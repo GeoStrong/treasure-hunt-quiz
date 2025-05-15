@@ -8,19 +8,19 @@ import Iphone from '@/public/Iphone';
 import Scroll from '@/public/Scroll';
 import Ufo from '@/public/Ufo';
 import Robot from '@/public/Robot';
-import { Html, OrbitControls, Stars } from '@react-three/drei';
+import { OrbitControls, Stars, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Spinner from '@/components/Spinner';
 import { Button } from '@/components/ui/button';
 import { AnimatePresence, motion } from 'motion/react';
-import { CgSpinnerTwoAlt } from 'react-icons/cg';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const typeRef = useRef<HTMLParagraphElement>(null);
+  const { progress } = useProgress();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,6 +32,14 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (progress === 100) {
+      setLoading(false);
+    } else {
+      setLoading(true);
+    }
+  }, [progress]);
 
   return (
     <div className="mt-10 p-8">
@@ -82,17 +90,8 @@ export default function Home() {
           loading ? 'opacity-0' : 'opacity-100'
         }`}
       >
-        <Canvas
-          onCreated={() => setLoading(false)}
-          onEnded={() => setLoading(false)}
-        >
-          <Suspense
-            fallback={
-              <Html>
-                <CgSpinnerTwoAlt className="animate-spin text-4xl" />
-              </Html>
-            }
-          >
+        <Canvas>
+          <Suspense fallback={null}>
             <ambientLight intensity={5} />
             <OrbitControls />
             <Dinosaur scale={0.015} />
