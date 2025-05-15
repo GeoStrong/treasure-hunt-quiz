@@ -8,13 +8,14 @@ import Iphone from '@/public/Iphone';
 import Scroll from '@/public/Scroll';
 import Ufo from '@/public/Ufo';
 import Robot from '@/public/Robot';
-import { OrbitControls, Stars } from '@react-three/drei';
+import { Html, OrbitControls, Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Spinner from '@/components/Spinner';
 import { Button } from '@/components/ui/button';
 import { AnimatePresence, motion } from 'motion/react';
+import { CgSpinnerTwoAlt } from 'react-icons/cg';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -41,7 +42,7 @@ export default function Home() {
             sequence={['Welcome, Time Explorers!']}
             wrapper="h1"
             className="text-4xl gradient-1 font-bold text-center"
-            cursor={true}
+            cursor={false}
           />
           <TypeAnimation
             ref={typeRef}
@@ -50,7 +51,7 @@ export default function Home() {
               'A mysterious glitch has scrambled history — from dinosaurs to the future! Your mission is to travel through time, solve riddles, and restore the past before it’s too late. Click on play to begin your journey. Good luck… history depends on you! 🚀',
             ]}
             speed={60}
-            cursor={false}
+            cursor={true}
             wrapper="p"
             className="text-2xl gradient-2 font-bold text-center mt-4"
             style={{ display: 'block' }}
@@ -81,8 +82,17 @@ export default function Home() {
           loading ? 'opacity-0' : 'opacity-100'
         }`}
       >
-        <Canvas onCreated={() => setLoading(false)}>
-          <Suspense fallback={null}>
+        <Canvas
+          onCreated={() => setLoading(false)}
+          onEnded={() => setLoading(false)}
+        >
+          <Suspense
+            fallback={
+              <Html>
+                <CgSpinnerTwoAlt className="animate-spin text-4xl" />
+              </Html>
+            }
+          >
             <ambientLight intensity={5} />
             <OrbitControls />
             <Dinosaur scale={0.015} />
