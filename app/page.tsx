@@ -46,7 +46,7 @@ export default function Home() {
             <Hourglass scale={0.02} />
             <StoneHead scale={0.005} />
             <Sword scale={1} />
-            <Iphone scale={1} />
+            {/* <Iphone scale={1} /> */}
             <Environment preset="lobby" />
             <Stars />
           </Suspense>
