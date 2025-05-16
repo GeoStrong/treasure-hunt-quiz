@@ -9,7 +9,7 @@ Title: Easter island head
 
 import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import useFloating from '@/lib/useFloating';
+import useFloating from '@/lib/hooks/useFloating';
 
 const StoneHead = (props) => {
   const { nodes, materials } = useGLTF('/stonehead.gltf');

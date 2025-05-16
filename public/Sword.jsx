@@ -9,7 +9,7 @@ Title: medieval sword
 
 import React, { use, useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import useFloating from '@/lib/useFloating';
+import useFloating from '@/lib/hooks/useFloating';
 
 const Sword = (props) => {
   const { nodes, materials } = useGLTF('/sword.gltf');

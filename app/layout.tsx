@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Genos } from 'next/font/google';
 import './globals.css';
+import StoreProvider from './StoreProvider';
 
 const genosSans = Genos({
   variable: '--font-genos-sans',
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${genosSans.variable} dark antialiased`}>
-        {children}
+        <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
   );

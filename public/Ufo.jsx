@@ -10,7 +10,7 @@ Title: Ufo
 import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useRef } from 'react';
-import useFloating from '@/lib/useFloating';
+import useFloating from '@/lib/hooks/useFloating';
 
 const Ufo = (props) => {
   const group = useRef();

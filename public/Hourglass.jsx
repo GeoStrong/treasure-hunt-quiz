@@ -9,7 +9,7 @@ Title: Hourglass
 
 import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import useFloating from '@/lib/useFloating';
+import useFloating from '@/lib/hooks/useFloating';
 
 const Hourglass = (props) => {
   const { nodes, materials } = useGLTF('/hourglass.gltf');

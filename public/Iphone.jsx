@@ -9,7 +9,7 @@ Title: iPhone 16 Pro Max
 
 import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import useFloating from '@/lib/useFloating';
+import useFloating from '@/lib/hooks/useFloating';
 
 const Iphone = (props) => {
   const { nodes, materials } = useGLTF('/iphone.gltf');

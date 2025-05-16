@@ -11,7 +11,7 @@ import React, { use, useRef } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
-import useFloating from '@/lib/useFloating';
+import useFloating from '@/lib/hooks/useFloating';
 
 const Robot = (props) => {
   const group = useRef();

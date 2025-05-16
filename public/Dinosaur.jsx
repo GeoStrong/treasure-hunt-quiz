@@ -9,7 +9,7 @@ Title: Dinosaur
 
 import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import useFloating from '@/lib/useFloating';
+import useFloating from '@/lib/hooks/useFloating';
 
 const Dinosaur = (props) => {
   const { nodes, materials } = useGLTF('/dinosaur.gltf');

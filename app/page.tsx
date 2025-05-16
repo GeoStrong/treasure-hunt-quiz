@@ -8,19 +8,34 @@ import Iphone from '@/public/Iphone';
 import Scroll from '@/public/Scroll';
 import Ufo from '@/public/Ufo';
 import Robot from '@/public/Robot';
+import Portal from '@/public/Portal';
+import Compass from '@/public/Compass';
 import { OrbitControls, Stars, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import Spinner from '@/components/Spinner';
+import ModelsLoading from '@/components/ModelsLoading';
 import { Button } from '@/components/ui/button';
 import { AnimatePresence, motion } from 'motion/react';
+import { useAppDispatch } from '@/lib/store/hooks';
+import { languageSlice } from '@/lib/store/languageSlice';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import Image from 'next/image';
+import useLanguage from '@/lib/hooks/useLanguage';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const typeRef = useRef<HTMLParagraphElement>(null);
   const { progress } = useProgress();
+  const dispatch = useAppDispatch();
+  const activeLanguage = useLanguage();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,21 +58,59 @@ export default function Home() {
 
   return (
     <div className="mt-10 p-8">
-      {loading && <Spinner />}
+      <div className="flex relative mb-10 z-10 w-full justify-center">
+        <Select defaultValue="en">
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem
+              value="en"
+              onClick={() => {
+                dispatch(languageSlice.actions.setLanguage('en'));
+              }}
+              className="flex justify-center gap-1"
+            >
+              EN{' '}
+              <Image
+                src="/images/english.svg"
+                alt="English"
+                width={20}
+                height={20}
+              />
+            </SelectItem>
+            <SelectItem
+              value="es"
+              onClick={() => {
+                dispatch(languageSlice.actions.setLanguage('et'));
+              }}
+              className="flex justify-center gap-1"
+            >
+              ES
+              <Image
+                src="/images/estonian.svg"
+                alt="English"
+                width={20}
+                height={20}
+              />
+            </SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      {loading && <ModelsLoading />}
       {!loading && (
-        <div className="flex flex-col items-center justify-center gap-3">
+        <div className="flex flex-col relative z-10 items-center justify-center gap-3">
           <TypeAnimation
-            sequence={['Welcome, Time Explorers!']}
+            key={activeLanguage.WELCOME_PAGE_TITLE}
+            sequence={[activeLanguage.WELCOME_PAGE_TITLE]}
             wrapper="h1"
             className="text-4xl gradient-1 font-bold text-center"
             cursor={false}
           />
           <TypeAnimation
+            key={activeLanguage.WELCOME_PAGE_DESCRIPTION}
             ref={typeRef}
-            sequence={[
-              2000,
-              'A mysterious glitch has scrambled history — from dinosaurs to the future! Your mission is to travel through time, solve riddles, and restore the past before it’s too late. Click on play to begin your journey. Good luck… history depends on you! 🚀',
-            ]}
+            sequence={[2000, activeLanguage.WELCOME_PAGE_DESCRIPTION]}
             speed={60}
             cursor={true}
             wrapper="p"
@@ -77,7 +130,7 @@ export default function Home() {
                   variant="default"
                   className="mt-4 cursor-pointer z-40 hover:scale-110 py-6 px-16 text-white text-xl gradient-3 font-bold text-center"
                 >
-                  Play
+                  {activeLanguage.WELCOME_PAGE_PLAY_BUTTON}
                 </Button>
               </motion.div>
             ) : null}
@@ -86,7 +139,7 @@ export default function Home() {
       )}
       <div
         id="canvas-container"
-        className={`absolute w-screen h-screen inset-0 -z-10 ${
+        className={`absolute w-screen h-screen inset-0 ${
           loading ? 'opacity-0' : 'opacity-100'
         }`}
       >
@@ -102,6 +155,8 @@ export default function Home() {
             <Scroll scale={0.03} />
             <Ufo scale={0.5} />
             <Robot scale={0.1} />
+            <Portal scale={0.5} />
+            <Compass scale={5} />
 
             <Stars
               radius={100}
