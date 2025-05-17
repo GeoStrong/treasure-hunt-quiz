@@ -18,7 +18,7 @@ const Portal = (props) => {
   // useFloating(ref);
 
   return (
-    <Center>
+    <Center position={[0, 1, 0]}>
       <group ref={ref} {...props} dispose={null}>
         <mesh
           geometry={nodes.Object_4.geometry}

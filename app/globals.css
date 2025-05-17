@@ -137,4 +137,10 @@
     /* background-clip: text;
     color: transparent; */
   }
+
+  .gradient-4 {
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    background-clip: text;
+    color: transparent;
+  }
 }
