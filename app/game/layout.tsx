@@ -10,7 +10,7 @@ import CanvasContainer from '@/components/CanvasContainer';
 import { useProgress } from '@react-three/drei';
 import LanguageSelect from '@/components/LanguageSelect';
 
-export default function Home() {
+export default function Home({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const typeRef = useRef<HTMLParagraphElement>(null);
@@ -79,6 +79,7 @@ export default function Home() {
               </motion.div>
             ) : null}
           </AnimatePresence>
+          {children}
         </div>
       )}
       <CanvasContainer />

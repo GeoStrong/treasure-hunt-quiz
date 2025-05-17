@@ -1,5 +1,5 @@
 import React from 'react';
 const Game: React.FC = () => {
-  return null;
+  return <>Page</>;
 };
 export default Game;
