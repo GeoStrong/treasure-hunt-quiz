@@ -6,18 +6,13 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { languageSlice } from '@/lib/store/languageSlice';
-import { LanguageType } from '@/lib/types';
+import { defaultLanguage } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   const activeLanguage = useLanguage();
   const dispatch = useAppDispatch();
-
-  const defaultLanguage =
-    typeof window !== 'undefined' && localStorage.getItem('language')
-      ? (localStorage.getItem('language') as LanguageType)
-      : 'en';
 
   return (
     <div className="mt-10 p-8">
@@ -67,8 +62,8 @@ export default function Home() {
         </div>
 
         <Link href={'/game'}>
-          <Button className="bg-gray-800 text-4xl gradient-3 text-white py-6 px-14 rounded-xl mt-5">
-            Start Game
+          <Button className="bg-gray-800 text-4xl gradient-3 text-white py-8 px-14 rounded-xl mt-5">
+            {activeLanguage.WELCOME_PAGE_PLAY_BUTTON}
           </Button>
         </Link>
       </div>

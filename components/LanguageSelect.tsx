@@ -9,13 +9,14 @@ import {
 import Image from 'next/image';
 import { languageSlice } from '@/lib/store/languageSlice';
 import { useAppDispatch } from '@/lib/store/hooks';
+import { defaultLanguage } from '@/lib/types';
 
 const LanguageSelect: React.FC = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <Select defaultValue="en">
-      <SelectTrigger defaultValue={'et'}>
+    <Select defaultValue={defaultLanguage}>
+      <SelectTrigger>
         <SelectValue />
       </SelectTrigger>
       <SelectContent className="min-w-0">

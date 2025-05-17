@@ -1,11 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { LanguageType } from '../types';
+import { defaultLanguage, LanguageType } from '../types';
 
 const initialState: { language: LanguageType } = {
-  language:
-    typeof window !== 'undefined' && localStorage.getItem('language')
-      ? (localStorage.getItem('language') as LanguageType)
-      : 'en', // Default language
+  language: defaultLanguage, // Default language
   // You can change this to any other language you want
 };
 

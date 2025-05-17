@@ -1,5 +1,6 @@
 export const english = {
   WELCOME_PAGE_TITLE: 'Select a language to start the game',
+  WELCOME_PAGE_PLAY_BUTTON: 'Start game',
   LOADING_PAGE_TITLE: 'Loading models...',
   LOADING_PAGE_DESCRIPTION:
     'Please wait while we load the models for the game. This may take a few moments.',

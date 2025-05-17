@@ -1,5 +1,6 @@
 export const estonian = {
   WELCOME_PAGE_TITLE: 'Mängu alustamiseks valige keel',
+  WELCOME_PAGE_PLAY_BUTTON: 'Alusta mängu',
   LOADING_PAGE_TITLE: 'Mudelite laadimine...',
   LOADING_PAGE_DESCRIPTION:
     'Palun oodake, kuni me laadime mängu mudelid. See võib võtta mõne hetke.',
