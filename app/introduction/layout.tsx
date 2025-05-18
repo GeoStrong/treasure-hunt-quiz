@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import ModelsLoading from '@/components/ModelsLoading';
 import CanvasContainer from '@/components/CanvasContainer';
 import { useProgress } from '@react-three/drei';
-import LanguageSelect from '@/components/LanguageSelect';
+import LayoutContainer from '@/components/LayoutContainer';
 
 const IntroductionLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -21,14 +21,11 @@ const IntroductionLayout: React.FC<{ children: React.ReactNode }> = ({
   }, [progress]);
 
   return (
-    <div className="mt-10 p-8 relative">
-      <div className="flex mb-5 justify-end relative left-0 z-10 w-full">
-        <LanguageSelect />
-      </div>
+    <LayoutContainer>
       {loading && <ModelsLoading />}
       {!loading && <>{children}</>}
       <CanvasContainer />
-    </div>
+    </LayoutContainer>
   );
 };
 

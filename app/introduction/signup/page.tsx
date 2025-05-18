@@ -10,7 +10,7 @@ import { signupRedirection } from '@/lib/actions';
 const Signup: React.FC = () => {
   const activeLanguage = useLanguage();
   const [name, setName] = useState<string>('');
-  const [size, setSize] = useState<number>(1);
+  const [size, setSize] = useState<number>();
   const [error, setError] = useState<string>('');
 
   return (
@@ -32,7 +32,6 @@ const Signup: React.FC = () => {
             value={size}
             type="number"
             placeholder={activeLanguage.SIGNUP_INPUT_SIZE_PLACEHOLDER}
-            min={1}
             className="border-fuchsia-800 !bg-pink-400/50 text-white text-xl p-6"
           />
           {error && (
@@ -44,7 +43,7 @@ const Signup: React.FC = () => {
             onClick={(event: FormEvent) => {
               event.preventDefault();
 
-              if (name === '' || size < 1) {
+              if (name === '' || size === undefined || size < 1) {
                 setError(activeLanguage.SIGNUP_PAGE_ERROR);
                 return;
               }
@@ -53,7 +52,7 @@ const Signup: React.FC = () => {
 
               const team: SignupForm = {
                 name,
-                size,
+                size: size as number,
               };
 
               localStorage.setItem('team', JSON.stringify(team));

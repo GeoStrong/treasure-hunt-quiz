@@ -1,9 +1,9 @@
 'use client';
 
-import LanguageSelect from '@/components/LanguageSelect';
+import LayoutContainer from '@/components/LayoutContainer';
 import React, { useEffect } from 'react';
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const GameLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     const team = localStorage.getItem('team');
     if (!team) {
@@ -11,13 +11,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     }
   }, []);
 
-  return (
-    <div className="w-full mt-10 p-8">
-      <div className="flex mb-5 justify-end relative left-0 z-10 w-full">
-        <LanguageSelect />
-      </div>
-      {children}
-    </div>
-  );
+  return <LayoutContainer>{children}</LayoutContainer>;
 };
-export default Layout;
+export default GameLayout;
