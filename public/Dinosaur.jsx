@@ -19,25 +19,27 @@ const Dinosaur = (props) => {
 
   return (
     <group ref={ref} {...props} dispose={null}>
-      <group
-        position={[-0.785, 0, -4.596]}
-        rotation={[-Math.PI / 2, 0, -0.128]}
-      >
-        <group position={[34.418, 0, -19.949]}>
-          <mesh
-            geometry={nodes['Deinonych__Material_#36_0'].geometry}
-            material={materials.Material_36}
-          />
-          <mesh
-            geometry={nodes['Deinonych__Material_#36_0_1'].geometry}
-            material={materials.Material_36_0}
-          />
-          <mesh
-            geometry={nodes['Deinonych__Material_#36_0_2'].geometry}
-            material={materials.Material_36_1}
-          />
+      <lOD>
+        <group
+          position={[-0.785, 0, -4.596]}
+          rotation={[-Math.PI / 2, 0, -0.128]}
+        >
+          <group position={[34.418, 0, -19.949]}>
+            <mesh
+              geometry={nodes['Deinonych__Material_#36_0'].geometry}
+              material={materials.Material_36}
+            />
+            <mesh
+              geometry={nodes['Deinonych__Material_#36_0_1'].geometry}
+              material={materials.Material_36_0}
+            />
+            <mesh
+              geometry={nodes['Deinonych__Material_#36_0_2'].geometry}
+              material={materials.Material_36_1}
+            />
+          </group>
         </group>
-      </group>
+      </lOD>
     </group>
   );
 };

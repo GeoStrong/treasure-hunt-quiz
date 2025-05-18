@@ -19,12 +19,14 @@ const StoneHead = (props) => {
 
   return (
     <group ref={ref} {...props} dispose={null}>
-      <mesh
-        geometry={nodes.Object_2.geometry}
-        material={materials['Scene_-_Root']}
-        position={[0.397, 0.002, 0]}
-        rotation={[-Math.PI / 2, -0.006, 0]}
-      />
+      <lOD>
+        <mesh
+          geometry={nodes.Object_2.geometry}
+          material={materials['Scene_-_Root']}
+          position={[0.397, 0.002, 0]}
+          rotation={[-Math.PI / 2, -0.006, 0]}
+        />
+      </lOD>
     </group>
   );
 };

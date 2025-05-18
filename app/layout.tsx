@@ -14,18 +14,18 @@ export const metadata: Metadata = {
   description: 'A 3D treasure hunt game',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: React.FC<
+  Readonly<{
+    children: React.ReactNode;
+  }>
+> = ({ children }) => {
   return (
     <html lang="en" className={`${titilliumWeb.className}`}>
-      <body
-        className={`${titilliumWeb.variable} overflow-hidden dark antialiased`}
-      >
+      <body className={`${titilliumWeb.variable} dark antialiased`}>
         <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

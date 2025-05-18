@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { useAppSelector } from '../store/hooks';
 import { english } from '../language/en';

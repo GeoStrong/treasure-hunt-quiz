@@ -10,14 +10,14 @@ import { defaultLanguage } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Home() {
+const Home = () => {
   const activeLanguage = useLanguage();
   const dispatch = useAppDispatch();
 
   return (
     <div className="mt-10 p-8">
       <div className="flex flex-col items-center gap-5">
-        <h1 className="text-4xl gradient-4 h-28 text-center">
+        <h1 className="text-4xl text-gradient-4 h-28 text-center">
           {activeLanguage.WELCOME_PAGE_TITLE}
         </h1>
         <div className="flex flex-col justify-center">
@@ -61,7 +61,7 @@ export default function Home() {
           </RadioGroup>
         </div>
 
-        <Link href={'/game'}>
+        <Link href="/introduction">
           <Button className="bg-gray-800 text-4xl gradient-3 text-white py-8 px-14 rounded-xl mt-5">
             {activeLanguage.WELCOME_PAGE_PLAY_BUTTON}
           </Button>
@@ -69,4 +69,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

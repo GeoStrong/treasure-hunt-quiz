@@ -20,85 +20,87 @@ const Compass = (props) => {
 
   return (
     <group ref={ref} {...props} dispose={null}>
-      <group scale={0.01}>
-        <pointLight intensity={5} />
-        <group position={[1.081, 3.57, 0]} rotation={[0, 0, 2.094]}>
+      <lOD>
+        <group scale={0.01}>
+          <pointLight intensity={5} />
+          <group position={[1.081, 3.57, 0]} rotation={[0, 0, 2.094]}>
+            <mesh
+              geometry={nodes.Cover_low_lambert1_0.geometry}
+              material={materials.lambert1}
+            />
+            <mesh
+              geometry={nodes.Sighting_Wire_low_lambert1_0.geometry}
+              material={materials.lambert1}
+            />
+            <mesh
+              geometry={nodes.Luminous_Sighting_Dot_01_low1_lambert1_0.geometry}
+              material={materials.lambert1}
+            />
+            <mesh
+              geometry={nodes.Luminous_Sighting_Dot_low_lambert1_0.geometry}
+              material={materials.lambert1}
+            />
+          </group>
           <mesh
-            geometry={nodes.Cover_low_lambert1_0.geometry}
+            geometry={nodes.Rear_Sight_low_lambert1_0.geometry}
             material={materials.lambert1}
           />
           <mesh
-            geometry={nodes.Sighting_Wire_low_lambert1_0.geometry}
+            geometry={nodes.Lens_low_lambert1_0.geometry}
             material={materials.lambert1}
           />
           <mesh
-            geometry={nodes.Luminous_Sighting_Dot_01_low1_lambert1_0.geometry}
+            geometry={nodes.Base_low_lambert1_0.geometry}
             material={materials.lambert1}
           />
           <mesh
-            geometry={nodes.Luminous_Sighting_Dot_low_lambert1_0.geometry}
+            geometry={nodes.Bezel_Ring_low_lambert1_0.geometry}
             material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Cover_Lock_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Glass_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Sight_Holder_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Cover_Base_Joint_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Button3_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Button2_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Screws_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Dail_Holder_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Floating_Dial_low_lambert1_0.geometry}
+            material={materials.lambert1}
+          />
+          <mesh
+            geometry={nodes.Thumb_Loop_low_lambert1_0.geometry}
+            material={materials.lambert1}
+            position={[-0.061, 0.634, 0]}
+            rotation={[0, 0, -0.063]}
           />
         </group>
-        <mesh
-          geometry={nodes.Rear_Sight_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Lens_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Base_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Bezel_Ring_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Cover_Lock_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Glass_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Sight_Holder_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Cover_Base_Joint_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Button3_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Button2_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Screws_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Dail_Holder_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Floating_Dial_low_lambert1_0.geometry}
-          material={materials.lambert1}
-        />
-        <mesh
-          geometry={nodes.Thumb_Loop_low_lambert1_0.geometry}
-          material={materials.lambert1}
-          position={[-0.061, 0.634, 0]}
-          rotation={[0, 0, -0.063]}
-        />
-      </group>
+      </lOD>
     </group>
   );
 };

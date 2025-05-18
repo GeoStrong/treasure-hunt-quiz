@@ -24,48 +24,50 @@ const Robot = (props) => {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
-          <group
-            name="13b38b2398744f4295b469a8c9d906d1fbx"
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={0.01}
-          >
-            <group name="Object_2">
-              <group name="RootNode">
-                <group
-                  name="Empty"
-                  position={[2.458, 0, -102.215]}
-                  rotation={[0, 0, Math.PI / 2]}
-                />
-                <group
-                  name="Kosti"
-                  position={[13.777, 460.07, -5.148]}
-                  rotation={[-Math.PI / 2, 0, Math.PI / 2]}
-                  scale={100}
-                >
-                  <group name="Object_7">
-                    <primitive object={nodes._rootJoint} />
-                    <group name="Object_9" />
-                    <skinnedMesh
-                      name="Object_10"
-                      geometry={nodes.Object_10.geometry}
-                      material={materials.Material}
-                      skeleton={nodes.Object_10.skeleton}
-                    />
+      <lOD>
+        <group name="Sketchfab_Scene">
+          <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
+            <group
+              name="13b38b2398744f4295b469a8c9d906d1fbx"
+              rotation={[Math.PI / 2, 0, 0]}
+              scale={0.01}
+            >
+              <group name="Object_2">
+                <group name="RootNode">
+                  <group
+                    name="Empty"
+                    position={[2.458, 0, -102.215]}
+                    rotation={[0, 0, Math.PI / 2]}
+                  />
+                  <group
+                    name="Kosti"
+                    position={[13.777, 460.07, -5.148]}
+                    rotation={[-Math.PI / 2, 0, Math.PI / 2]}
+                    scale={100}
+                  >
+                    <group name="Object_7">
+                      <primitive object={nodes._rootJoint} />
+                      <group name="Object_9" />
+                      <skinnedMesh
+                        name="Object_10"
+                        geometry={nodes.Object_10.geometry}
+                        material={materials.Material}
+                        skeleton={nodes.Object_10.skeleton}
+                      />
+                    </group>
                   </group>
+                  <group
+                    name="Empty001"
+                    position={[13.138, 0.369, 88.479]}
+                    rotation={[0, 0, -Math.PI / 2]}
+                  />
+                  <group name="1_L" />
                 </group>
-                <group
-                  name="Empty001"
-                  position={[13.138, 0.369, 88.479]}
-                  rotation={[0, 0, -Math.PI / 2]}
-                />
-                <group name="1_L" />
               </group>
             </group>
           </group>
         </group>
-      </group>
+      </lOD>
     </group>
   );
 };

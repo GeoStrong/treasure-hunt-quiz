@@ -20,28 +20,30 @@ const Hourglass = (props) => {
 
   return (
     <group ref={ref} {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
-        <mesh
-          geometry={nodes.Object_2.geometry}
-          material={materials.aiStandardSurface2SG}
-        />
-        <mesh
-          geometry={nodes.Object_3.geometry}
-          material={materials.aiStandardSurface1SG}
-        />
-        <mesh
-          geometry={nodes.Object_4.geometry}
-          material={materials.aiStandardSurface1SG}
-        />
-        <mesh
-          geometry={nodes.Object_5.geometry}
-          material={materials.aiStandardSurface1SG}
-        />
-        <mesh
-          geometry={nodes.Object_6.geometry}
-          material={materials.aiStandardSurface1SG}
-        />
-      </group>
+      <lOD>
+        <group rotation={[-Math.PI / 2, 0, 0]}>
+          <mesh
+            geometry={nodes.Object_2.geometry}
+            material={materials.aiStandardSurface2SG}
+          />
+          <mesh
+            geometry={nodes.Object_3.geometry}
+            material={materials.aiStandardSurface1SG}
+          />
+          <mesh
+            geometry={nodes.Object_4.geometry}
+            material={materials.aiStandardSurface1SG}
+          />
+          <mesh
+            geometry={nodes.Object_5.geometry}
+            material={materials.aiStandardSurface1SG}
+          />
+          <mesh
+            geometry={nodes.Object_6.geometry}
+            material={materials.aiStandardSurface1SG}
+          />
+        </group>
+      </lOD>
     </group>
   );
 };

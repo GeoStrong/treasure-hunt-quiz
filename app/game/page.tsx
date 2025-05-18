@@ -1,65 +1,59 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { TypeAnimation } from 'react-type-animation';
+import QRScanner from '@/components/QRScanner';
 import { Button } from '@/components/ui/button';
-import { AnimatePresence, motion } from 'motion/react';
 import useLanguage from '@/lib/hooks/useLanguage';
+import { SignupForm } from '@/lib/types';
+import React, { useEffect, useState } from 'react';
+import { Gi3dHammer, GiPocketWatch } from 'react-icons/gi';
 
-const Introduction: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const typeRef = useRef<HTMLParagraphElement>(null);
+const Game: React.FC = () => {
+  const [team, setTeam] = useState<SignupForm | null>();
   const activeLanguage = useLanguage();
+  const [qrScannerIsActive, setQrScannerIsActive] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (typeRef.current?.innerText?.includes('🚀')) {
-        clearInterval(interval);
-        setIsVisible(true);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
+    setTeam(JSON.parse(localStorage.getItem('team') || ''));
   }, []);
 
   return (
-    <div className="flex flex-col relative z-10 items-center justify-center gap-3">
-      <TypeAnimation
-        key={activeLanguage.GAME_PAGE_TITLE}
-        sequence={[activeLanguage.GAME_PAGE_TITLE]}
-        wrapper="h1"
-        className="text-4xl gradient-1 font-bold text-center"
-        cursor={false}
-      />
-      <TypeAnimation
-        key={activeLanguage.GAME_PAGE_DESCRIPTION}
-        ref={typeRef}
-        sequence={[2000, activeLanguage.GAME_PAGE_DESCRIPTION]}
-        speed={60}
-        cursor={true}
-        wrapper="p"
-        className="text-2xl gradient-2 font-bold text-center mt-4"
-        style={{ display: 'block' }}
-      />
-
-      <AnimatePresence initial={false}>
-        {isVisible ? (
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+    <>
+      <div className="flex w-full justify-center">
+        {qrScannerIsActive ? (
+          <QRScanner setQRScannerVisibility={setQrScannerIsActive} />
+        ) : (
+          <div className="justify-center flex flex-col items-center gap-5">
+            <h1 className="text-4xl text-center text-gradient-2 flex gap-2 flex-col items-center font-bold">
+              {activeLanguage.GAME_PAGE_TITLE}, {team?.name}!
+              <GiPocketWatch className="text-4xl text-fuchsia-800" />
+            </h1>
+            <p className="text-center text-xl text-gradient-3">
+              {activeLanguage.GAME_PAGE_DESCRIPTION}
+            </p>
             <Button
-              variant="default"
-              className="mt-4 cursor-pointer z-40 hover:scale-110 py-6 px-16 text-white text-xl gradient-3 font-bold text-center"
+              onClick={() => {
+                setQrScannerIsActive(true);
+              }}
+              className="bg-purple-800 p-6 hover:bg-purple-700 text-white text-xl font-bold mt-10"
             >
-              {activeLanguage.GAME_PAGE_PLAY_BUTTON}
+              {activeLanguage.GAME_PAGE_BUTTON}
             </Button>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-    </div>
+            <h2
+              className="
+            text-2xl text-gradient-4 font-bold text-center mt-10 flex gap-2 items-center"
+            >
+              {activeLanguage.GAME_PAGE_HOW_IT_WORKS}
+              <Gi3dHammer className="text-2xl text-amber-500" />
+            </h2>
+            <ul className="text-xl text-white">
+              {activeLanguage.GAME_PAGE_HOW_IT_WORKS_LIST.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
-export default Introduction;
+export default Game;

@@ -19,13 +19,15 @@ const Scroll = (props) => {
 
   return (
     <group ref={ref} {...props} dispose={null}>
-      <mesh
-        geometry={nodes['Scroll_LP_01_-_Default_0'].geometry}
-        material={materials['01_-_Default']}
-        position={[0, -0.786, -1.16]}
-        rotation={[-Math.PI / 2, 0, 0]}
-        scale={[1, 1, 1.393]}
-      />
+      <lOD>
+        <mesh
+          geometry={nodes['Scroll_LP_01_-_Default_0'].geometry}
+          material={materials['01_-_Default']}
+          position={[0, -0.786, -1.16]}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={[1, 1, 1.393]}
+        />
+      </lOD>
     </group>
   );
 };

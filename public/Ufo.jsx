@@ -21,19 +21,21 @@ const Ufo = (props) => {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
-          <group name="Root">
-            <group name="Cube" position={[0, 0, 0.513]}>
-              <mesh
-                name="Cube_0"
-                geometry={nodes.Cube_0.geometry}
-                material={materials['Material-material']}
-              />
+      <lOD>
+        <group name="Sketchfab_Scene">
+          <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
+            <group name="Root">
+              <group name="Cube" position={[0, 0, 0.513]}>
+                <mesh
+                  name="Cube_0"
+                  geometry={nodes.Cube_0.geometry}
+                  material={materials['Material-material']}
+                />
+              </group>
             </group>
           </group>
         </group>
-      </group>
+      </lOD>
     </group>
   );
 };
