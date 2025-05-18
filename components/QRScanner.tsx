@@ -23,10 +23,6 @@ const QRScanner: React.FC<{
         </div>
         <Scanner
           onScan={(result) => {
-            setTimeout(() => {
-              setQRScannerVisibility(false);
-            }, 1000);
-
             quizzRedirection(result[0].rawValue);
           }}
           allowMultiple={true}

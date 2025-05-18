@@ -9,7 +9,6 @@ Title: Portal Door
 
 import React, { useRef } from 'react';
 import { Center, useGLTF } from '@react-three/drei';
-import { RigidBody } from '@react-three/rapier';
 // import useFloating from '@/lib/useFloating';
 
 const Portal = (props) => {

@@ -11,7 +11,6 @@ import Ufo from '@/public/Ufo';
 import { Center, OrbitControls, Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
-import { Physics } from '@react-three/rapier';
 
 const CanvasContainer: React.FC = () => {
   return (
@@ -21,32 +20,30 @@ const CanvasContainer: React.FC = () => {
     >
       <Canvas dpr={[1, 1.5]}>
         <Suspense fallback={null}>
-          <Physics>
-            <Center>
-              <ambientLight intensity={5} />
-              <OrbitControls />
-              <Dinosaur scale={0.015} />
-              <Hourglass scale={0.02} />
-              <StoneHead scale={0.005} />
-              <Sword scale={1} />
-              <Iphone scale={0.5} />
-              <Scroll scale={0.03} />
-              <Ufo scale={0.5} />
-              <Robot scale={0.1} />
-              <Compass scale={5} />
-            </Center>
-            <Portal scale={0.5} />
+          <Center>
+            <ambientLight intensity={5} />
+            <OrbitControls />
+            <Dinosaur scale={0.015} />
+            <Hourglass scale={0.02} />
+            <StoneHead scale={0.005} />
+            <Sword scale={1} />
+            <Iphone scale={0.5} />
+            <Scroll scale={0.03} />
+            <Ufo scale={0.5} />
+            <Robot scale={0.1} />
+            <Compass scale={5} />
+          </Center>
+          <Portal scale={0.5} />
 
-            <Stars
-              radius={100}
-              depth={50}
-              count={5000}
-              factor={7}
-              saturation={0}
-              fade
-              speed={1}
-            />
-          </Physics>
+          <Stars
+            radius={100}
+            depth={50}
+            count={5000}
+            factor={7}
+            saturation={0}
+            fade
+            speed={1}
+          />
         </Suspense>
       </Canvas>
     </div>

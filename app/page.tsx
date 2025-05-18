@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import useLanguage from '@/lib/hooks/useLanguage';
@@ -61,10 +60,11 @@ const Home = () => {
           </RadioGroup>
         </div>
 
-        <Link href="/introduction">
-          <Button className="bg-gray-800 text-4xl gradient-3 text-white py-8 px-14 rounded-xl mt-5">
-            {activeLanguage.WELCOME_PAGE_PLAY_BUTTON}
-          </Button>
+        <Link
+          href="/introduction"
+          className="bg-gray-800 text-2xl gradient-3 text-white py-4 px-16 rounded-xl mt-5"
+        >
+          {activeLanguage.WELCOME_PAGE_PLAY_BUTTON}
         </Link>
       </div>
     </div>
