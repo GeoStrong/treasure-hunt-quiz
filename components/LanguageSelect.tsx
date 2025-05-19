@@ -50,6 +50,21 @@ const LanguageSelect: React.FC = () => {
             height={20}
           />
         </SelectItem>
+        <SelectItem
+          value="ru"
+          onClick={() => {
+            dispatch(languageSlice.actions.setLanguage('ru'));
+          }}
+          className="flex p-1 justify-between gap-1"
+        >
+          RU
+          <Image
+            src="/images/russian.svg"
+            alt="English"
+            width={20}
+            height={20}
+          />
+        </SelectItem>
       </SelectContent>
     </Select>
   );

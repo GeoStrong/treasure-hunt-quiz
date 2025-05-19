@@ -57,6 +57,24 @@ const Home = () => {
                 />
               </div>
             </Label>
+            <Label
+              htmlFor="ru"
+              className="flex w-2xs items-center justify-center bg-gray-800 p-2 space-x-2 rounded-md"
+              onClick={() => {
+                dispatch(languageSlice.actions.setLanguage('ru'));
+              }}
+            >
+              <RadioGroupItem value="ru" id="ru" />
+              <div className="text-xl flex items-center gap-2">
+                Russian{' '}
+                <Image
+                  src="/images/russian.svg"
+                  alt="English"
+                  width={20}
+                  height={20}
+                />
+              </div>
+            </Label>
           </RadioGroup>
         </div>
 
