@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Titillium_Web } from 'next/font/google';
 import './globals.css';
 import StoreProvider from './StoreProvider';
+import { ThemeProvider } from 'next-themes';
 import LoadingProgressBar from '@/components/LoadingProgressBar';
 
 const titilliumWeb = Titillium_Web({
@@ -24,7 +25,9 @@ const RootLayout: React.FC<
     <html lang="en" className={`${titilliumWeb.className}`}>
       <body className={`${titilliumWeb.variable} dark antialiased`}>
         <StoreProvider>
-          {children}
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            {children}
+          </ThemeProvider>
           <LoadingProgressBar />
         </StoreProvider>
       </body>

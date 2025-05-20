@@ -37,7 +37,7 @@ const Introduction: React.FC = () => {
         key={activeLanguage.INTRODUCTION_PAGE_TITLE}
         sequence={[activeLanguage.INTRODUCTION_PAGE_TITLE]}
         wrapper="h1"
-        className="text-4xl text-gradient-1 font-bold text-center"
+        className="text-4xl text-gradient-2 font-bold text-center"
         cursor={false}
       />
       <TypeAnimation
@@ -47,7 +47,7 @@ const Introduction: React.FC = () => {
         speed={60}
         cursor={true}
         wrapper="p"
-        className="text-2xl text-gradient-2 font-bold text-center mt-4"
+        className="text-2xl text-gradient-4 font-bold text-center mt-4"
         style={{ display: 'block' }}
       />
 

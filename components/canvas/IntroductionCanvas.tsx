@@ -12,7 +12,7 @@ import { Center, OrbitControls, Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 
-const CanvasContainer: React.FC = () => {
+const IntroductionCanvas: React.FC = () => {
   return (
     <div
       id="canvas-container"
@@ -49,4 +49,4 @@ const CanvasContainer: React.FC = () => {
     </div>
   );
 };
-export default CanvasContainer;
+export default IntroductionCanvas;

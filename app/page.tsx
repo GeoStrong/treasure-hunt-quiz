@@ -23,7 +23,7 @@ const Home = () => {
           <RadioGroup defaultValue={defaultLanguage}>
             <Label
               htmlFor="en"
-              className="flex w-2xs items-center justify-center bg-gray-800 p-2 space-x-2 rounded-md"
+              className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
               onClick={() => {
                 dispatch(languageSlice.actions.setLanguage('en'));
               }}
@@ -41,7 +41,7 @@ const Home = () => {
             </Label>
             <Label
               htmlFor="et"
-              className="flex w-2xs items-center justify-center bg-gray-800 p-2 space-x-2 rounded-md"
+              className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
               onClick={() => {
                 dispatch(languageSlice.actions.setLanguage('et'));
               }}
@@ -59,7 +59,7 @@ const Home = () => {
             </Label>
             <Label
               htmlFor="ru"
-              className="flex w-2xs items-center justify-center bg-gray-800 p-2 space-x-2 rounded-md"
+              className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
               onClick={() => {
                 dispatch(languageSlice.actions.setLanguage('ru'));
               }}
@@ -80,7 +80,7 @@ const Home = () => {
 
         <Link
           href="/introduction"
-          className="bg-gray-800 text-2xl gradient-3 text-white py-4 px-16 rounded-xl mt-5"
+          className="bg-gray-700 text-2xl gradient-3 text-white py-4 px-16 rounded-xl mt-5"
         >
           {activeLanguage.WELCOME_PAGE_PLAY_BUTTON}
         </Link>

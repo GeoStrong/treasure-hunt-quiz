@@ -13,7 +13,7 @@ export const estonian = {
   SIGNUP_INPUT_SIZE_PLACEHOLDER: 'Sisestage oma meeskonna suurus',
   SIGNUP_PAGE_BUTTON: 'Luua meeskond',
   SIGNUP_PAGE_ERROR: 'Palun täitke kõik väljad',
-  GAME_PAGE_TITLE: 'Tere tulemast Time Trek: Kadunud ajajoonele!',
+  GAME_PAGE_TITLE: 'Tere tulemast Time Trek: Kadunud ajajoonele',
   GAME_PAGE_DESCRIPTION:
     'Ole valmis põnevaks seikluseks läbi aja! Keegi on mineviku segi ajanud ja ainult Sina saad selle parandada. Skaneerides parki peidetud QR-koode, hüppad eri ajaperioodide vahel - dinosaurustest tulevikku - ning lahendad mõistatusi ja ülesandeid, et taastada ajalugu!',
   GAME_PAGE_BUTTON: 'Skaneeri QR-kood, et alustada',

@@ -27,7 +27,7 @@ const Game: React.FC = () => {
               {activeLanguage.GAME_PAGE_TITLE}, {team?.name}!
               <GiPocketWatch className="text-4xl text-fuchsia-800" />
             </h1>
-            <p className="text-center text-xl text-gradient-3">
+            <p className="text-center text-xl text-white">
               {activeLanguage.GAME_PAGE_DESCRIPTION}
             </p>
             <Button

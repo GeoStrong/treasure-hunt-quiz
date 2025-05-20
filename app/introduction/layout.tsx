@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import ModelsLoading from '@/components/ModelsLoading';
-import CanvasContainer from '@/components/CanvasContainer';
+import ModelsLoading from '@/components/canvas/ModelsLoading';
 import { useProgress } from '@react-three/drei';
 import LayoutContainer from '@/components/LayoutContainer';
+import IntroductionCanvas from '@/components/canvas/IntroductionCanvas';
 
 const IntroductionLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -24,7 +24,7 @@ const IntroductionLayout: React.FC<{ children: React.ReactNode }> = ({
     <LayoutContainer>
       {loading && <ModelsLoading />}
       {!loading && <>{children}</>}
-      <CanvasContainer />
+      <IntroductionCanvas />
     </LayoutContainer>
   );
 };

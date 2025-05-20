@@ -13,7 +13,7 @@ export const english = {
   SIGNUP_INPUT_SIZE_PLACEHOLDER: 'Enter your team size',
   SIGNUP_PAGE_BUTTON: 'Create team',
   SIGNUP_PAGE_ERROR: 'Please fill in all fields',
-  GAME_PAGE_TITLE: 'Welcome to Time Trek: The Lost Timeline!',
+  GAME_PAGE_TITLE: 'Welcome to Time Trek: The Lost Timeline',
   GAME_PAGE_DESCRIPTION:
     'Get ready for an exciting adventure through time! Someone has scrambled the past, and only YOU can fix it. By scanning QR codes hidden around the park, you’ll jump between different time periods—from dinosaurs to the future—and solve riddles and challenges to restore history!',
   GAME_PAGE_BUTTON: 'Scan QR Code to Start',

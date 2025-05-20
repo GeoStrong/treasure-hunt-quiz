@@ -15,7 +15,7 @@ const Dinosaur = (props) => {
   const { nodes, materials } = useGLTF('/dinosaur.gltf');
   const ref = useRef();
 
-  useFloating(ref);
+  props.floating && useFloating(ref);
 
   return (
     <group ref={ref} {...props} dispose={null}>

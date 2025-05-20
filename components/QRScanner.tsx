@@ -16,9 +16,9 @@ const QRScanner: React.FC<{
             onClick={() => {
               setQRScannerVisibility(false);
             }}
-            className="text-white bg-gray-800 p-3 rounded-full text-xl font-bold"
+            className="text-white bg-gray-700 p-3 rounded-full text-xl font-bold"
           >
-            <BiArrowBack className="text-4xl" />
+            <BiArrowBack className="text-3xl" />
           </button>
         </div>
         <Scanner
