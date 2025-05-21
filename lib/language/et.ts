@@ -24,4 +24,16 @@ export const estonian = {
     '3. Lahenda väljakutse, et avada järgmine asukoht.',
     '4. Täida missioon, et võita auhind ja saada sertifitseeritud ajauurijaks!',
   ],
+  QUIZZ_INCORRECT_ANSWER: 'Vale vastus, proovi uuesti!',
+  QUIZZ_CORRECT_ANSWER: 'Õige vastus! Tubli töö!',
+  QUIZZ_TYPE_YOUR_ANSWER: 'Sisesta oma vastus siia',
+  QUIZZ_NEXT_QUESTION: 'Järgmine küsimus',
+  QUIZZ_CHECK_ANSWER: 'Kontrolli vastust',
+  PREHISTORIC_PAGE_TITLE: 'Eelajalooline ajastu',
+  PREHISTORIC_QUIZZ_QUESTION_1:
+    'Mineviku hiiglaslikke sisalikke nimetatakse ___',
+  PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurused',
+  PREHISTORIC_QUIZZ_QUESTION_2:
+    'Midagi on selle varajase stseeni juures puudu - mida kasutasid inimesed sooja hoidmiseks ja toidu valmistamiseks?',
+  PREHISTORIC_QUIZZ_ANSWER_2: 'tuli',
 };

@@ -1,3 +1,4 @@
+import Stopwatch from '@/components/quizz/Stopwatch';
 import {
   Dialog,
   DialogContent,
@@ -12,7 +13,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="">
+    <>
       <div className="mb-5 flex w-full justify-between">
         <Dialog>
           <DialogTrigger>
@@ -35,9 +36,13 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </DialogHeader>
           </DialogContent>
         </Dialog>
+        <div className="">
+          <Stopwatch />
+        </div>
+        <div className=""></div>
       </div>
       <div className="w-full">{children}</div>
-    </div>
+    </>
   );
 };
 export default QuizzLayout;

@@ -24,4 +24,15 @@ export const russian = {
     '3. Реши задачу, чтобы открыть следующее местоположение.',
     '4. Выполни миссию, чтобы выиграть приз и стать сертифицированным исследователем времени!',
   ],
+  QUIZZ_INCORRECT_ANSWER: 'Неправильный ответ, попробуй еще раз!',
+  QUIZZ_CORRECT_ANSWER: 'Правильный ответ! Отличная работа!',
+  QUIZZ_TYPE_YOUR_ANSWER: 'Введите свой ответ тут',
+  QUIZZ_NEXT_QUESTION: 'Следующий вопрос',
+  QUIZZ_CHECK_ANSWER: 'Проверить ответ',
+  PREHISTORIC_PAGE_TITLE: 'Доисторическая эпоха',
+  PREHISTORIC_QUIZZ_QUESTION_1: 'Гигантских ящеров прошлого называли ___',
+  PREHISTORIC_QUIZZ_ANSWER_1: 'динозавры',
+  PREHISTORIC_QUIZZ_QUESTION_2:
+    'Чего-то не хватает в этой ранней сцене - что использовали люди, чтобы согреться и готовить?',
+  PREHISTORIC_QUIZZ_ANSWER_2: 'огонь',
 };

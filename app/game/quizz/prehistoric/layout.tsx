@@ -6,6 +6,7 @@ import PrehistoricCanvas from '@/components/canvas/PrehistoricCanvas';
 import { useProgress } from '@react-three/drei';
 import { GiDinosaurRex } from 'react-icons/gi';
 import { AnimatePresence, motion } from 'motion/react';
+import useLanguage from '@/lib/hooks/useLanguage';
 
 const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -13,6 +14,7 @@ const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
   const [loading, setLoading] = useState(true);
   const { progress } = useProgress();
   const [isVisible, setIsVisible] = useState(false);
+  const activeLanguage = useLanguage();
 
   useEffect(() => {
     setTimeout(() => {
@@ -34,7 +36,7 @@ const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
       {!loading && (
         <>
           <h1 className="text-center text-[#3B2F2F] text-3xl flex items-center justify-center gap-2 text-gradient-2 font-bold">
-            Prehistoric Era
+            {activeLanguage.PREHISTORIC_PAGE_TITLE}
             <GiDinosaurRex className="text-[#3B2F2F]" />
           </h1>
           <AnimatePresence initial={false}>

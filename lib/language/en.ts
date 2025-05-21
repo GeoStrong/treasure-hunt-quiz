@@ -24,4 +24,15 @@ export const english = {
     '3. Solve the challenge to unlock the next location.',
     '4. Complete the quest to win a prize and become a certified Time Explorer!',
   ],
+  QUIZZ_INCORRECT_ANSWER: 'Incorrect answer, try again!',
+  QUIZZ_CORRECT_ANSWER: 'Correct answer! Well done!',
+  QUIZZ_TYPE_YOUR_ANSWER: 'Type your answer here',
+  QUIZZ_NEXT_QUESTION: 'Next Question',
+  QUIZZ_CHECK_ANSWER: 'Check Answer',
+  PREHISTORIC_PAGE_TITLE: 'Prehistoric Era',
+  PREHISTORIC_QUIZZ_QUESTION_1: 'The giant lizards of the past were called ___',
+  PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurs',
+  PREHISTORIC_QUIZZ_QUESTION_2:
+    'Something’s missing from this early scene—what did people use to stay warm and cook?',
+  PREHISTORIC_QUIZZ_ANSWER_2: 'fire',
 };

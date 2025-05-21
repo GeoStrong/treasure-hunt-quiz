@@ -23,7 +23,7 @@ const IntroductionCanvas: React.FC = () => {
           <Center>
             <ambientLight intensity={5} />
             <OrbitControls />
-            <Dinosaur scale={0.015} />
+            <Dinosaur floating={true} scale={0.015} />
             <Hourglass scale={0.02} />
             <StoneHead scale={0.005} />
             <Sword scale={1} />

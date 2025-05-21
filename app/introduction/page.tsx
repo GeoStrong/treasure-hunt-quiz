@@ -44,7 +44,7 @@ const Introduction: React.FC = () => {
         key={activeLanguage.INTRODUCTION_PAGE_DESCRIPTION}
         ref={typeRef}
         sequence={[3000, activeLanguage.INTRODUCTION_PAGE_DESCRIPTION]}
-        speed={60}
+        speed={70}
         cursor={true}
         wrapper="p"
         className="text-2xl text-gradient-4 font-bold text-center mt-4"
