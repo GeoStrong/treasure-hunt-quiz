@@ -14,13 +14,15 @@ const Fire = (props) => {
   const { nodes, materials } = useGLTF('/fire.gltf');
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
-        <mesh
-          geometry={nodes.defaultMaterial.geometry}
-          material={materials.campFire_SHDR}
-          rotation={[Math.PI / 2, 0, 0]}
-        />
-      </group>
+      <lOD>
+        <group rotation={[-Math.PI / 2, 0, 0]}>
+          <mesh
+            geometry={nodes.defaultMaterial.geometry}
+            material={materials.campFire_SHDR}
+            rotation={[Math.PI / 2, 0, 0]}
+          />
+        </group>
+      </lOD>
     </group>
   );
 };

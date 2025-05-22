@@ -14,79 +14,81 @@ const Asteroid = (props) => {
   const { nodes, materials } = useGLTF('/asteroid.gltf');
   return (
     <group {...props} dispose={null}>
-      <group
-        position={[0.181, -0.149, -0.271]}
-        rotation={[0.071, -0.696, 1.89]}
-        scale={1.473}
-      >
+      <lOD>
+        <group
+          position={[0.181, -0.149, -0.271]}
+          rotation={[0.071, -0.696, 1.89]}
+          scale={1.473}
+        >
+          <mesh
+            geometry={nodes.Object_6.geometry}
+            material={materials.material_1}
+          />
+          <mesh
+            geometry={nodes.Object_8.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_9.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_10.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_11.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_12.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_13.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_14.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_15.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_16.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_17.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_18.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_19.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_20.geometry}
+            material={materials.material_2}
+          />
+          <mesh
+            geometry={nodes.Object_21.geometry}
+            material={materials.material_2}
+          />
+        </group>
         <mesh
-          geometry={nodes.Object_6.geometry}
-          material={materials.material_1}
+          geometry={nodes.Object_4.geometry}
+          material={materials.material_0}
+          position={[1.239, 0.93, -0.096]}
+          rotation={[0.05, 0.044, -0.852]}
+          scale={1.049}
         />
-        <mesh
-          geometry={nodes.Object_8.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_9.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_10.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_11.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_12.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_13.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_14.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_15.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_16.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_17.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_18.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_19.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_20.geometry}
-          material={materials.material_2}
-        />
-        <mesh
-          geometry={nodes.Object_21.geometry}
-          material={materials.material_2}
-        />
-      </group>
-      <mesh
-        geometry={nodes.Object_4.geometry}
-        material={materials.material_0}
-        position={[1.239, 0.93, -0.096]}
-        rotation={[0.05, 0.044, -0.852]}
-        scale={1.049}
-      />
+      </lOD>
     </group>
   );
 };

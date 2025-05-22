@@ -20,42 +20,44 @@ const Pteranodon = (props) => {
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group
-          name="Sketchfab_model"
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={246.552}
-        >
+      <lOD>
+        <group name="Sketchfab_Scene">
           <group
-            name="0e3f0d87f2c1425ca0ce55f91a21f2d3fbx"
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={0.01}
+            name="Sketchfab_model"
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={246.552}
           >
-            <group name="Object_2">
-              <group name="RootNode">
-                <group name="Shell_001">
-                  <group name="Pet" position={[-0.905, 1.279, -0.485]}>
-                    <group name="Pteranodon(LP)" scale={0.05}>
-                      <group name="Object_7">
-                        <primitive object={nodes._rootJoint} />
-                        <group
-                          name="Object_9"
-                          position={[-0.905, 1.279, -0.485]}
-                          scale={0.05}
-                        />
-                        <group name="ptera_LOD_2" />
-                        <skinnedMesh
-                          name="Object_10"
-                          geometry={nodes.Object_10.geometry}
-                          material={materials.pteraLowPoly}
-                          skeleton={nodes.Object_10.skeleton}
-                        />
-                        <skinnedMesh
-                          name="Object_11"
-                          geometry={nodes.Object_11.geometry}
-                          material={materials.eyes}
-                          skeleton={nodes.Object_11.skeleton}
-                        />
+            <group
+              name="0e3f0d87f2c1425ca0ce55f91a21f2d3fbx"
+              rotation={[Math.PI / 2, 0, 0]}
+              scale={0.01}
+            >
+              <group name="Object_2">
+                <group name="RootNode">
+                  <group name="Shell_001">
+                    <group name="Pet" position={[-0.905, 1.279, -0.485]}>
+                      <group name="Pteranodon(LP)" scale={0.05}>
+                        <group name="Object_7">
+                          <primitive object={nodes._rootJoint} />
+                          <group
+                            name="Object_9"
+                            position={[-0.905, 1.279, -0.485]}
+                            scale={0.05}
+                          />
+                          <group name="ptera_LOD_2" />
+                          <skinnedMesh
+                            name="Object_10"
+                            geometry={nodes.Object_10.geometry}
+                            material={materials.pteraLowPoly}
+                            skeleton={nodes.Object_10.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_11"
+                            geometry={nodes.Object_11.geometry}
+                            material={materials.eyes}
+                            skeleton={nodes.Object_11.skeleton}
+                          />
+                        </group>
                       </group>
                     </group>
                   </group>
@@ -64,7 +66,7 @@ const Pteranodon = (props) => {
             </group>
           </group>
         </group>
-      </group>
+      </lOD>
     </group>
   );
 };
