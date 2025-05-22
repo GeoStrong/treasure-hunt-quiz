@@ -9,23 +9,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { TeamInterface } from '@/lib/types';
+import { useAppSelector } from '@/lib/store/hooks';
 import { useProgress } from '@react-three/drei';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [team, setTeam] = useState<TeamInterface | null>(null);
   const [startStopwatch, setStartStopwatch] = useState(false);
   const { progress } = useProgress();
-
-  useEffect(() => {
-    const storedTeam = localStorage.getItem('team');
-    if (storedTeam) {
-      setTeam(JSON.parse(storedTeam) as TeamInterface);
-    }
-  }, []);
+  const { profile } = useAppSelector((state) => state.profile);
 
   useEffect(() => {
     if (progress === 100) {
@@ -56,12 +49,12 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </DialogContent>
         </Dialog>
         <Stopwatch isStarted={startStopwatch} />
-        <div className="flex flex-col gap-1">
+        <div className="flex text-center flex-col gap-1">
           <h2 className="text-lg text-gradient-3 font-bold text-center">
-            {team?.name}
+            {profile.name}
           </h2>
           <h3 className="text-lg text-white font-bold text-center">
-            {team?.points} points
+            {profile.points}
           </h3>
         </div>
       </div>

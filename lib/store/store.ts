@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import languageSliceReducer from './languageSlice';
+import profileSliceReducer from './profileSlice';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       language: languageSliceReducer,
+      profile: profileSliceReducer,
     },
   });
 };

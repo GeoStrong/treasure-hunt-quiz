@@ -1,21 +1,43 @@
 'use client';
 
-import useQuizzStopwatch from '@/lib/hooks/useQuizzStopwatch';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useAppSelector } from '@/lib/store/hooks';
+import { useStopwatch } from 'react-timer-hook';
 
 const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
   isStarted,
-  isPaused,
 }) => {
-  const { minutes, seconds, start, pause } = useQuizzStopwatch();
+  const { profile } = useAppSelector((state) => state.profile);
+  const startButtonRef = useRef<HTMLButtonElement>(null);
+  const stopwatchOffset = new Date();
+
+  let secondsElapsed = 0;
+
+  const startTime = profile.timeStart && new Date(profile.timeStart).getTime();
+  const now = Date.now();
+  if (startTime !== undefined && startTime !== null) {
+    secondsElapsed = Math.floor((now - startTime) / 1000);
+  }
+  const offsetDate = new Date(stopwatchOffset);
+  offsetDate.setSeconds(offsetDate.getSeconds() + secondsElapsed);
+
+  const { minutes, seconds, start } = useStopwatch({
+    autoStart: false,
+    offsetTimestamp: offsetDate,
+  });
 
   useEffect(() => {
     if (isStarted) {
-      start();
-    } else if (isPaused) {
-      pause();
+      startButtonRef.current?.click();
+      if (profile.timeStart !== null) return;
+      const time = new Date();
+      const updatedTeam = {
+        ...profile,
+        timeStart: time,
+      };
+      localStorage.setItem('team', JSON.stringify(updatedTeam));
     }
-  }, [isPaused, isStarted, pause, start]);
+  }, [isStarted, profile]);
 
   return (
     <div className="flex flex-col">
@@ -25,8 +47,12 @@ const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
           {minutes}:{seconds < 10 && 0}
           {seconds}
         </h2>
-        {/* <button>Start</button>
-        <button>Stop</button> */}
+        <div className="opacity-0 absolute">
+          <button ref={startButtonRef} onClick={start}>
+            Start
+          </button>
+        </div>
+        {/* <button>Stop</button> */}
       </div>
     </div>
   );

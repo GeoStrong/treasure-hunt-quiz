@@ -6,6 +6,8 @@ import { Input } from '@/components/ui/input';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
+import { useAppDispatch } from '@/lib/store/hooks';
+import { addPoints, deductPoints } from '@/lib/store/profileSlice';
 
 const PrehistoricQuizzQuestion2: React.FC = () => {
   const [answer, setAnswer] = useState('');
@@ -13,6 +15,7 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
   const [isHintUsed, setIsHintUsed] = useState(false);
   const activeLanguage = useLanguage();
+  const dispatch = useAppDispatch();
 
   const team = JSON.parse(localStorage.getItem('team') || '') as TeamInterface;
 
@@ -24,18 +27,21 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     setIsHintUsed(true);
     team.prehistoricQuizz.question3.hintUsed = true;
     team.points -= 50;
+    dispatch(deductPoints(50));
     localStorage.setItem('team', JSON.stringify(team));
   };
 
   const handlePassing = () => {
     team.prehistoricQuizz.question1.isCorrect = true;
     team.points += 250;
+    dispatch(addPoints(250));
     localStorage.setItem('team', JSON.stringify(team));
   };
 
   const handleSurrender = () => {
     team.prehistoricQuizz.question1.isCorrect = false;
     team.points -= 100;
+    dispatch(deductPoints(100));
     localStorage.setItem('team', JSON.stringify(team));
     quizzRedirection('/prehistoric/3');
   };

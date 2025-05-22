@@ -6,12 +6,15 @@ import { Input } from '@/components/ui/input';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { TeamInterface } from '@/lib/types';
 import { signupRedirection } from '@/lib/actions';
+import { useAppDispatch } from '@/lib/store/hooks';
+import { setProfile } from '@/lib/store/profileSlice';
 
 const Signup: React.FC = () => {
   const activeLanguage = useLanguage();
   const [name, setName] = useState<string>('');
   const [size, setSize] = useState<number>();
   const [error, setError] = useState<string>('');
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -53,6 +56,7 @@ const Signup: React.FC = () => {
               const team: TeamInterface = {
                 name,
                 size: size as number,
+                timeStart: null,
                 prehistoricQuizz: {
                   time: 0,
                   question1: {
@@ -73,6 +77,7 @@ const Signup: React.FC = () => {
               };
 
               localStorage.setItem('team', JSON.stringify(team));
+              dispatch(setProfile(team));
               signupRedirection();
             }}
           >
