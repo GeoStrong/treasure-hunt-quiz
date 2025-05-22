@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/pteranodon-0f4134c1b09746069f7bbac26b4c8
 Title: Pteranodon
 */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';

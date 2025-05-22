@@ -61,6 +61,7 @@ const PrehistoricQuizzQuestion3: React.FC = () => {
       setIsCorrect(true);
       team.prehistoricQuizz.passed = true;
       localStorage.setItem('team', JSON.stringify(team));
+      dispatch(setProfile(team));
     } else {
       setIsCorrect(false);
     }

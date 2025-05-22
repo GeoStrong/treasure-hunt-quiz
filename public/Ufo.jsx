@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/ufo-2d55eec1da344c9a9943abafbd07f0f9
 Title: Ufo
 */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useRef } from 'react';
 import useFloating from '@/lib/hooks/useFloating';
