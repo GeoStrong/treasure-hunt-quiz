@@ -52,4 +52,8 @@ export const english = {
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'I’m a celestial object that can cause mass extinction.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
+  NEW_STEP_TITLE_1:
+    'Congratulations you have completed one of the steps of the game!',
+  NEW_STEP_TITLE_2: 'You have unlocked another location.',
+  NEW_STEP_TITLE_3: 'You can now go to the next step 👣',
 };

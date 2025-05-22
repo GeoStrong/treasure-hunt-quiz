@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import { quizzRedirection } from '@/lib/actions';
 import { useAppSelector } from '@/lib/store/hooks';
 import { useProgress } from '@react-three/drei';
 import Image from 'next/image';
@@ -17,14 +18,22 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [startStopwatch, setStartStopwatch] = useState(false);
-  const { progress } = useProgress();
+  const { progress, active } = useProgress();
   const { profile } = useAppSelector((state) => state.profile);
 
   useEffect(() => {
-    if (progress === 100) {
+    if (progress === 100 && active) {
+      setStartStopwatch(true);
+    } else if (!active) {
       setStartStopwatch(true);
     }
-  }, [progress]);
+  }, [active, progress]);
+
+  useEffect(() => {
+    if (profile.prehistoricQuizz.passed) {
+      quizzRedirection('/new-step');
+    }
+  }, [profile.prehistoricQuizz.passed]);
 
   return (
     <>

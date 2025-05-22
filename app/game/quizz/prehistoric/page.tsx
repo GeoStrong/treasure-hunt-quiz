@@ -31,22 +31,22 @@ const QuizzQuestion = () => {
     setIsHintUsed(true);
     team.prehistoricQuizz.question1.hintUsed = true;
     team.points -= 50;
-    dispatch(profileSlice.actions.deductPoints(50));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(profileSlice.actions.deductPoints(50));
   };
 
   const handlePassing = () => {
     team.prehistoricQuizz.question1.isCorrect = true;
     team.points += 250;
-    dispatch(addPoints(250));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(addPoints(250));
   };
 
   const handleSurrender = () => {
     team.prehistoricQuizz.question1.isCorrect = false;
     team.points -= 100;
-    dispatch(deductPoints(100));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(deductPoints(100));
     quizzRedirection('/prehistoric/2');
   };
 
@@ -85,7 +85,7 @@ const QuizzQuestion = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={2}
+          nextPage={'/prehistoric/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           quizzNumber={1}

@@ -39,7 +39,7 @@ const QuizzControls: React.FC<{
   onSurrender,
 }) => {
   const activeLanguage = useLanguage();
-  const pathname = '/game/quizz/prehistoric';
+  const pathname = '/game/quizz';
 
   const activeHint =
     quizzNumber === 1

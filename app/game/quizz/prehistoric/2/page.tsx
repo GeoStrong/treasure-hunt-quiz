@@ -35,22 +35,22 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     setIsHintUsed(true);
     team.prehistoricQuizz.question2.hintUsed = true;
     team.points -= 50;
-    dispatch(deductPoints(50));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(deductPoints(50));
   };
 
   const handlePassing = () => {
-    team.prehistoricQuizz.question1.isCorrect = true;
+    team.prehistoricQuizz.question2.isCorrect = true;
     team.points += 250;
-    dispatch(addPoints(250));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(addPoints(250));
   };
 
   const handleSurrender = () => {
-    team.prehistoricQuizz.question1.isCorrect = false;
+    team.prehistoricQuizz.question2.isCorrect = false;
     team.points -= 100;
-    dispatch(deductPoints(100));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(deductPoints(100));
     quizzRedirection('/prehistoric/3');
   };
 
@@ -144,7 +144,7 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={3}
+          nextPage={'/prehistoric/3'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           quizzNumber={2}

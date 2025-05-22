@@ -42,7 +42,7 @@ const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
   return (
     <div className="flex flex-col">
       <div className="flex justify-center items-center">
-        <h2 className="text-2xl text-center text-[#3B2F2F] font-bold">
+        <h2 className="text-2xl text-center bg-[#3B2F2F] p-2 rounded-md text-white font-bold">
           {minutes < 10 && 0}
           {minutes}:{seconds < 10 && 0}
           {seconds}

@@ -9,7 +9,7 @@ import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints } from '@/lib/store/profileSlice';
 
-const PrehistoricQuizzQuestion2: React.FC = () => {
+const PrehistoricQuizzQuestion3: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -27,22 +27,22 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     setIsHintUsed(true);
     team.prehistoricQuizz.question3.hintUsed = true;
     team.points -= 50;
-    dispatch(deductPoints(50));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(deductPoints(50));
   };
 
   const handlePassing = () => {
-    team.prehistoricQuizz.question1.isCorrect = true;
+    team.prehistoricQuizz.question3.isCorrect = true;
     team.points += 250;
-    dispatch(addPoints(250));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(addPoints(250));
   };
 
   const handleSurrender = () => {
-    team.prehistoricQuizz.question1.isCorrect = false;
+    team.prehistoricQuizz.question3.isCorrect = false;
     team.points -= 100;
-    dispatch(deductPoints(100));
     localStorage.setItem('team', JSON.stringify(team));
+    dispatch(deductPoints(100));
     quizzRedirection('/prehistoric/3');
   };
 
@@ -55,6 +55,8 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     setIsSubmitted(true);
     if (answer.toLowerCase() === activeLanguage.PREHISTORIC_QUIZZ_ANSWER_3) {
       setIsCorrect(true);
+      team.prehistoricQuizz.passed = true;
+      localStorage.setItem('team', JSON.stringify(team));
     } else {
       setIsCorrect(false);
     }
@@ -82,7 +84,7 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={3}
+          nextPage={'/new-step'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           quizzNumber={3}
@@ -93,4 +95,4 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     </div>
   );
 };
-export default PrehistoricQuizzQuestion2;
+export default PrehistoricQuizzQuestion3;

@@ -53,4 +53,7 @@ export const estonian = {
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'Olen taevakeha, mis võib põhjustada massilist väljasuremist.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
+  NEW_STEP_TITLE_1: 'Palju õnne, olete lõpetanud ühe mängu sammust!',
+  NEW_STEP_TITLE_2: 'Olete avanud uue asukoha.',
+  NEW_STEP_TITLE_3: 'Nüüd saate minna järgmisele sammu 👣',
 };
