@@ -20,7 +20,7 @@ const MedievalCanvas: React.FC = () => {
           <Environment preset="sunset" />
           <OrbitControls enableZoom={false} />
           <Castle scale={0.15} position={[0.5, -2, 0]} />
-          <Knight scale={0.004} position={[-1.4, -0.45, 2]} />
+          {/* <Knight scale={0.004} position={[-1.4, -0.45, 2]} /> */}
           <Dragon position={[1, 1, -2]} rotation={[0, 6, 0]} />
           <Archer scale={0.5} position={[-2, -0.4, -1]} rotation={[0, 2, 0]} />
           <Sky />
