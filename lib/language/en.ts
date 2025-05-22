@@ -30,9 +30,26 @@ export const english = {
   QUIZZ_NEXT_QUESTION: 'Next Question',
   QUIZZ_CHECK_ANSWER: 'Check Answer',
   PREHISTORIC_PAGE_TITLE: 'Prehistoric Era',
+  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE:
+    'Are you sure you want to get a hint?',
+  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION:
+    'It will cost you 50 points!',
+  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE:
+    'Are you sure you want to surrender?',
+  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
+    'This action cannot be undone. You will lose 100 points.',
   PREHISTORIC_QUIZZ_QUESTION_1: 'The giant lizards of the past were called ___',
+  PREHISTORIC_QUIZZ_QUESTION_1_HINT:
+    'They roamed the Earth millions of years ago and are often depicted in movies.',
   PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurs',
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Something’s missing from this early scene—what did people use to stay warm and cook?',
+  PREHISTORIC_QUIZZ_QUESTION_2_HINT:
+    'It’s something that can be found in nature and is essential for survival.',
   PREHISTORIC_QUIZZ_ANSWER_2: 'fire',
+  PREHISTORIC_QUIZZ_QUESTION_3:
+    'I flew through space and caused quite the clatter, ending the reign of those who had mattered. What am I?',
+  PREHISTORIC_QUIZZ_QUESTION_3_HINT:
+    'I’m a celestial object that can cause mass extinction.',
+  PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
 };

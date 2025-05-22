@@ -30,9 +30,27 @@ export const russian = {
   QUIZZ_NEXT_QUESTION: 'Следующий вопрос',
   QUIZZ_CHECK_ANSWER: 'Проверить ответ',
   PREHISTORIC_PAGE_TITLE: 'Доисторическая эпоха',
+  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE:
+    'Вы уверены, что хотите получить подсказку?',
+  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION:
+    'Это будет стоить вам 50 очков!',
+  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE:
+    'Вы уверены, что хотите сдаться?',
+  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
+    'Это действие нельзя отменить. Вы потеряете 100 очков.',
   PREHISTORIC_QUIZZ_QUESTION_1: 'Гигантских ящеров прошлого называли ___',
+  PREHISTORIC_QUIZZ_QUESTION_1_HINT:
+    'Они бродили по Земле миллионы лет назад и часто изображаются в фильмах.',
+
   PREHISTORIC_QUIZZ_ANSWER_1: 'динозавры',
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Чего-то не хватает в этой ранней сцене - что использовали люди, чтобы согреться и готовить?',
+  PREHISTORIC_QUIZZ_QUESTION_2_HINT:
+    'Это то, что можно найти в природе и что необходимо для выживания.',
   PREHISTORIC_QUIZZ_ANSWER_2: 'огонь',
+  PREHISTORIC_QUIZZ_QUESTION_3:
+    'Я пролетел через космос и вызвал шум, положив конец правлению тех, кто имел значение. Что я?',
+  PREHISTORIC_QUIZZ_QUESTION_3_HINT:
+    'Я небесный объект, который может вызвать массовое вымирание.',
+  PREHISTORIC_QUIZZ_ANSWER_3: 'астероид',
 };

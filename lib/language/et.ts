@@ -7,7 +7,7 @@ export const estonian = {
   INTRODUCTION_PAGE_TITLE: 'Tere tulemast, ajauurijad!',
   INTRODUCTION_PAGE_DESCRIPTION:
     'Salapärane tõrge on segi ajanud ajaloo - dinosaurustest tulevikku! Sinu ülesanne on reisida läbi aja, lahendada mõistatusi ja taastada minevik, enne kui on liiga hilja. Klõpsake mängimiseks, et alustada oma teekonda. Palju õnne... ajalugu sõltub sinust! 🚀',
-  INTRODUCTION_PAGE_PLAY_BUTTON: 'PLAY',
+  INTRODUCTION_PAGE_PLAY_BUTTON: 'MÄNGI',
   SIGNUP_PAGE_TITLE: 'Loo oma meeskond',
   SIGNUP_INPUT_NAME_PLACEHOLDER: 'Sisestage oma meeskonna nimi',
   SIGNUP_INPUT_SIZE_PLACEHOLDER: 'Sisestage oma meeskonna suurus',
@@ -30,10 +30,27 @@ export const estonian = {
   QUIZZ_NEXT_QUESTION: 'Järgmine küsimus',
   QUIZZ_CHECK_ANSWER: 'Kontrolli vastust',
   PREHISTORIC_PAGE_TITLE: 'Eelajalooline ajastu',
+  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE:
+    'Kas olete kindel, et soovite vihjet saada?',
+  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION:
+    'See maksab teile 50 punkti!',
+  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE:
+    'Kas olete kindel, et soovite alla anda?',
+  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
+    'Seda toimingut ei saa tagasi võtta. Kaotate 100 punkti.',
   PREHISTORIC_QUIZZ_QUESTION_1:
     'Mineviku hiiglaslikke sisalikke nimetatakse ___',
+  PREHISTORIC_QUIZZ_QUESTION_1_HINT:
+    'Nad rändasid Maal miljoneid aastaid tagasi ja neid kujutatakse sageli filmides.',
   PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurused',
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Midagi on selle varajase stseeni juures puudu - mida kasutasid inimesed sooja hoidmiseks ja toidu valmistamiseks?',
+  PREHISTORIC_QUIZZ_QUESTION_2_HINT:
+    'See on midagi, mida leidub looduses ja mis on ellujäämiseks hädavajalik.',
   PREHISTORIC_QUIZZ_ANSWER_2: 'tuli',
+  PREHISTORIC_QUIZZ_QUESTION_3:
+    'Lendasin läbi kosmose ja põhjustasin kõva müra, lõpetades nende valitsemise, kes olid olulised. Mis ma olen?',
+  PREHISTORIC_QUIZZ_QUESTION_3_HINT:
+    'Olen taevakeha, mis võib põhjustada massilist väljasuremist.',
+  PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
 };

@@ -3,12 +3,12 @@
 import QRScanner from '@/components/QRScanner';
 import { Button } from '@/components/ui/button';
 import useLanguage from '@/lib/hooks/useLanguage';
-import { SignupForm } from '@/lib/types';
+import { TeamInterface } from '@/lib/types';
 import React, { useEffect, useState } from 'react';
 import { Gi3dHammer, GiPocketWatch } from 'react-icons/gi';
 
 const Game: React.FC = () => {
-  const [team, setTeam] = useState<SignupForm | null>();
+  const [team, setTeam] = useState<TeamInterface | null>();
   const activeLanguage = useLanguage();
   const [qrScannerIsActive, setQrScannerIsActive] = useState(false);
 

@@ -1,15 +1,44 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import useLanguage from '@/lib/hooks/useLanguage';
 import QuizzControls from '@/components/quizz/QuizzControls';
+import { TeamInterface } from '@/lib/types';
+import { quizzRedirection } from '@/lib/actions';
 
 const QuizzQuestion = () => {
   const [answer, setAnswer] = useState('');
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
+  const [isHintUsed, setIsHintUsed] = useState(false);
   const activeLanguage = useLanguage();
+
+  const team = JSON.parse(localStorage.getItem('team') || '') as TeamInterface;
+
+  useEffect(() => {
+    setIsHintUsed(team.prehistoricQuizz.question1.hintUsed);
+  }, [team.prehistoricQuizz.question1.hintUsed]);
+
+  const handleHintUsage = () => {
+    setIsHintUsed(true);
+    team.prehistoricQuizz.question1.hintUsed = true;
+    team.points -= 50;
+    localStorage.setItem('team', JSON.stringify(team));
+  };
+
+  const handlePassing = () => {
+    team.prehistoricQuizz.question1.isCorrect = true;
+    team.points += 250;
+    localStorage.setItem('team', JSON.stringify(team));
+  };
+
+  const handleSurrender = () => {
+    team.prehistoricQuizz.question1.isCorrect = false;
+    team.points -= 100;
+    localStorage.setItem('team', JSON.stringify(team));
+    quizzRedirection('/prehistoric/2');
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);
@@ -31,7 +60,7 @@ const QuizzQuestion = () => {
         onSubmit={handleSubmit}
         className="w-full flex flex-col items-center"
       >
-        <h2 className="text-2xl text-center text-[#3B2F2F] font-bold">
+        <h2 className="text-xl text-center text-[#3B2F2F] font-bold">
           {activeLanguage.PREHISTORIC_QUIZZ_QUESTION_1}
         </h2>
         <Input
@@ -47,6 +76,11 @@ const QuizzQuestion = () => {
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
           nextPage={2}
+          isHintUsed={isHintUsed}
+          setIsHintUsed={handleHintUsage}
+          quizzNumber={1}
+          onPassing={handlePassing}
+          onSurrender={handleSurrender}
         />
       </form>
     </div>

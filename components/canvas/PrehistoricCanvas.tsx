@@ -5,6 +5,8 @@ import { Canvas } from '@react-three/fiber';
 import Dinosaur from '@/public/Dinosaur';
 import Poly from '@/public/Poly';
 import Pteranodon from '@/public/Pteranodon';
+import Asteroid from '@/public/Asteroid';
+import Fire from '@/public/Fire';
 import { Environment, OrbitControls, Sky } from '@react-three/drei';
 
 const PrehistoricCanvas: React.FC = () => {
@@ -23,6 +25,8 @@ const PrehistoricCanvas: React.FC = () => {
           />
           <Pteranodon scale={0.5} position={[0, -3, 0]} rotation={[6, 1, 0]} />
           <Poly scale={0.1} position={[0, -2.5, -1]} />
+          <Asteroid scale={0.5} position={[2, 0, -1]} />
+          <Fire scale={0.5} position={[0, -2.2, 0.4]} />
           <ambientLight intensity={1} />
           <Environment preset="sunset" />
           <OrbitControls enableZoom={false} />

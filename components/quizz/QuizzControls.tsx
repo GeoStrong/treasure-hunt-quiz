@@ -1,21 +1,52 @@
+import { BsFillFlagFill } from 'react-icons/bs';
+import { MdTipsAndUpdates } from 'react-icons/md';
 import React from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import Link from 'next/link';
-// import { useLocation } from 'react-use';
 import { GrLinkNext } from 'react-icons/gr';
 import { Button } from '@/components/ui/button';
 import useLanguage from '@/lib/hooks/useLanguage';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '../ui/dialog';
 
 const QuizzControls: React.FC<{
   answer: string;
   isCorrect: boolean;
   isSubmitted: boolean;
   nextPage: string | number;
-}> = ({ answer, isCorrect, isSubmitted, nextPage }) => {
-  // const { pathname } = useLocation();
+  isHintUsed: boolean;
+  setIsHintUsed: () => void;
+  quizzNumber: number;
+  onPassing: () => void;
+  onSurrender: () => void;
+}> = ({
+  answer,
+  isCorrect,
+  isSubmitted,
+  nextPage,
+  isHintUsed,
+  setIsHintUsed,
+  quizzNumber,
+  onPassing,
+  onSurrender,
+}) => {
   const activeLanguage = useLanguage();
-
   const pathname = '/game/quizz/prehistoric';
+
+  const activeHint =
+    quizzNumber === 1
+      ? activeLanguage.PREHISTORIC_QUIZZ_QUESTION_1_HINT
+      : quizzNumber === 2
+      ? activeLanguage.PREHISTORIC_QUIZZ_QUESTION_2_HINT
+      : activeLanguage.PREHISTORIC_QUIZZ_QUESTION_3_HINT;
 
   return (
     <AnimatePresence>
@@ -39,12 +70,13 @@ const QuizzControls: React.FC<{
           transition={{ duration: 0.5 }}
           className="text-lg flex flex-col justify-center gap-2 mt-4"
         >
-          <span className="bg-green-500 text-white px-2 text-center rounded-md">
+          <span className="bg-green-700 text-white px-2 text-center rounded-md">
             {activeLanguage.QUIZZ_CORRECT_ANSWER}
           </span>
           <Link
             href={`${pathname}/${nextPage}`}
-            className="bg-amber-500 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
+            onClick={onPassing}
+            className="bg-amber-600 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
           >
             {activeLanguage.QUIZZ_NEXT_QUESTION}
             <GrLinkNext />
@@ -58,8 +90,76 @@ const QuizzControls: React.FC<{
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full flex mt-5 justify-end"
+          className="w-full flex mt-5 justify-between"
         >
+          <div className="flex items-center gap-2">
+            <Dialog>
+              <DialogTrigger>
+                <MdTipsAndUpdates className="text-3xl border-amber-500 text-yellow-500" />
+              </DialogTrigger>
+              <DialogContent className="bg-gray-300 text-black">
+                {isHintUsed ? (
+                  <DialogHeader>
+                    <DialogDescription className="flex text-xl text-black justify-center">
+                      {activeHint}
+                    </DialogDescription>
+                  </DialogHeader>
+                ) : (
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl">
+                      {
+                        activeLanguage.PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE
+                      }
+                    </DialogTitle>
+                    <DialogDescription className="flex text-xl text-black justify-center">
+                      {
+                        activeLanguage.PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION
+                      }
+                    </DialogDescription>
+                  </DialogHeader>
+                )}
+                {!isHintUsed && (
+                  <DialogFooter className="flex justify-center flex-row">
+                    <DialogClose>
+                      <Button>No</Button>
+                    </DialogClose>
+                    <Button
+                      onClick={() => {
+                        setIsHintUsed();
+                      }}
+                    >
+                      Yes
+                    </Button>
+                  </DialogFooter>
+                )}
+              </DialogContent>
+            </Dialog>
+            <Dialog>
+              <DialogTrigger>
+                <BsFillFlagFill className="text-2xl text-red-900" />
+              </DialogTrigger>
+              <DialogContent className="bg-gray-300 text-black">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl">
+                    {
+                      activeLanguage.PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE
+                    }
+                  </DialogTitle>
+                  <DialogDescription className="flex text-xl text-black justify-center">
+                    {
+                      activeLanguage.PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION
+                    }
+                  </DialogDescription>
+                </DialogHeader>
+                <DialogFooter className="flex justify-center flex-row">
+                  <DialogClose>
+                    <Button>No</Button>
+                  </DialogClose>
+                  <Button onClick={onSurrender}>Yes</Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+          </div>
           <Button type="submit" className="bg-[#3B2F2F] text-white font-bold">
             {activeLanguage.QUIZZ_CHECK_ANSWER}
           </Button>

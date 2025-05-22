@@ -1,3 +1,5 @@
+'use client';
+
 import Stopwatch from '@/components/quizz/Stopwatch';
 import {
   Dialog,
@@ -7,19 +9,36 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import { TeamInterface } from '@/lib/types';
+import { useProgress } from '@react-three/drei';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [team, setTeam] = useState<TeamInterface | null>(null);
+  const [startStopwatch, setStartStopwatch] = useState(false);
+  const { progress } = useProgress();
+
+  useEffect(() => {
+    const storedTeam = localStorage.getItem('team');
+    if (storedTeam) {
+      setTeam(JSON.parse(storedTeam) as TeamInterface);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (progress === 100) {
+      setStartStopwatch(true);
+    }
+  }, [progress]);
+
   return (
     <>
-      <div className="mb-5 flex w-full justify-between">
+      <div className="mb-5 flex items-center w-full justify-between">
         <Dialog>
-          <DialogTrigger>
-            <button className="bg-purple-800 rounded-2xl p-4 hover:bg-purple-700 text-white font-bold">
-              <FaMapMarkedAlt className="text-xl" />
-            </button>
+          <DialogTrigger className="bg-purple-800 rounded-2xl p-4 hover:bg-purple-700 text-white font-bold">
+            <FaMapMarkedAlt className="text-xl" />
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
@@ -36,10 +55,15 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </DialogHeader>
           </DialogContent>
         </Dialog>
-        <div className="">
-          <Stopwatch />
+        <Stopwatch isStarted={startStopwatch} />
+        <div className="flex flex-col gap-1">
+          <h2 className="text-lg text-gradient-3 font-bold text-center">
+            {team?.name}
+          </h2>
+          <h3 className="text-lg text-white font-bold text-center">
+            {team?.points} points
+          </h3>
         </div>
-        <div className=""></div>
       </div>
       <div className="w-full">{children}</div>
     </>
