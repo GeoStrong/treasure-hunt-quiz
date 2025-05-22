@@ -72,4 +72,6 @@ export const english = {
   EGYPT_PAGE_TITLE: 'Ancient Egypt',
 
   MEDIEVAL_PAGE_TITLE: 'Medieval Era',
+
+  VICTORIAN_PAGE_TITLE: 'Victorian Era',
 };

@@ -71,4 +71,6 @@ export const estonian = {
   EGYPT_PAGE_TITLE: 'Egiptuse ajastu',
 
   MEDIEVAL_PAGE_TITLE: 'Keskaeg',
+
+  VICTORIAN_PAGE_TITLE: 'Viktoriaanlik ajastu',
 };

@@ -70,4 +70,6 @@ export const russian = {
   EGYPT_PAGE_TITLE: 'Египетская эпоха',
 
   MEDIEVAL_PAGE_TITLE: 'Средневековая эпоха',
+
+  VICTORIAN_PAGE_TITLE: 'Викторианская эпоха',
 };
