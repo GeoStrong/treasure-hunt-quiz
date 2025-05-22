@@ -21,7 +21,7 @@ const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
   const offsetDate = new Date(stopwatchOffset);
   offsetDate.setSeconds(offsetDate.getSeconds() + secondsElapsed);
 
-  const { minutes, seconds, start } = useStopwatch({
+  const { hours, minutes, seconds, start } = useStopwatch({
     autoStart: false,
     offsetTimestamp: offsetDate,
   });
@@ -43,6 +43,8 @@ const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
     <div className="flex flex-col">
       <div className="flex justify-center items-center">
         <h2 className="text-2xl text-center bg-[#3B2F2F] p-2 rounded-md text-white font-bold">
+          {hours > 0 && hours < 10 && 0}
+          {hours > 0 && `${hours}:`}
           {minutes < 10 && 0}
           {minutes}:{seconds < 10 && 0}
           {seconds}

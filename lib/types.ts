@@ -20,6 +20,7 @@ export interface TeamInterface {
   timeStart?: Date | null;
   timeEnd?: Date | null;
   prehistoricQuizz: QuizzInterface;
+  egyptQuizz: QuizzInterface;
 }
 
 export const defaultLanguage =
@@ -36,6 +37,13 @@ export const defaultProfile =
         points: 0,
         timeStart: null,
         prehistoricQuizz: {
+          time: 0,
+          question1: { isCorrect: false, hintUsed: false },
+          question2: { isCorrect: false, hintUsed: false },
+          question3: { isCorrect: false, hintUsed: false },
+          passed: false,
+        },
+        egyptQuizz: {
           time: 0,
           question1: { isCorrect: false, hintUsed: false },
           question2: { isCorrect: false, hintUsed: false },

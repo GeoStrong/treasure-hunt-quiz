@@ -61,7 +61,9 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    if (answer.toLowerCase() === activeLanguage.PREHISTORIC_QUIZZ_ANSWER_2) {
+    if (
+      answer.toLowerCase().trim() === activeLanguage.PREHISTORIC_QUIZZ_ANSWER_2
+    ) {
       setIsCorrect(true);
     } else {
       setIsCorrect(false);

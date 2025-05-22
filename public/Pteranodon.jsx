@@ -18,6 +18,13 @@ const Pteranodon = (props) => {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
   const { actions } = useAnimations(animations, group);
+
+  useEffect(() => {
+    if (actions && animations.length > 0) {
+      actions[animations[0].name]?.play();
+    }
+  }, [actions, animations]);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <lOD>

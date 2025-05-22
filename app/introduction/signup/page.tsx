@@ -73,6 +73,22 @@ const Signup: React.FC = () => {
                   },
                   passed: false,
                 },
+                egyptQuizz: {
+                  time: 0,
+                  question1: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question2: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question3: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  passed: false,
+                },
                 points: 0,
               };
 

@@ -1,6 +1,7 @@
 'use client';
 
 import Stopwatch from '@/components/quizz/Stopwatch';
+import TreasureMap from '@/components/TreasureMap';
 import {
   Dialog,
   DialogContent,
@@ -9,10 +10,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { quizzRedirection } from '@/lib/actions';
 import { useAppSelector } from '@/lib/store/hooks';
 import { useProgress } from '@react-three/drei';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 
@@ -29,12 +28,6 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     }
   }, [active, progress]);
 
-  useEffect(() => {
-    if (profile.prehistoricQuizz.passed) {
-      quizzRedirection('/new-step');
-    }
-  }, [profile.prehistoricQuizz.passed]);
-
   return (
     <>
       <div className="mb-5 flex items-center w-full justify-between">
@@ -46,13 +39,7 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <DialogHeader>
               <DialogTitle>Qr Code Map</DialogTitle>
               <DialogDescription>
-                <Image
-                  src={'/images/park-map.png'}
-                  alt="QR Scanner"
-                  width={500}
-                  height={500}
-                  className="rounded-lg"
-                />
+                <TreasureMap />
               </DialogDescription>
             </DialogHeader>
           </DialogContent>

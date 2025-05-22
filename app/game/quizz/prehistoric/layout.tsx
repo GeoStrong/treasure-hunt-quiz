@@ -7,6 +7,8 @@ import { useProgress } from '@react-three/drei';
 import { GiDinosaurRex } from 'react-icons/gi';
 import { AnimatePresence, motion } from 'motion/react';
 import useLanguage from '@/lib/hooks/useLanguage';
+import { useAppSelector } from '@/lib/store/hooks';
+import { quizzRedirection } from '@/lib/actions';
 
 const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -15,6 +17,7 @@ const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
   const { progress } = useProgress();
   const [isVisible, setIsVisible] = useState(false);
   const activeLanguage = useLanguage();
+  const { profile } = useAppSelector((state) => state.profile);
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,6 +32,12 @@ const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
       setLoading(true);
     }
   }, [progress]);
+
+  useEffect(() => {
+    if (profile.prehistoricQuizz.passed) {
+      quizzRedirection('/new-step');
+    }
+  }, [profile.prehistoricQuizz.passed]);
 
   return (
     <div className="w-full h-full">

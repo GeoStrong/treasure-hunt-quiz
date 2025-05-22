@@ -1,18 +1,22 @@
 export const english = {
   WELCOME_PAGE_TITLE: 'Select a language to start the game',
   WELCOME_PAGE_PLAY_BUTTON: 'Start game',
+
   LOADING_PAGE_TITLE: 'Loading models...',
   LOADING_PAGE_DESCRIPTION:
     'Please wait while we load the models for the game. This may take a few moments.',
+
   INTRODUCTION_PAGE_TITLE: 'Welcome, Time Explorers!',
   INTRODUCTION_PAGE_DESCRIPTION:
     'A mysterious glitch has scrambled history — from dinosaurs to the future! Your mission is to travel through time, solve riddles, and restore the past before it’s too late. Click on play to begin your journey. Good luck… history depends on you! 🚀',
   INTRODUCTION_PAGE_PLAY_BUTTON: 'PLAY',
+
   SIGNUP_PAGE_TITLE: 'Create your team',
   SIGNUP_INPUT_NAME_PLACEHOLDER: 'Enter your team name',
   SIGNUP_INPUT_SIZE_PLACEHOLDER: 'Enter your team size',
   SIGNUP_PAGE_BUTTON: 'Create team',
   SIGNUP_PAGE_ERROR: 'Please fill in all fields',
+
   GAME_PAGE_TITLE: 'Welcome to Time Trek: The Lost Timeline',
   GAME_PAGE_DESCRIPTION:
     'Get ready for an exciting adventure through time! Someone has scrambled the past, and only YOU can fix it. By scanning QR codes hidden around the park, you’ll jump between different time periods—from dinosaurs to the future—and solve riddles and challenges to restore history!',
@@ -24,11 +28,13 @@ export const english = {
     '3. Solve the challenge to unlock the next location.',
     '4. Complete the quest to win a prize and become a certified Time Explorer!',
   ],
+
   QUIZZ_INCORRECT_ANSWER: 'Incorrect answer, try again!',
   QUIZZ_CORRECT_ANSWER: 'Correct answer! Well done!',
   QUIZZ_TYPE_YOUR_ANSWER: 'Type your answer here',
   QUIZZ_NEXT_QUESTION: 'Next Question',
   QUIZZ_CHECK_ANSWER: 'Check Answer',
+
   PREHISTORIC_PAGE_TITLE: 'Prehistoric Era',
   PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE:
     'Are you sure you want to get a hint?',
@@ -52,8 +58,18 @@ export const english = {
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'I’m a celestial object that can cause mass extinction.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
+
   NEW_STEP_TITLE_1:
     'Congratulations you have completed one of the steps of the game!',
   NEW_STEP_TITLE_2: 'You have unlocked another location.',
   NEW_STEP_TITLE_3: 'You can now go to the next step 👣',
+  NEW_STEP_SCAN_BUTTON: 'Scan QR Code',
+
+  OOPSIE_PAGE_TITLE:
+    'Oopsie! It seems like you are lost in the jungle. Please go back and complete the previous step before continuing your adventure',
+  OOPSIE_PAGE_BUTTON: 'Go back to the previous step',
+
+  EGYPT_PAGE_TITLE: 'Ancient Egypt',
+
+  MEDIEVAL_PAGE_TITLE: 'Medieval Era',
 };

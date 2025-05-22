@@ -22,6 +22,12 @@ const Robot = (props) => {
 
   useFloating(group);
 
+  useEffect(() => {
+    if (actions && animations.length > 0) {
+      actions[animations[0].name]?.play();
+    }
+  }, [actions, animations]);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <lOD>
