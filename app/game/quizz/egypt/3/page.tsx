@@ -8,6 +8,8 @@ import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
 
 const EgyptQuizzQuestion3: React.FC = () => {
   const [answer, setAnswer] = useState('');
@@ -83,6 +85,29 @@ const EgyptQuizzQuestion3: React.FC = () => {
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
           className={`mt-5 text-black placeholder:text-black border-amber-950 text-md w-2/3 p-4`}
         />
+        <RadioGroup className="grid grid-cols-2 gap-2 mt-5">
+          <Label
+            htmlFor="en"
+            className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
+          >
+            <RadioGroupItem value="en" id="en" />
+            <div className="text-xl flex items-center gap-2">English </div>
+          </Label>
+          <Label
+            htmlFor="et"
+            className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
+          >
+            <RadioGroupItem value="et" id="et" />
+            <div className="text-xl flex items-center gap-2">Estonian </div>
+          </Label>
+          <Label
+            htmlFor="ru"
+            className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
+          >
+            <RadioGroupItem value="ru" id="ru" />
+            <div className="text-xl flex items-center gap-2">Russian </div>
+          </Label>
+        </RadioGroup>
         <QuizzControls
           answer={answer}
           isCorrect={isCorrect}
