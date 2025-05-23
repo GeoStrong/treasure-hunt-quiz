@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/robot-from-the-series-love-death-and-rob
 Title: Robot from the series "Love death and robots"
 */
 
-import React, { use, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
@@ -21,12 +21,6 @@ const Robot = (props) => {
   const { actions } = useAnimations(animations, group);
 
   useFloating(group);
-
-  useEffect(() => {
-    if (actions && animations.length > 0) {
-      actions[animations[0].name]?.play();
-    }
-  }, [actions, animations]);
 
   return (
     <group ref={group} {...props} dispose={null}>

@@ -37,7 +37,10 @@ const AncientEgyptLayout: React.FC<{ children: React.ReactNode }> = ({
     if (!profile.prehistoricQuizz.passed) {
       quizzRedirection('/oopsie');
     }
-  }, [profile.prehistoricQuizz.passed]);
+    // if (profile.egyptQuizz.passed) {
+    //   quizzRedirection('/new-step');
+    // }
+  }, [profile.egyptQuizz.passed, profile.prehistoricQuizz.passed]);
 
   return (
     <div className="w-full h-full">

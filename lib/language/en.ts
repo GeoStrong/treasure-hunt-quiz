@@ -32,18 +32,17 @@ export const english = {
   QUIZZ_INCORRECT_ANSWER: 'Incorrect answer, try again!',
   QUIZZ_CORRECT_ANSWER: 'Correct answer! Well done!',
   QUIZZ_TYPE_YOUR_ANSWER: 'Type your answer here',
+
   QUIZZ_NEXT_QUESTION: 'Next Question',
   QUIZZ_CHECK_ANSWER: 'Check Answer',
 
-  PREHISTORIC_PAGE_TITLE: 'Prehistoric Era',
-  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE:
-    'Are you sure you want to get a hint?',
-  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION:
-    'It will cost you 50 points!',
-  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE:
-    'Are you sure you want to surrender?',
-  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
+  QUIZZ_QUESTION_HINT_WARNING_TITLE: 'Are you sure you want to get a hint?',
+  QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION: 'It will cost you 50 points!',
+  QUIZZ_QUESTION_SURRENDER_WARNING_TITLE: 'Are you sure you want to surrender?',
+  QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
     'This action cannot be undone. You will lose 100 points.',
+
+  PREHISTORIC_PAGE_TITLE: 'Prehistoric Era',
   PREHISTORIC_QUIZZ_QUESTION_1: 'The giant lizards of the past were called ___',
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'They roamed the Earth millions of years ago and are often depicted in movies.',
@@ -70,10 +69,26 @@ export const english = {
   OOPSIE_PAGE_BUTTON: 'Go back to the previous step',
 
   EGYPT_PAGE_TITLE: 'Ancient Egypt',
+  EGYPT_QUIZZ_QUESTION_1:
+    'I’m a grand triangle in the desert, where pharaohs rest and mysteries dwell. What am I?',
+  EGYPT_QUIZZ_QUESTION_1_HINT:
+    'I’m a massive tomb built for ancient kings, with a secret or two to tell.',
+  EGYPT_QUIZZ_ANSWER_1: 'pyramid',
+  EGYPT_QUIZZ_QUESTION_2: 'What was the name of Egyptian kings?',
+  EGYPT_QUIZZ_QUESTION_2_HINT:
+    'They were often buried in grand tombs, and their names are still known today.',
+  EGYPT_QUIZZ_ANSWER_2: 'pharaohs',
+  EGYPT_QUIZZ_QUESTION_3:
+    'I have the head of a falcon and watch over kings. Who am I?',
+  EGYPT_QUIZZ_QUESTION_3_HINT:
+    'I’m a god of the sky, often depicted with a sun disk and wings.',
+  EGYPT_QUIZZ_ANSWER_3: 'horus',
 
   MEDIEVAL_PAGE_TITLE: 'Medieval Era',
 
   VICTORIAN_PAGE_TITLE: 'Victorian Era',
 
   '1980_PAGE_TITLE': '1980s Era',
+
+  FUTURE_PAGE_TITLE: 'Future Era',
 };

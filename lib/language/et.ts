@@ -32,18 +32,19 @@ export const estonian = {
   QUIZZ_INCORRECT_ANSWER: 'Vale vastus, proovi uuesti!',
   QUIZZ_CORRECT_ANSWER: 'Õige vastus! Tubli töö!',
   QUIZZ_TYPE_YOUR_ANSWER: 'Sisesta oma vastus siia',
+
   QUIZZ_NEXT_QUESTION: 'Järgmine küsimus',
   QUIZZ_CHECK_ANSWER: 'Kontrolli vastust',
 
-  PREHISTORIC_PAGE_TITLE: 'Eelajalooline ajastu',
-  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE:
+  QUIZZ_QUESTION_HINT_WARNING_TITLE:
     'Kas olete kindel, et soovite vihjet saada?',
-  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION:
-    'See maksab teile 50 punkti!',
-  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE:
+  QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION: 'See maksab teile 50 punkti!',
+  QUIZZ_QUESTION_SURRENDER_WARNING_TITLE:
     'Kas olete kindel, et soovite alla anda?',
-  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
+  QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
     'Seda toimingut ei saa tagasi võtta. Kaotate 100 punkti.',
+
+  PREHISTORIC_PAGE_TITLE: 'Eelajalooline ajastu',
   PREHISTORIC_QUIZZ_QUESTION_1:
     'Mineviku hiiglaslikke sisalikke nimetatakse ___',
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
@@ -69,10 +70,26 @@ export const estonian = {
   OOPSIE_PAGE_BUTTON: 'Mine tagasi eelnevale sammu',
 
   EGYPT_PAGE_TITLE: 'Egiptuse ajastu',
+  EGYPT_QUIZZ_QUESTION_1:
+    'Ma olen suur kolmnurk kõrbes, kus puhkavad vaaraod ja elavad saladused. Mis ma olen?',
+  EGYPT_QUIZZ_QUESTION_1_HINT:
+    'Ma olen iidsetele kuningatele ehitatud massiivne hauakamber, millel on üks või kaks saladust rääkida.',
+  EGYPT_QUIZZ_ANSWER_1: 'püramiid',
+  EGYPT_QUIZZ_QUESTION_2: 'Mis oli Egiptuse kuningate nimi?',
+  EGYPT_QUIZZ_QUESTION_2_HINT:
+    'Nad maeti sageli suurtesse hauakambritesse ja nende nimed on tänaseni tuntud.',
+  EGYPT_QUIZZ_ANSWER_2: 'vaaraod',
+  EGYPT_QUIZZ_QUESTION_3:
+    'Mul on haugi pea ja ma valvan kuningate üle. Kes ma olen?',
+  EGYPT_QUIZZ_QUESTION_3_HINT:
+    'Ma olen taevajumal, keda kujutatakse sageli päikeseketta ja tiibadega.',
+  EGYPT_QUIZZ_ANSWER_3: 'horos',
 
   MEDIEVAL_PAGE_TITLE: 'Keskaeg',
 
   VICTORIAN_PAGE_TITLE: 'Viktoriaanlik ajastu',
 
   '1980_PAGE_TITLE': '1980. aastad',
+
+  FUTURE_PAGE_TITLE: 'Tuleviku ajastu',
 };

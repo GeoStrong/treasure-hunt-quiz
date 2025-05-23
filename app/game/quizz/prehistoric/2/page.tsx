@@ -149,9 +149,9 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
           nextPage={'/prehistoric/3'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
-          quizzNumber={2}
           onPassing={handlePassing}
           onSurrender={handleSurrender}
+          activeHint={activeLanguage.PREHISTORIC_QUIZZ_QUESTION_2_HINT}
         />
       </form>
     </div>

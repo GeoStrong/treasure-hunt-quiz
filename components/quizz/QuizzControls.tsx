@@ -24,9 +24,9 @@ const QuizzControls: React.FC<{
   nextPage: string | number;
   isHintUsed: boolean;
   setIsHintUsed: () => void;
-  quizzNumber: number;
   onPassing: () => void;
   onSurrender: () => void;
+  activeHint: string;
 }> = ({
   answer,
   isCorrect,
@@ -34,19 +34,12 @@ const QuizzControls: React.FC<{
   nextPage,
   isHintUsed,
   setIsHintUsed,
-  quizzNumber,
   onPassing,
   onSurrender,
+  activeHint,
 }) => {
   const activeLanguage = useLanguage();
   const pathname = '/game/quizz';
-
-  const activeHint =
-    quizzNumber === 1
-      ? activeLanguage.PREHISTORIC_QUIZZ_QUESTION_1_HINT
-      : quizzNumber === 2
-      ? activeLanguage.PREHISTORIC_QUIZZ_QUESTION_2_HINT
-      : activeLanguage.PREHISTORIC_QUIZZ_QUESTION_3_HINT;
 
   return (
     <AnimatePresence>
@@ -107,14 +100,10 @@ const QuizzControls: React.FC<{
                 ) : (
                   <DialogHeader>
                     <DialogTitle className="text-2xl">
-                      {
-                        activeLanguage.PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE
-                      }
+                      {activeLanguage.QUIZZ_QUESTION_HINT_WARNING_TITLE}
                     </DialogTitle>
                     <DialogDescription className="flex text-xl text-black justify-center">
-                      {
-                        activeLanguage.PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION
-                      }
+                      {activeLanguage.QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION}
                     </DialogDescription>
                   </DialogHeader>
                 )}
@@ -141,13 +130,11 @@ const QuizzControls: React.FC<{
               <DialogContent className="bg-gray-300 text-black">
                 <DialogHeader>
                   <DialogTitle className="text-2xl">
-                    {
-                      activeLanguage.PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE
-                    }
+                    {activeLanguage.QUIZZ_QUESTION_SURRENDER_WARNING_TITLE}
                   </DialogTitle>
                   <DialogDescription className="flex text-xl text-black justify-center">
                     {
-                      activeLanguage.PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION
+                      activeLanguage.QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION
                     }
                   </DialogDescription>
                 </DialogHeader>

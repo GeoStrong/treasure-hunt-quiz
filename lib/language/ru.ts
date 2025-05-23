@@ -35,15 +35,14 @@ export const russian = {
   QUIZZ_NEXT_QUESTION: 'Следующий вопрос',
   QUIZZ_CHECK_ANSWER: 'Проверить ответ',
 
-  PREHISTORIC_PAGE_TITLE: 'Доисторическая эпоха',
-  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_TITLE:
+  QUIZZ_QUESTION_HINT_WARNING_TITLE:
     'Вы уверены, что хотите получить подсказку?',
-  PREHISTORIC_QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION:
-    'Это будет стоить вам 50 очков!',
-  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_TITLE:
-    'Вы уверены, что хотите сдаться?',
-  PREHISTORIC_QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
+  QUIZZ_QUESTION_HINT_WARNING_DESCRIPTION: 'Это будет стоить вам 50 очков!',
+  QUIZZ_QUESTION_SURRENDER_WARNING_TITLE: 'Вы уверены, что хотите сдаться?',
+  QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
     'Это действие нельзя отменить. Вы потеряете 100 очков.',
+
+  PREHISTORIC_PAGE_TITLE: 'Доисторическая эпоха',
   PREHISTORIC_QUIZZ_QUESTION_1: 'Гигантских ящеров прошлого называли ___',
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'Они бродили по Земле миллионы лет назад и часто изображаются в фильмах.',
@@ -68,10 +67,25 @@ export const russian = {
   OOPSIE_PAGE_BUTTON: 'Вернуться к предыдущему шагу',
 
   EGYPT_PAGE_TITLE: 'Египетская эпоха',
+  EGYPT_QUIZZ_QUESTION_1:
+    'Я - великий треугольник в пустыне, где отдыхают фараоны и обитают тайны. Что я?',
+  EGYPT_QUIZZ_QUESTION_1_HINT:
+    'Я - величественная гробница, построенная из огромных камней, и я охраняю секреты древнего мира.',
+  EGYPT_QUIZZ_ANSWER_1: 'пирамиды',
+  EGYPT_QUIZZ_QUESTION_2: 'Как звали египетских царей?',
+  EGYPT_QUIZZ_QUESTION_2_HINT:
+    'Их часто хоронили в величественных гробницах, и их имена известны до сих пор.',
+  EGYPT_QUIZZ_ANSWER_2: 'фараоны',
+  EGYPT_QUIZZ_QUESTION_3: 'У меня голова сокола, и я охраняю царей. Кто я?',
+  EGYPT_QUIZZ_QUESTION_3_HINT:
+    'Я - мифическое существо, которое сочетает в себе человеческие и животные черты.',
+  EGYPT_QUIZZ_ANSWER_3: 'гор',
 
   MEDIEVAL_PAGE_TITLE: 'Средневековая эпоха',
 
   VICTORIAN_PAGE_TITLE: 'Викторианская эпоха',
 
   '1980_PAGE_TITLE': 'Эпоха 1980-х',
+
+  FUTURE_PAGE_TITLE: 'Эпоха будущего',
 };

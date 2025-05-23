@@ -24,30 +24,30 @@ const QuizzQuestion = () => {
   const team = JSON.parse(localStorage.getItem('team') || '') as TeamInterface;
 
   useEffect(() => {
-    setIsHintUsed(team.prehistoricQuizz.question1.hintUsed);
-  }, [team.prehistoricQuizz.question1.hintUsed]);
+    setIsHintUsed(team.egyptQuizz.question1.hintUsed);
+  }, [team.egyptQuizz.question1.hintUsed]);
 
   const handleHintUsage = () => {
     setIsHintUsed(true);
-    team.prehistoricQuizz.question1.hintUsed = true;
+    team.egyptQuizz.question1.hintUsed = true;
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(profileSlice.actions.deductPoints(50));
   };
 
   const handlePassing = () => {
-    team.prehistoricQuizz.question1.isCorrect = true;
+    team.egyptQuizz.question1.isCorrect = true;
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
   };
 
   const handleSurrender = () => {
-    team.prehistoricQuizz.question1.isCorrect = false;
+    team.egyptQuizz.question1.isCorrect = false;
     team.points -= 100;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
-    quizzRedirection('/prehistoric/2');
+    quizzRedirection('/egypt/2');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,9 +57,7 @@ const QuizzQuestion = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    if (
-      answer.toLowerCase().trim() === activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1
-    ) {
+    if (answer.toLowerCase().trim() === activeLanguage.EGYPT_QUIZZ_ANSWER_1) {
       setIsCorrect(true);
     } else {
       setIsCorrect(false);
@@ -73,7 +71,7 @@ const QuizzQuestion = () => {
         className="w-full flex flex-col items-center"
       >
         <h2 className="text-xl text-center text-[#3B2F2F] font-bold">
-          {activeLanguage.PREHISTORIC_QUIZZ_QUESTION_1}
+          {activeLanguage.EGYPT_QUIZZ_QUESTION_1}
         </h2>
         <Input
           value={answer}
@@ -87,12 +85,12 @@ const QuizzQuestion = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/prehistoric/2'}
+          nextPage={'/egypt/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
-          quizzNumber={1}
           onPassing={handlePassing}
           onSurrender={handleSurrender}
+          activeHint={activeLanguage.EGYPT_QUIZZ_QUESTION_1_HINT}
         />
       </form>
     </div>

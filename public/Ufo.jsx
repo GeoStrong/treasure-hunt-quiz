@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/ufo-2d55eec1da344c9a9943abafbd07f0f9
 Title: Ufo
 */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useRef } from 'react';
 import useFloating from '@/lib/hooks/useFloating';
@@ -18,12 +18,6 @@ const Ufo = (props) => {
   const { actions } = useAnimations(animations, group);
 
   useFloating(group);
-
-  useEffect(() => {
-    if (actions && animations.length > 0) {
-      actions[animations[0].name]?.play();
-    }
-  }, [actions, animations]);
 
   return (
     <group ref={group} {...props} dispose={null}>
