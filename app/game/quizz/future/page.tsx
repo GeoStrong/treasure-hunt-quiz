@@ -90,9 +90,9 @@ const QuizzQuestion = () => {
           nextPage={'/prehistoric/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
-          quizzNumber={1}
           onPassing={handlePassing}
           onSurrender={handleSurrender}
+          activeHint={'1'}
         />
       </form>
     </div>
