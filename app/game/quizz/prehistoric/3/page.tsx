@@ -60,7 +60,10 @@ const PrehistoricQuizzQuestion3: React.FC = () => {
     ) {
       setIsCorrect(true);
       team.prehistoricQuizz.passed = true;
+      team.prehistoricQuizz.question3.isCorrect = true;
+      team.points += 250;
       localStorage.setItem('team', JSON.stringify(team));
+      dispatch(addPoints(250));
       dispatch(setProfile(team));
     } else {
       setIsCorrect(false);

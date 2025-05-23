@@ -41,6 +41,8 @@ export const russian = {
   QUIZZ_QUESTION_SURRENDER_WARNING_TITLE: 'Вы уверены, что хотите сдаться?',
   QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
     'Это действие нельзя отменить. Вы потеряете 100 очков.',
+  QUIZZ_QUESTION_SELECT_WARNING:
+    'У вас есть только один шанс ответить на этот вопрос',
 
   PREHISTORIC_PAGE_TITLE: 'Доисторическая эпоха',
   PREHISTORIC_QUIZZ_QUESTION_1: 'Гигантских ящеров прошлого называли ___',
@@ -80,8 +82,30 @@ export const russian = {
   EGYPT_QUIZZ_QUESTION_3_HINT:
     'Я - мифическое существо, которое сочетает в себе человеческие и животные черты.',
   EGYPT_QUIZZ_ANSWER_3: 'гор',
+  EGYPT_QUIZZ_SELECT_OPTION_1: 'Анубис',
+  EGYPT_QUIZZ_SELECT_OPTION_2: 'Гор',
+  EGYPT_QUIZZ_SELECT_OPTION_3: 'Осирис',
+  EGYPT_QUIZZ_SELECT_OPTION_4: 'Ра',
 
   MEDIEVAL_PAGE_TITLE: 'Средневековая эпоха',
+  MEDIEVAL_QUIZZ_QUESTION_1:
+    'Я - величественное сооружение, где рыцари сражаются и принцессы ждут. Что я?',
+  MEDIEVAL_QUIZZ_QUESTION_1_HINT:
+    'Я - крепость, защищенная стенами, где происходят великие сражения и романтические истории.',
+  MEDIEVAL_QUIZZ_ANSWER_1: 'замок',
+  MEDIEVAL_QUIZZ_QUESTION_2:
+    'Я ношу доспехи и скачу в бой. Я служу своему королю с отвагой. Кто я?',
+  MEDIEVAL_QUIZZ_QUESTION_2_HINT: 'Я - воин чести, с древними историями.',
+  MEDIEVAL_QUIZZ_ANSWER_2: 'рыцарь',
+  MEDIEVAL_QUIZZ_QUESTION_3:
+    'Что использовали лучники для нанесения дальних атак?',
+  MEDIEVAL_QUIZZ_QUESTION_3_HINT:
+    'Я - точное оружие, с тетивой и стрелой для игры.',
+  MEDIEVAL_QUIZZ_ANSWER_3: 'лук',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_1: 'Меч',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Ударная дубина',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_3: 'Арбалет',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Лук',
 
   VICTORIAN_PAGE_TITLE: 'Викторианская эпоха',
 

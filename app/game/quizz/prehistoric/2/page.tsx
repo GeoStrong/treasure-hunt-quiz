@@ -15,7 +15,7 @@ import {
 import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
-import { addPoints, deductPoints } from '@/lib/store/profileSlice';
+import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
 
 const PrehistoricQuizzQuestion2: React.FC = () => {
   const [answer, setAnswer] = useState('');
@@ -37,6 +37,7 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(50));
+    dispatch(setProfile(team));
   };
 
   const handlePassing = () => {
@@ -140,7 +141,7 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
           onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
-          className={`mt-5 text-black placeholder:text-black border-amber-950 text-md w-2/3 p-4`}
+          className="mt-5 text-black placeholder:text-white border-amber-950 text-md w-2/3 p-4"
         />
         <QuizzControls
           answer={answer}

@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { GrLinkNext } from 'react-icons/gr';
 
-const EgyptQuizzQuestion3: React.FC = () => {
+const MedievalQuizzQuestion3: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -22,28 +22,28 @@ const EgyptQuizzQuestion3: React.FC = () => {
   const team = JSON.parse(localStorage.getItem('team') || '') as TeamInterface;
 
   useEffect(() => {
-    setIsHintUsed(team.egyptQuizz.question3.hintUsed);
-  }, [team.egyptQuizz.question3.hintUsed]);
+    setIsHintUsed(team.medievalQuizz.question3.hintUsed);
+  }, [team.medievalQuizz.question3.hintUsed]);
 
   const handleHintUsage = () => {
     setIsHintUsed(true);
-    team.egyptQuizz.question3.hintUsed = true;
+    team.medievalQuizz.question3.hintUsed = true;
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(50));
   };
 
   const handlePassing = () => {
-    team.egyptQuizz.question3.isCorrect = true;
+    team.medievalQuizz.question3.isCorrect = true;
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
   };
 
   const handleSurrender = () => {
-    team.egyptQuizz.question3.isCorrect = false;
+    team.medievalQuizz.question3.isCorrect = false;
     team.points -= 100;
-    team.egyptQuizz.passed = true;
+    team.medievalQuizz.passed = true;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
     dispatch(setProfile(team));
@@ -53,10 +53,12 @@ const EgyptQuizzQuestion3: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    if (answer.toLowerCase().trim() === activeLanguage.EGYPT_QUIZZ_ANSWER_3) {
+    if (
+      answer.toLowerCase().trim() === activeLanguage.MEDIEVAL_QUIZZ_ANSWER_3
+    ) {
       setIsCorrect(true);
-      team.egyptQuizz.passed = true;
-      team.egyptQuizz.question3.isCorrect = true;
+      team.medievalQuizz.passed = true;
+      team.medievalQuizz.question3.isCorrect = true;
       team.points += 250;
       localStorage.setItem('team', JSON.stringify(team));
       dispatch(addPoints(250));
@@ -68,16 +70,15 @@ const EgyptQuizzQuestion3: React.FC = () => {
 
   useEffect(() => {
     if (!isCorrect && isSubmitted) {
-      team.egyptQuizz.question3.blocked = true;
-      team.egyptQuizz.question3.isCorrect = false;
-      team.egyptQuizz.passed = true;
+      team.medievalQuizz.question3.blocked = true;
+      team.medievalQuizz.question3.isCorrect = false;
+      team.medievalQuizz.passed = true;
       localStorage.setItem('team', JSON.stringify(team));
       dispatch(setProfile(team));
     }
   }, [dispatch, isCorrect, isSubmitted, team]);
 
-  const disabled =
-    (!isCorrect && isSubmitted) || team.egyptQuizz.question3.blocked;
+  const disabled = !isCorrect && isSubmitted;
 
   return (
     <div className="flex flex-col">
@@ -87,7 +88,7 @@ const EgyptQuizzQuestion3: React.FC = () => {
         className="w-full flex flex-col justify-center items-center mt-2"
       >
         <h2 className="text-xl text-center bg-[#3B2F2F] p-2 rounded-md text-white font-bold">
-          {[...activeLanguage.EGYPT_QUIZZ_QUESTION_3].reverse().join('')}
+          {[...activeLanguage.MEDIEVAL_QUIZZ_QUESTION_3].reverse().join('')}
         </h2>
         <p
           className="
@@ -101,27 +102,27 @@ const EgyptQuizzQuestion3: React.FC = () => {
               type="button"
               disabled={disabled}
               onClick={() => {
-                setAnswer(activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_1);
+                setAnswer(activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_1);
               }}
               className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_1 &&
+                answer === activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_1 &&
                 'bg-orange-500'
               }`}
             >
-              {activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_1}
+              {activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_1}
             </Button>
             <Button
               type="button"
               disabled={disabled}
               onClick={() => {
-                setAnswer(activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_2);
+                setAnswer(activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_2);
               }}
               className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_2 &&
+                answer === activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_2 &&
                 'bg-orange-500'
               }`}
             >
-              {activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_2}
+              {activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_2}
             </Button>
           </div>
           <div className="flex flex-col gap-2 w-full">
@@ -129,27 +130,27 @@ const EgyptQuizzQuestion3: React.FC = () => {
               type="button"
               disabled={disabled}
               onClick={() => {
-                setAnswer(activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_3);
+                setAnswer(activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_3);
               }}
               className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_3 &&
+                answer === activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_3 &&
                 'bg-orange-500'
               }`}
             >
-              {activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_3}{' '}
+              {activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_3}{' '}
             </Button>
             <Button
               type="button"
               disabled={disabled}
               onClick={() => {
-                setAnswer(activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_4);
+                setAnswer(activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_4);
               }}
               className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_4 &&
+                answer === activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_4 &&
                 'bg-orange-500'
               }`}
             >
-              {activeLanguage.EGYPT_QUIZZ_SELECT_OPTION_4}
+              {activeLanguage.MEDIEVAL_QUIZZ_SELECT_OPTION_4}
             </Button>
           </div>
         </div>
@@ -162,7 +163,7 @@ const EgyptQuizzQuestion3: React.FC = () => {
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}
           onSurrender={handleSurrender}
-          activeHint={activeLanguage.EGYPT_QUIZZ_QUESTION_3_HINT}
+          activeHint={activeLanguage.MEDIEVAL_QUIZZ_QUESTION_3_HINT}
         />
         {disabled && (
           <Link
@@ -177,4 +178,4 @@ const EgyptQuizzQuestion3: React.FC = () => {
     </div>
   );
 };
-export default EgyptQuizzQuestion3;
+export default MedievalQuizzQuestion3;

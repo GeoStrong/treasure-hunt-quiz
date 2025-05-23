@@ -41,6 +41,8 @@ export const english = {
   QUIZZ_QUESTION_SURRENDER_WARNING_TITLE: 'Are you sure you want to surrender?',
   QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
     'This action cannot be undone. You will lose 100 points.',
+  QUIZZ_QUESTION_SELECT_WARNING:
+    'You only have one chance to answer this question',
 
   PREHISTORIC_PAGE_TITLE: 'Prehistoric Era',
   PREHISTORIC_QUIZZ_QUESTION_1: 'The giant lizards of the past were called ___',
@@ -83,8 +85,31 @@ export const english = {
   EGYPT_QUIZZ_QUESTION_3_HINT:
     'I’m a god of the sky, often depicted with a sun disk and wings.',
   EGYPT_QUIZZ_ANSWER_3: 'horus',
+  EGYPT_QUIZZ_SELECT_OPTION_1: 'Anubis',
+  EGYPT_QUIZZ_SELECT_OPTION_2: 'Horus',
+  EGYPT_QUIZZ_SELECT_OPTION_3: 'Osiris',
+  EGYPT_QUIZZ_SELECT_OPTION_4: 'Ra',
 
   MEDIEVAL_PAGE_TITLE: 'Medieval Era',
+  MEDIEVAL_QUIZZ_QUESTION_1:
+    'I’m a grand building with towers so high, where knights and ladies would often sigh. What am I?',
+  MEDIEVAL_QUIZZ_QUESTION_1_HINT:
+    'I’m a stronghold of stone, where battles were fought, and legends were born.',
+  MEDIEVAL_QUIZZ_ANSWER_1: 'castle',
+  MEDIEVAL_QUIZZ_QUESTION_2:
+    'I wear armor and ride into battle. I serve my king with courage. Who am I?',
+  MEDIEVAL_QUIZZ_QUESTION_2_HINT:
+    'I’m a warrior of honor, with stories of old.',
+  MEDIEVAL_QUIZZ_ANSWER_2: 'knight',
+  MEDIEVAL_QUIZZ_QUESTION_3:
+    'From sword to bow, what did archers use to strike from far away?',
+  MEDIEVAL_QUIZZ_QUESTION_3_HINT:
+    'I’m a weapon of precision, with a string and an arrow to play.',
+  MEDIEVAL_QUIZZ_ANSWER_3: 'bow',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_1: 'Sword',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Mace',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_3: 'Crossbow',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Bow',
 
   VICTORIAN_PAGE_TITLE: 'Victorian Era',
 

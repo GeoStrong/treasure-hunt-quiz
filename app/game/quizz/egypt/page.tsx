@@ -7,11 +7,7 @@ import QuizzControls from '@/components/quizz/QuizzControls';
 import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
-import {
-  addPoints,
-  deductPoints,
-  profileSlice,
-} from '@/lib/store/profileSlice';
+import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
 
 const QuizzQuestion = () => {
   const [answer, setAnswer] = useState('');
@@ -32,7 +28,8 @@ const QuizzQuestion = () => {
     team.egyptQuizz.question1.hintUsed = true;
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
-    dispatch(profileSlice.actions.deductPoints(50));
+    dispatch(deductPoints(50));
+    dispatch(setProfile(team));
   };
 
   const handlePassing = () => {

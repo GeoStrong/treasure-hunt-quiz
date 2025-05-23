@@ -58,7 +58,6 @@ const Signup: React.FC = () => {
                 size: size as number,
                 timeStart: null,
                 prehistoricQuizz: {
-                  time: 0,
                   question1: {
                     isCorrect: false,
                     hintUsed: false,
@@ -74,7 +73,66 @@ const Signup: React.FC = () => {
                   passed: false,
                 },
                 egyptQuizz: {
-                  time: 0,
+                  question1: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question2: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question3: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  passed: false,
+                },
+                medievalQuizz: {
+                  question1: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question2: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question3: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  passed: false,
+                },
+                victorianQuizz: {
+                  question1: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question2: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question3: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  passed: false,
+                },
+                '1980Quizz': {
+                  question1: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question2: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  question3: {
+                    isCorrect: false,
+                    hintUsed: false,
+                  },
+                  passed: false,
+                },
+                futureQuizz: {
                   question1: {
                     isCorrect: false,
                     hintUsed: false,

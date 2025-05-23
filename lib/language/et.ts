@@ -43,6 +43,8 @@ export const estonian = {
     'Kas olete kindel, et soovite alla anda?',
   QUIZZ_QUESTION_SURRENDER_WARNING_DESCRIPTION:
     'Seda toimingut ei saa tagasi võtta. Kaotate 100 punkti.',
+  QUIZZ_QUESTION_SELECT_WARNING:
+    'Teil on ainult üks võimalus sellele küsimusele vastata',
 
   PREHISTORIC_PAGE_TITLE: 'Eelajalooline ajastu',
   PREHISTORIC_QUIZZ_QUESTION_1:
@@ -84,8 +86,31 @@ export const estonian = {
   EGYPT_QUIZZ_QUESTION_3_HINT:
     'Ma olen taevajumal, keda kujutatakse sageli päikeseketta ja tiibadega.',
   EGYPT_QUIZZ_ANSWER_3: 'horos',
+  EGYPT_QUIZZ_SELECT_OPTION_1: 'Anubis',
+  EGYPT_QUIZZ_SELECT_OPTION_2: 'Horos',
+  EGYPT_QUIZZ_SELECT_OPTION_3: 'Osiris',
+  EGYPT_QUIZZ_SELECT_OPTION_4: 'Ra',
 
   MEDIEVAL_PAGE_TITLE: 'Keskaeg',
+  MEDIEVAL_QUIZZ_QUESTION_1:
+    'Ma olen suursugune hoone, mille tornid on nii kõrged, et rüütlid ja daamid tihti ohkavad. Mis ma olen?',
+  MEDIEVAL_QUIZZ_QUESTION_1_HINT:
+    'Ma olen kindel struktuur, mis kaitseb kuningriiki ja selle elanikke.',
+  MEDIEVAL_QUIZZ_ANSWER_1: 'loss',
+  MEDIEVAL_QUIZZ_QUESTION_2:
+    'Ma kannan soomust ja ratsutan lahingusse. Ma teen oma kuningat vapralt. Kes ma olen?',
+  MEDIEVAL_QUIZZ_QUESTION_2_HINT:
+    'Ma olen auväärne sõdalane, kellel on vanad lood.',
+  MEDIEVAL_QUIZZ_ANSWER_2: 'rüütel',
+  MEDIEVAL_QUIZZ_QUESTION_3:
+    'Mida kasutasid vibulaskjad mõõgast vibuni, et kaugelt lüüa?',
+  MEDIEVAL_QUIZZ_QUESTION_3_HINT:
+    'Ma olen täppisrelv, millel on nööri ja noolega mängida.',
+  MEDIEVAL_QUIZZ_ANSWER_3: 'vibu',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_1: 'Mõõk',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Mace',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_3: 'Ristlaskur',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Vibu',
 
   VICTORIAN_PAGE_TITLE: 'Viktoriaanlik ajastu',
 

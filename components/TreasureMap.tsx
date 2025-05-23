@@ -26,8 +26,18 @@ const TreasureMap: React.FC = () => {
           <BiQr className="text-2xl" />
         </div>
       )}
-      {profile.prehistoricQuizz.passed && (
+      {profile.prehistoricQuizz.passed && !profile.egyptQuizz.passed ? (
         <div className="absolute bg-amber-800 p-2 rounded-full top-[85%] left-[58%]">
+          <BiQr className="text-2xl" />
+        </div>
+      ) : (
+        <div className="absolute top-[85%] left-[58%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        </div>
+      )}
+
+      {profile.egyptQuizz.passed && (
+        <div className="absolute bg-amber-800 p-2 rounded-full top-[50%] left-[50%]">
           <BiQr className="text-2xl" />
         </div>
       )}

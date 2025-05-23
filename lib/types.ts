@@ -3,10 +3,10 @@ export type LanguageType = 'en' | 'et' | 'ru';
 export interface QuizzQuestion {
   isCorrect: boolean;
   hintUsed: boolean;
+  blocked?: boolean;
 }
 
 export interface QuizzInterface {
-  time: number;
   question1: QuizzQuestion;
   question2: QuizzQuestion;
   question3: QuizzQuestion;
@@ -21,6 +21,10 @@ export interface TeamInterface {
   timeEnd?: Date | null;
   prehistoricQuizz: QuizzInterface;
   egyptQuizz: QuizzInterface;
+  medievalQuizz: QuizzInterface;
+  victorianQuizz: QuizzInterface;
+  '1980Quizz': QuizzInterface;
+  futureQuizz: QuizzInterface;
 }
 
 export const defaultLanguage =
@@ -37,14 +41,36 @@ export const defaultProfile =
         points: 0,
         timeStart: null,
         prehistoricQuizz: {
-          time: 0,
           question1: { isCorrect: false, hintUsed: false },
           question2: { isCorrect: false, hintUsed: false },
           question3: { isCorrect: false, hintUsed: false },
           passed: false,
         },
         egyptQuizz: {
-          time: 0,
+          question1: { isCorrect: false, hintUsed: false },
+          question2: { isCorrect: false, hintUsed: false },
+          question3: { isCorrect: false, hintUsed: false },
+          passed: false,
+        },
+        medievalQuizz: {
+          question1: { isCorrect: false, hintUsed: false },
+          question2: { isCorrect: false, hintUsed: false },
+          question3: { isCorrect: false, hintUsed: false },
+          passed: false,
+        },
+        victorianQuizz: {
+          question1: { isCorrect: false, hintUsed: false },
+          question2: { isCorrect: false, hintUsed: false },
+          question3: { isCorrect: false, hintUsed: false },
+          passed: false,
+        },
+        '1980Quizz': {
+          question1: { isCorrect: false, hintUsed: false },
+          question2: { isCorrect: false, hintUsed: false },
+          question3: { isCorrect: false, hintUsed: false },
+          passed: false,
+        },
+        futureQuizz: {
           question1: { isCorrect: false, hintUsed: false },
           question2: { isCorrect: false, hintUsed: false },
           question3: { isCorrect: false, hintUsed: false },
