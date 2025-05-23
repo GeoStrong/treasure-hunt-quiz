@@ -72,4 +72,6 @@ export const russian = {
   MEDIEVAL_PAGE_TITLE: 'Средневековая эпоха',
 
   VICTORIAN_PAGE_TITLE: 'Викторианская эпоха',
+
+  '1980_PAGE_TITLE': 'Эпоха 1980-х',
 };

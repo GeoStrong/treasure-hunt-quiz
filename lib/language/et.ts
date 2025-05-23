@@ -73,4 +73,6 @@ export const estonian = {
   MEDIEVAL_PAGE_TITLE: 'Keskaeg',
 
   VICTORIAN_PAGE_TITLE: 'Viktoriaanlik ajastu',
+
+  '1980_PAGE_TITLE': '1980. aastad',
 };

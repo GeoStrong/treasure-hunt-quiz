@@ -20,7 +20,7 @@ const VictorianCanvas: React.FC = () => {
         <Suspense fallback={null}>
           <ambientLight intensity={1} />
           <Environment preset="sunset" />
-          <OrbitControls enableZoom={true} />
+          <OrbitControls enableZoom={false} />
           <Sky />
           <Ground scale={0.006} />
           <VictorianEnvironment scale={2} position={[-2, 0.01, 1]} />

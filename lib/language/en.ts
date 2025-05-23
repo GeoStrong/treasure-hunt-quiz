@@ -74,4 +74,6 @@ export const english = {
   MEDIEVAL_PAGE_TITLE: 'Medieval Era',
 
   VICTORIAN_PAGE_TITLE: 'Victorian Era',
+
+  '1980_PAGE_TITLE': '1980s Era',
 };
