@@ -45,6 +45,7 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
+    dispatch(setProfile(team));
   };
 
   const handleSurrender = () => {
@@ -52,6 +53,7 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
     team.points -= 100;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
+    dispatch(setProfile(team));
     quizzRedirection('/prehistoric/3');
   };
 

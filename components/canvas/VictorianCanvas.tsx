@@ -22,12 +22,16 @@ const VictorianCanvas: React.FC = () => {
           <Environment preset="sunset" />
           <OrbitControls enableZoom={false} />
           <Sky />
-          <Ground scale={0.006} />
-          <VictorianEnvironment scale={2} position={[-2, 0.01, 1]} />
-          <Train scale={0.2} position={[2, 0.35, -1.5]} />
-          <Rails scale={3} position={[0, 0.05, -2.45]} rotation={[0, 1.5, 0]} />
-          <Lamp scale={0.2} position={[2, 0, 0]} />
-          <Hallway scale={0.3} position={[0, 0.1, -4]} rotation={[0, 4.7, 0]} />
+          <Ground scale={0.006} position={[0, -2, 0]} />
+          <VictorianEnvironment scale={2} position={[-2, -1.99, 1]} />
+          <Train scale={0.2} position={[2, -1.65, -1.5]} />
+          <Rails scale={3} position={[0, -1.95, -2.4]} rotation={[0, 1.5, 0]} />
+          <Lamp scale={0.2} position={[2, -2, 0]} />
+          <Hallway
+            scale={0.3}
+            position={[0, -1.9, -4]}
+            rotation={[0, 4.7, 0]}
+          />
         </Suspense>
       </Canvas>
     </div>

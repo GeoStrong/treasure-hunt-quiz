@@ -14,7 +14,7 @@ export const estonian = {
   SIGNUP_PAGE_TITLE: 'Loo oma meeskond',
   SIGNUP_INPUT_NAME_PLACEHOLDER: 'Sisestage oma meeskonna nimi',
   SIGNUP_INPUT_SIZE_PLACEHOLDER: 'Sisestage oma meeskonna suurus',
-  SIGNUP_PAGE_BUTTON: 'Luua meeskond',
+  SIGNUP_PAGE_BUTTON: 'Loo meeskond',
   SIGNUP_PAGE_ERROR: 'Palun täitke kõik väljad',
 
   GAME_PAGE_TITLE: 'Tere tulemast Time Trek: Kadunud ajajoonele',
@@ -45,6 +45,8 @@ export const estonian = {
     'Seda toimingut ei saa tagasi võtta. Kaotate 100 punkti.',
   QUIZZ_QUESTION_SELECT_WARNING:
     'Teil on ainult üks võimalus sellele küsimusele vastata',
+  QUIZZ_QUESTION_REBUS: 'Lahenda rebus',
+  QUIZZ_QUESTION_MAZE: 'Lahenda labürint',
 
   PREHISTORIC_PAGE_TITLE: 'Eelajalooline ajastu',
   PREHISTORIC_QUIZZ_QUESTION_1:
@@ -65,7 +67,7 @@ export const estonian = {
 
   NEW_STEP_TITLE_1: 'Palju õnne, olete lõpetanud ühe mängu sammust!',
   NEW_STEP_TITLE_2: 'Olete avanud uue asukoha.',
-  NEW_STEP_TITLE_3: 'Nüüd saate minna järgmisele sammu 👣',
+  NEW_STEP_TITLE_3: 'Nüüd saate minna järgmise sammu juurde 👣',
   NEW_STEP_SCAN_BUTTON: 'Skaneeri QR-kood',
 
   OOPSIE_PAGE_TITLE: 'Oopsie! Tundub, et midagi läks valesti. Proovige uuesti.',
@@ -108,11 +110,27 @@ export const estonian = {
     'Ma olen täppisrelv, millel on nööri ja noolega mängida.',
   MEDIEVAL_QUIZZ_ANSWER_3: 'vibu',
   MEDIEVAL_QUIZZ_SELECT_OPTION_1: 'Mõõk',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Mace',
+  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Nui',
   MEDIEVAL_QUIZZ_SELECT_OPTION_3: 'Ristlaskur',
   MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Vibu',
 
   VICTORIAN_PAGE_TITLE: 'Viktoriaanlik ajastu',
+  VICTORIAN_QUIZZ_QUESTION_1:
+    'Millist neist ei kasutatud viktoriaanlikul ajastul?',
+  VICTORIAN_QUIZZ_QUESTION_1_HINT:
+    'See seade on kaasaegne leiutis, mis muutis kommunikatsiooni revolutsiooniliselt.',
+  VICTORIAN_QUIZZ_ANSWER_1: 'nutitelefon',
+  VICTORIAN_QUIZZ_SELECT_OPTION_1: 'Gaasilamp',
+  VICTORIAN_QUIZZ_SELECT_OPTION_2: 'Nutitelefoni',
+  VICTORIAN_QUIZZ_SELECT_OPTION_3: 'Kirjutusmasinad',
+  VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Aurumootor',
+  VICTORIAN_QUIZZ_QUESTION_2_HINT:
+    'See on transpordivahend, mis oli populaarne viktoriaanlikul ajastul.',
+  VICTORIAN_QUIZZ_ANSWER_2: 'rong',
+  VICTORIAN_QUIZZ_QUESTION_3_HINT:
+    'See on seade, mis valgustab ruumi ja oli viktoriaanlikul ajastul väga populaarne.',
+  VICTORIAN_QUIZZ_ANSWER_3: 'valguslamp',
+  VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze-et.png',
 
   '1980_PAGE_TITLE': '1980. aastad',
 

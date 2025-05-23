@@ -7,7 +7,7 @@ import useLanguage from '@/lib/hooks/useLanguage';
 import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
-import { addPoints, deductPoints } from '@/lib/store/profileSlice';
+import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
 
 const MedievalQuizzQuestion2: React.FC = () => {
   const [answer, setAnswer] = useState('');
@@ -29,6 +29,7 @@ const MedievalQuizzQuestion2: React.FC = () => {
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(50));
+    dispatch(setProfile(team));
   };
 
   const handlePassing = () => {
@@ -36,6 +37,7 @@ const MedievalQuizzQuestion2: React.FC = () => {
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
+    dispatch(setProfile(team));
   };
 
   const handleSurrender = () => {
@@ -43,6 +45,7 @@ const MedievalQuizzQuestion2: React.FC = () => {
     team.points -= 100;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
+    dispatch(setProfile(team));
     quizzRedirection('/medieval/3');
   };
 

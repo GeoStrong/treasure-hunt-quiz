@@ -43,6 +43,8 @@ export const english = {
     'This action cannot be undone. You will lose 100 points.',
   QUIZZ_QUESTION_SELECT_WARNING:
     'You only have one chance to answer this question',
+  QUIZZ_QUESTION_REBUS: 'Solve the rebus',
+  QUIZZ_QUESTION_MAZE: 'Solve the maze',
 
   PREHISTORIC_PAGE_TITLE: 'Prehistoric Era',
   PREHISTORIC_QUIZZ_QUESTION_1: 'The giant lizards of the past were called ___',
@@ -112,6 +114,22 @@ export const english = {
   MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Bow',
 
   VICTORIAN_PAGE_TITLE: 'Victorian Era',
+  VICTORIAN_QUIZZ_QUESTION_1:
+    'Which of these was not used in the Victorian era?',
+  VICTORIAN_QUIZZ_QUESTION_1_HINT:
+    'This device is a modern invention that revolutionized communication.',
+  VICTORIAN_QUIZZ_ANSWER_1: 'smartphone',
+  VICTORIAN_QUIZZ_SELECT_OPTION_1: 'Gas lamp',
+  VICTORIAN_QUIZZ_SELECT_OPTION_2: 'Smartphone',
+  VICTORIAN_QUIZZ_SELECT_OPTION_3: 'Typewriter',
+  VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Steam engine',
+  VICTORIAN_QUIZZ_QUESTION_2_HINT:
+    'It’s a mode of transportation that was popular in the Victorian era.',
+  VICTORIAN_QUIZZ_ANSWER_2: 'train',
+  VICTORIAN_QUIZZ_QUESTION_3_HINT:
+    'It’s a device that produces light and was invented during this time.',
+  VICTORIAN_QUIZZ_ANSWER_3: 'bulb',
+  VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze.png',
 
   '1980_PAGE_TITLE': '1980s Era',
 

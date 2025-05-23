@@ -93,7 +93,7 @@ const EgyptQuizzQuestion3: React.FC = () => {
           className="
           text-center text-sm bg-orange-400 p-2 rounded-md text-white mt-2"
         >
-          You only have one chance to answer this question
+          {activeLanguage.QUIZZ_QUESTION_SELECT_WARNING}
         </p>
         <div className="flex gap-2 w-full mt-5">
           <div className="flex flex-col gap-2 w-full">

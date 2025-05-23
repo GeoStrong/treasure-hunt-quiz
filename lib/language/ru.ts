@@ -43,6 +43,8 @@ export const russian = {
     'Это действие нельзя отменить. Вы потеряете 100 очков.',
   QUIZZ_QUESTION_SELECT_WARNING:
     'У вас есть только один шанс ответить на этот вопрос',
+  QUIZZ_QUESTION_REBUS: 'Разгадайте ребус',
+  QUIZZ_QUESTION_MAZE: 'Разгадайте лабиринт',
 
   PREHISTORIC_PAGE_TITLE: 'Доисторическая эпоха',
   PREHISTORIC_QUIZZ_QUESTION_1: 'Гигантских ящеров прошлого называли ___',
@@ -108,6 +110,22 @@ export const russian = {
   MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Лук',
 
   VICTORIAN_PAGE_TITLE: 'Викторианская эпоха',
+  VICTORIAN_QUIZZ_QUESTION_1:
+    'Какой из этих предметов не использовался в викторианскую эпоху?',
+  VICTORIAN_QUIZZ_QUESTION_1_HINT:
+    'Это устройство - современное изобретение, которое революционизировало связь.',
+  VICTORIAN_QUIZZ_ANSWER_1: 'смартфон',
+  VICTORIAN_QUIZZ_SELECT_OPTION_1: 'Газовая лампа',
+  VICTORIAN_QUIZZ_SELECT_OPTION_2: 'Смартфон',
+  VICTORIAN_QUIZZ_SELECT_OPTION_3: 'Печатная машинка',
+  VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Паровой двигатель',
+  VICTORIAN_QUIZZ_QUESTION_2_HINT:
+    'Это вид транспорта, который был популярен в викторианскую эпоху.',
+  VICTORIAN_QUIZZ_ANSWER_2: 'поезд',
+  VICTORIAN_QUIZZ_QUESTION_3_HINT:
+    'Это устройство, которое использовалось для освещения улиц и домов.',
+  VICTORIAN_QUIZZ_ANSWER_3: 'лампа',
+  VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze-ru.png',
 
   '1980_PAGE_TITLE': 'Эпоха 1980-х',
 

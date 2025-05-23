@@ -37,6 +37,7 @@ const QuizzQuestion = () => {
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
+    dispatch(setProfile(team));
   };
 
   const handleSurrender = () => {
@@ -44,6 +45,7 @@ const QuizzQuestion = () => {
     team.points -= 100;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
+    dispatch(setProfile(team));
     quizzRedirection('/medieval/2');
   };
 

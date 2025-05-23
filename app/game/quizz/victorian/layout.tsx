@@ -33,11 +33,14 @@ const VictorianLayout: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [progress]);
 
-  // useEffect(() => {
-  //   if (!profile.egyptQuizz.passed) {
-  //     quizzRedirection('/oopsie');
-  //   }
-  // }, [profile.egyptQuizz.passed]);
+  useEffect(() => {
+    if (!profile.medievalQuizz.passed) {
+      quizzRedirection('/oopsie');
+    }
+    if (profile.victorianQuizz.passed) {
+      quizzRedirection('/new-step');
+    }
+  }, [profile.medievalQuizz.passed, profile.victorianQuizz.passed]);
 
   return (
     <div className="w-full h-full">

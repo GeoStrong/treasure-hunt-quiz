@@ -31,6 +31,7 @@ const MedievalQuizzQuestion3: React.FC = () => {
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(50));
+    dispatch(setProfile(team));
   };
 
   const handlePassing = () => {
@@ -38,6 +39,7 @@ const MedievalQuizzQuestion3: React.FC = () => {
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
+    dispatch(setProfile(team));
   };
 
   const handleSurrender = () => {
@@ -78,7 +80,8 @@ const MedievalQuizzQuestion3: React.FC = () => {
     }
   }, [dispatch, isCorrect, isSubmitted, team]);
 
-  const disabled = !isCorrect && isSubmitted;
+  const disabled =
+    (!isCorrect && isSubmitted) || team.medievalQuizz.question3.blocked;
 
   return (
     <div className="flex flex-col">
@@ -90,11 +93,8 @@ const MedievalQuizzQuestion3: React.FC = () => {
         <h2 className="text-xl text-center bg-[#3B2F2F] p-2 rounded-md text-white font-bold">
           {[...activeLanguage.MEDIEVAL_QUIZZ_QUESTION_3].reverse().join('')}
         </h2>
-        <p
-          className="
-          text-center text-sm bg-orange-400 p-2 rounded-md text-white mt-2"
-        >
-          You only have one chance to answer this question
+        <p className="text-center text-sm bg-orange-400 p-2 rounded-md text-white mt-2">
+          {activeLanguage.QUIZZ_QUESTION_SELECT_WARNING}
         </p>
         <div className="flex gap-2 w-full mt-5">
           <div className="flex flex-col gap-2 w-full">
