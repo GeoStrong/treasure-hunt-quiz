@@ -12,7 +12,8 @@ const Oopsie: React.FC = () => {
         {activeLanguage.OOPSIE_PAGE_TITLE}
       </h1>
       <Link
-        href="/game/quizz/new-step"
+        href="#"
+        onClick={() => window.history.back()}
         className="text-2xl bg-purple-800 p-2 rounded-md font-bold text-center mt-5"
       >
         {activeLanguage.OOPSIE_PAGE_BUTTON}

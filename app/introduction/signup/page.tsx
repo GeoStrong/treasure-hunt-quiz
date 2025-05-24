@@ -28,21 +28,21 @@ const Signup: React.FC = () => {
             value={name}
             type="text"
             placeholder={activeLanguage.SIGNUP_INPUT_NAME_PLACEHOLDER}
-            className="border-fuchsia-800 placeholder:text-white !bg-fuchsia-700/50 text-xl p-6"
+            className="border-fuchsia-800 placeholder:text-white !bg-fuchsia-700/50 text-lg p-6"
           />
           <Input
             onChange={(e) => setSize(Number(e.target.value))}
             value={size}
             type="number"
             placeholder={activeLanguage.SIGNUP_INPUT_SIZE_PLACEHOLDER}
-            className="border-fuchsia-800 placeholder:text-white !bg-pink-400/50 text-white text-xl p-6"
+            className="border-fuchsia-800 placeholder:text-white !bg-pink-400/50 text-white text-lg p-6"
           />
           {error && (
             <p className="text-red-500 text-lg font-semibold">{error}</p>
           )}
           <Button
             type="submit"
-            className="gradient-4 w-1/2 font-semibold text-gray-800 text-xl p-6"
+            className="gradient-4 w-2/3 font-semibold text-gray-800 text-xl p-6"
             onClick={(event: FormEvent) => {
               event.preventDefault();
 

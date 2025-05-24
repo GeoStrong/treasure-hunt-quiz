@@ -79,7 +79,7 @@ const QuizzQuestion = () => {
           onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
-          className={`mt-5 text-black placeholder:text-black border-amber-950 text-xl w-2/3 p-4`}
+          className={`mt-5 text-black placeholder:text-black border-amber-950 placeholder:text-base text-xl w-2/3 p-4`}
         />
         <QuizzControls
           answer={answer}
