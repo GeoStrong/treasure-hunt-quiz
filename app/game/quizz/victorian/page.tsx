@@ -8,6 +8,8 @@ import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { GrLinkNext } from 'react-icons/gr';
 
 const QuizzQuestion = () => {
   const [answer, setAnswer] = useState('');
@@ -61,8 +63,18 @@ const QuizzQuestion = () => {
     }
   };
 
+  useEffect(() => {
+    if (!isCorrect && isSubmitted) {
+      team.victorianQuizz.question1.blocked = true;
+      team.victorianQuizz.question1.isCorrect = false;
+      team.victorianQuizz.passed = true;
+      localStorage.setItem('team', JSON.stringify(team));
+      dispatch(setProfile(team));
+    }
+  }, [dispatch, isCorrect, isSubmitted, team]);
+
   const disabled =
-    (!isCorrect && isSubmitted) || team.victorianQuizz.question3.blocked;
+    (!isCorrect && isSubmitted) || team.victorianQuizz.question1.blocked;
 
   return (
     <div className="flex justify-center items-center flex-col">
@@ -145,6 +157,15 @@ const QuizzQuestion = () => {
           onSurrender={handleSurrender}
           activeHint={activeLanguage.VICTORIAN_QUIZZ_QUESTION_1_HINT}
         />
+        {disabled && (
+          <Link
+            href="/game/quizz/egypt/2"
+            className="bg-amber-600 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
+          >
+            {activeLanguage.QUIZZ_NEXT_QUESTION}
+            <GrLinkNext />
+          </Link>
+        )}
       </form>
     </div>
   );

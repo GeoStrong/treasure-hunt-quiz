@@ -7,11 +7,7 @@ import QuizzControls from '@/components/quizz/QuizzControls';
 import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
-import {
-  addPoints,
-  deductPoints,
-  profileSlice,
-} from '@/lib/store/profileSlice';
+import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
 
 const QuizzQuestion = () => {
   const [answer, setAnswer] = useState('');
@@ -24,30 +20,33 @@ const QuizzQuestion = () => {
   const team = JSON.parse(localStorage.getItem('team') || '') as TeamInterface;
 
   useEffect(() => {
-    setIsHintUsed(team.prehistoricQuizz.question1.hintUsed);
-  }, [team.prehistoricQuizz.question1.hintUsed]);
+    setIsHintUsed(team.futureQuizz.question1.hintUsed);
+  }, [team.futureQuizz.question1.hintUsed]);
 
   const handleHintUsage = () => {
     setIsHintUsed(true);
-    team.prehistoricQuizz.question1.hintUsed = true;
+    team.futureQuizz.question1.hintUsed = true;
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
-    dispatch(profileSlice.actions.deductPoints(50));
+    dispatch(deductPoints(50));
+    dispatch(setProfile(team));
   };
 
   const handlePassing = () => {
-    team.prehistoricQuizz.question1.isCorrect = true;
+    team.futureQuizz.question1.isCorrect = true;
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
+    dispatch(setProfile(team));
   };
 
   const handleSurrender = () => {
-    team.prehistoricQuizz.question1.isCorrect = false;
+    team.futureQuizz.question1.isCorrect = false;
     team.points -= 100;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
-    quizzRedirection('/prehistoric/2');
+    dispatch(setProfile(team));
+    quizzRedirection('/future/2');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,9 +56,7 @@ const QuizzQuestion = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    if (
-      answer.toLowerCase().trim() === activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1
-    ) {
+    if (answer.toLowerCase().trim() === activeLanguage.FUTURE_QUIZZ_ANSWER_1) {
       setIsCorrect(true);
     } else {
       setIsCorrect(false);
@@ -72,8 +69,8 @@ const QuizzQuestion = () => {
         onSubmit={handleSubmit}
         className="w-full flex flex-col items-center"
       >
-        <h2 className="text-xl text-center bg-[#3B2F2F] text-white p-2 rounded-md font-bold">
-          {activeLanguage.PREHISTORIC_QUIZZ_QUESTION_1}
+        <h2 className="text-xl text-center text-white font-bold rotate-180">
+          {[...activeLanguage.FUTURE_QUIZZ_QUESTION_1].reverse().join('')}
         </h2>
         <Input
           value={answer}
@@ -81,18 +78,18 @@ const QuizzQuestion = () => {
           onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
-          className={`mt-5 text-white placeholder:text-white border-amber-950 text-xl w-2/3 p-4`}
+          className={`mt-5 text-white placeholder:text-white border-white text-xl w-2/3 p-4`}
         />
         <QuizzControls
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/prehistoric/2'}
+          nextPage={'/future/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}
           onSurrender={handleSurrender}
-          activeHint={'1'}
+          activeHint={activeLanguage.FUTURE_QUIZZ_QUESTION_1_HINT}
         />
       </form>
     </div>

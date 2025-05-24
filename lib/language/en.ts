@@ -6,6 +6,11 @@ export const english = {
   LOADING_PAGE_DESCRIPTION:
     'Please wait while we load the models for the game. This may take a few moments.',
 
+  NOT_FOUND_TITLE: 'It seems like you are lost in the time void...',
+  NOT_FOUND_DESCRIPTION:
+    'The page you are looking for does not exist. Please check the URL or return to the home page.',
+  NOT_FOUND_BUTTON: 'Back to Checkpoint',
+
   INTRODUCTION_PAGE_TITLE: 'Welcome, Time Explorers!',
   INTRODUCTION_PAGE_DESCRIPTION:
     'A mysterious glitch has scrambled history — from dinosaurs to the future! Your mission is to travel through time, solve riddles, and restore the past before it’s too late. Click on play to begin your journey. Good luck… history depends on you! 🚀',
@@ -132,6 +137,34 @@ export const english = {
   VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze.png',
 
   '1980_PAGE_TITLE': '1980s Era',
+  '1980_QUIZZ_QUESTION_1':
+    'Which professional boxer had his last fight in 1980?',
+  '1980_QUIZZ_QUESTION_1_HINT':
+    'He was known for his incredible speed and power, and he was a world champion.',
+  '1980_QUIZZ_ANSWER_1': 'Muhammad Ali',
+  '1980_QUIZZ_SELECT_OPTION_1': 'Mike Tyson',
+  '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
+  '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
+  '1980_QUIZZ_SELECT_OPTION_4': 'George Foreman',
+  '1980_QUIZZ_QUESTION_2_HINT':
+    'This is a popular video game character from the 1980s.',
+  '1980_QUIZZ_ANSWER_2': 'pacman',
+  '1980_QUIZZ_QUESTION_3_HINT':
+    'This is a popular puzzle game that involves fitting shapes together.',
+  '1980_QUIZZ_ANSWER_3': 'tetris',
+  '1980_QUIZZ_IMAGE_SRC': '/images/1980-maze.png',
 
   FUTURE_PAGE_TITLE: 'Future Era',
+  FUTURE_QUIZZ_QUESTION_1:
+    'I’m a vehicle of tomorrow, gliding above the streets, combining the freedom of the sky with the convenience of the road. What am I?',
+  FUTURE_QUIZZ_QUESTION_1_HINT:
+    'You might see me in sci-fi movies, driving and flying above traffic jams. I’m not just a car, I can soar!',
+  FUTURE_QUIZZ_ANSWER_1: 'flying car',
+  FUTURE_QUIZZ_QUESTION_2_HINT:
+    'I’m a device that can fly and deliver packages, often seen buzzing around cities.',
+  FUTURE_QUIZZ_ANSWER_2: 'drone',
+  FUTURE_QUIZZ_QUESTION_3_HINT:
+    'I’m a futuristic device that projects a 3D image into the air, allowing you to interact with it as if it were real.',
+  FUTURE_QUIZZ_ANSWER_3: 'hologram',
+  FUTURE_QUIZZ_IMAGE_SRC: '/images/future-maze.png',
 };

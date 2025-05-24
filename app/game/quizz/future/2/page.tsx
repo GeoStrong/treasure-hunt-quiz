@@ -2,12 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import QuizzControls from '@/components/quizz/QuizzControls';
+import { Input } from '@/components/ui/input';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
-import { Input } from '@/components/ui/input';
+import Image from 'next/image';
 import {
   Dialog,
   DialogContent,
@@ -15,9 +16,8 @@ import {
   DialogHeader,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import Image from 'next/image';
 
-const VictorianQuizzQuestion3: React.FC = () => {
+const FutureQuizzQuestion2: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -28,16 +28,12 @@ const VictorianQuizzQuestion3: React.FC = () => {
   const team = JSON.parse(localStorage.getItem('team') || '') as TeamInterface;
 
   useEffect(() => {
-    setIsHintUsed(team.victorianQuizz.question3.hintUsed);
-  }, [team.victorianQuizz.question3.hintUsed]);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAnswer(e.target.value);
-  };
+    setIsHintUsed(team.futureQuizz.question2.hintUsed);
+  }, [team.futureQuizz.question2.hintUsed]);
 
   const handleHintUsage = () => {
     setIsHintUsed(true);
-    team.victorianQuizz.question3.hintUsed = true;
+    team.futureQuizz.question2.hintUsed = true;
     team.points -= 50;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(50));
@@ -45,7 +41,7 @@ const VictorianQuizzQuestion3: React.FC = () => {
   };
 
   const handlePassing = () => {
-    team.victorianQuizz.question3.isCorrect = true;
+    team.futureQuizz.question2.isCorrect = true;
     team.points += 250;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(addPoints(250));
@@ -53,28 +49,23 @@ const VictorianQuizzQuestion3: React.FC = () => {
   };
 
   const handleSurrender = () => {
-    team.victorianQuizz.question3.isCorrect = false;
+    team.futureQuizz.question2.isCorrect = false;
     team.points -= 100;
-    team.victorianQuizz.passed = true;
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
     dispatch(setProfile(team));
-    quizzRedirection('/new-step');
+    quizzRedirection('/future/3');
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAnswer(e.target.value);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    if (
-      answer.toLowerCase().trim() === activeLanguage.VICTORIAN_QUIZZ_ANSWER_3
-    ) {
+    if (answer.toLowerCase().trim() === activeLanguage.FUTURE_QUIZZ_ANSWER_2) {
       setIsCorrect(true);
-      team.victorianQuizz.passed = true;
-      team.victorianQuizz.question3.isCorrect = true;
-      team.points += 250;
-      localStorage.setItem('team', JSON.stringify(team));
-      dispatch(addPoints(250));
-      dispatch(setProfile(team));
     } else {
       setIsCorrect(false);
     }
@@ -85,15 +76,15 @@ const VictorianQuizzQuestion3: React.FC = () => {
       <div className="grid self-center gap-2 grid-cols-2"></div>
       <form
         onSubmit={handleSubmit}
-        className="w-full flex flex-col justify-center items-center mt-2"
+        className="w-full flex flex-col items-center mt-2"
       >
-        <h2 className="text-xl text-center bg-[#3B2F2F] p-2 rounded-md text-white font-bold">
-          {activeLanguage.QUIZZ_QUESTION_MAZE}
+        <h2 className="text-xl text-center text-white p-2 rounded-md font-bold">
+          {activeLanguage.QUIZZ_QUESTION_REBUS}
         </h2>
         <Dialog>
           <DialogTrigger className="mt-5">
             <Image
-              src={activeLanguage.VICTORIAN_QUIZZ_IMAGE_SRC}
+              src="/images/future-rebus.jpg"
               width={200}
               height={200}
               alt="maze"
@@ -103,7 +94,7 @@ const VictorianQuizzQuestion3: React.FC = () => {
             <DialogHeader>
               <DialogDescription className="flex justify-center">
                 <Image
-                  src={activeLanguage.VICTORIAN_QUIZZ_IMAGE_SRC}
+                  src="/images/future-rebus.jpg"
                   width={500}
                   height={500}
                   alt="maze"
@@ -118,21 +109,21 @@ const VictorianQuizzQuestion3: React.FC = () => {
           onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
-          className={`mt-5 text-black placeholder:text-black border-amber-950 text-md w-2/3 p-4`}
+          className={`mt-5 text-white placeholder:text-white border-white text-md w-2/3 p-4`}
         />
         <QuizzControls
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/new-step'}
+          nextPage={'/future/3'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}
           onSurrender={handleSurrender}
-          activeHint={activeLanguage.VICTORIAN_QUIZZ_QUESTION_3_HINT}
+          activeHint={activeLanguage.FUTURE_QUIZZ_QUESTION_2_HINT}
         />
       </form>
     </div>
   );
 };
-export default VictorianQuizzQuestion3;
+export default FutureQuizzQuestion2;

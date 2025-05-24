@@ -21,7 +21,7 @@ const Era1980Canvas: React.FC = () => {
           <OrbitControls enableZoom={false} />
           <Sky />
           <Miami scale={0.08} position={[0, -2, 0]} />
-          <Pacman scale={0.4} position={[0, 0, -3]} rotation={[0.5, 3, 0]} />
+          <Pacman scale={0.01} position={[0, 0, -3]} rotation={[0, 0, 0]} />
           <Rubik scale={5} position={[1, 0, 2]} rotation={[1, 1, 2]} />
           <Nuclear scale={0.06} position={[-2, 1, 0]} rotation={[-5, 0, 0]} />
         </Suspense>

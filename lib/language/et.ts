@@ -6,6 +6,11 @@ export const estonian = {
   LOADING_PAGE_DESCRIPTION:
     'Palun oodake, kuni me laadime mängu mudelid. See võib võtta mõne hetke.',
 
+  NOT_FOUND_TITLE: 'Tundub, et sa oled kadunud ajalisse tühjusesse...',
+  NOT_FOUND_DESCRIPTION:
+    'Otsitud lehekülge ei ole olemas. Palun kontrollige URL-i või minge tagasi kodulehele.',
+  NOT_FOUND_BUTTON: 'Tagasi kontrollpunkti juurde',
+
   INTRODUCTION_PAGE_TITLE: 'Tere tulemast, ajauurijad!',
   INTRODUCTION_PAGE_DESCRIPTION:
     'Salapärane tõrge on segi ajanud ajaloo - dinosaurustest tulevikku! Sinu ülesanne on reisida läbi aja, lahendada mõistatusi ja taastada minevik, enne kui on liiga hilja. Klõpsake mängimiseks, et alustada oma teekonda. Palju õnne... ajalugu sõltub sinust! 🚀',
@@ -133,6 +138,34 @@ export const estonian = {
   VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze-et.png',
 
   '1980_PAGE_TITLE': '1980. aastad',
+  '1980_QUIZZ_QUESTION_1':
+    'Millise profipoksija viimane võitlus toimus 1980. aastal?',
+  '1980_QUIZZ_QUESTION_1_HINT':
+    'Ta oli tuntud oma uskumatu kiiruse ja jõu poolest ning ta oli maailmameister.',
+  '1980_QUIZZ_ANSWER_1': 'Muhammad Ali',
+  '1980_QUIZZ_SELECT_OPTION_1': 'Mike Tyson',
+  '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
+  '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
+  '1980_QUIZZ_SELECT_OPTION_4': 'George Foreman',
+  '1980_QUIZZ_QUESTION_2_HINT':
+    'See on populaarne videomängude tegelane 1980ndatest aastatest.',
+  '1980_QUIZZ_ANSWER_2': 'pacman',
+  '1980_QUIZZ_QUESTION_3_HINT':
+    'See on populaarne mõistatusmäng, mis hõlmab kujundite kokku sobitamist.',
+  '1980_QUIZZ_ANSWER_3': 'tetris',
+  '1980_QUIZZ_IMAGE_SRC': '/images/1980-maze-et.png',
 
   FUTURE_PAGE_TITLE: 'Tuleviku ajastu',
+  FUTURE_QUIZZ_QUESTION_1:
+    'Ma olen homne sõiduk, mis libiseb tänavate kohal, ühendades taeva vabaduse ja maantee mugavuse. Mis ma olen?',
+  FUTURE_QUIZZ_QUESTION_1_HINT:
+    'Sa võid mind näha ulmefilmides, sõitmas ja lendamas üle liiklusummikute. Ma ei ole lihtsalt auto, ma oskan hõljuda!',
+  FUTURE_QUIZZ_ANSWER_1: 'lendav auto',
+  FUTURE_QUIZZ_QUESTION_2_HINT:
+    'Ma olen seade, mis suudab lennata ja pakke kohale toimetada ning mida sageli nähakse linnades ringi sumisemas.',
+  FUTURE_QUIZZ_ANSWER_2: 'droon',
+  FUTURE_QUIZZ_QUESTION_3_HINT:
+    'Ma olen futuristlik seade, mis projitseerib 3D-pildi õhku, võimaldades teil sellega suhelda, nagu oleks see reaalne.',
+  FUTURE_QUIZZ_ANSWER_3: 'hologramm',
+  FUTURE_QUIZZ_IMAGE_SRC: '/images/future-maze-et.png',
 };

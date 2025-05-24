@@ -33,11 +33,14 @@ const Era1980Layout: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [progress]);
 
-  // useEffect(() => {
-  //   if (!profile.egyptQuizz.passed) {
-  //     quizzRedirection('/oopsie');
-  //   }
-  // }, [profile.egyptQuizz.passed]);
+  useEffect(() => {
+    if (!profile.victorianQuizz.passed) {
+      quizzRedirection('/oopsie');
+    }
+    if (profile['1980Quizz'].passed) {
+      quizzRedirection('/new-step');
+    }
+  }, [profile, profile.victorianQuizz.passed]);
 
   return (
     <div className="w-full h-full">

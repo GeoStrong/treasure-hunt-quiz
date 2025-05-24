@@ -33,11 +33,14 @@ const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [progress]);
 
-  // useEffect(() => {
-  //   if (!profile.egyptQuizz.passed) {
-  //     quizzRedirection('/oopsie');
-  //   }
-  // }, [profile.egyptQuizz.passed]);
+  useEffect(() => {
+    if (!profile['1980Quizz'].passed) {
+      quizzRedirection('/oopsie');
+    }
+    if (profile.futureQuizz.passed) {
+      quizzRedirection('/new-step');
+    }
+  }, [profile, profile.victorianQuizz.passed]);
 
   return (
     <div className="w-full h-full">
@@ -56,7 +59,7 @@ const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
                 exit={{ opacity: 0, scale: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="bg-yellow-300/10 border-amber-950 border-2 rounded-lg p-5 mt-5">
+                <div className="bg-yellow-300/10 border-white border-2 rounded-lg p-5 mt-5">
                   {children}
                 </div>
               </motion.div>
