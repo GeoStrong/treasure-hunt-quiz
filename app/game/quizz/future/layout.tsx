@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { GiMonoWheelRobot } from 'react-icons/gi';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { useAppSelector } from '@/lib/store/hooks';
-import { quizzRedirection } from '@/lib/actions';
+import { gameRedirection, quizzRedirection } from '@/lib/actions';
 
 const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -38,7 +38,7 @@ const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
       quizzRedirection('/oopsie');
     }
     if (profile.futureQuizz.passed) {
-      quizzRedirection('/congratulations');
+      gameRedirection('/congratulations');
     }
   }, [profile, profile.victorianQuizz.passed]);
 
