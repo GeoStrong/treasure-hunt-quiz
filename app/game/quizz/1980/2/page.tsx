@@ -115,7 +115,7 @@ const Era1980QuizzQuestion2: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/1980/3'}
+          nextPage={'/quizz/1980/3'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

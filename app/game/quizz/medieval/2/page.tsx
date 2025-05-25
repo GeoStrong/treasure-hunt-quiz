@@ -87,7 +87,7 @@ const MedievalQuizzQuestion2: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/medieval/3'}
+          nextPage={'/quizz/medieval/3'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

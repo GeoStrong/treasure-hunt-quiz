@@ -65,7 +65,6 @@ const QuizzQuestion = () => {
     if (!isCorrect && isSubmitted) {
       team['1980Quizz'].question1.blocked = true;
       team['1980Quizz'].question1.isCorrect = false;
-      team['1980Quizz'].passed = true;
       localStorage.setItem('team', JSON.stringify(team));
       dispatch(setProfile(team));
     }
@@ -148,7 +147,7 @@ const QuizzQuestion = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/1980/2'}
+          nextPage={'/quizz/1980/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

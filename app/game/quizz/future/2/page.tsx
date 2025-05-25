@@ -115,7 +115,7 @@ const FutureQuizzQuestion2: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/future/3'}
+          nextPage={'/quizz/future/3'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

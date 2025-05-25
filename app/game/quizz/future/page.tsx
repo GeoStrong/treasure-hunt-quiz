@@ -84,7 +84,7 @@ const QuizzQuestion = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/future/2'}
+          nextPage={'/quizz/future/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

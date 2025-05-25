@@ -150,7 +150,7 @@ const QuizzQuestion = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/victorian/2'}
+          nextPage={'/quizz/victorian/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

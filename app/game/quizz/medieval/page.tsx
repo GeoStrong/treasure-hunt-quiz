@@ -80,13 +80,13 @@ const QuizzQuestion = () => {
           onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
-          className={`mt-5 text-black placeholder:text-white border-amber-950 text-xl w-2/3 p-4`}
+          className={`mt-5 text-black placeholder:text-black border-amber-950 text-xl w-2/3 p-4`}
         />
         <QuizzControls
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/medieval/2'}
+          nextPage={'/quizz/medieval/2'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

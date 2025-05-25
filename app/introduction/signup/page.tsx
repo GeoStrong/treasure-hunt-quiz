@@ -4,7 +4,7 @@ import React, { FormEvent, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import useLanguage from '@/lib/hooks/useLanguage';
-import { TeamInterface } from '@/lib/types';
+import { emptyRecord, TeamInterface } from '@/lib/types';
 import { signupRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { setProfile } from '@/lib/store/profileSlice';
@@ -54,100 +54,9 @@ const Signup: React.FC = () => {
               setError('');
 
               const team: TeamInterface = {
+                ...emptyRecord,
                 name,
                 size: size as number,
-                timeStart: null,
-                prehistoricQuizz: {
-                  question1: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question2: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question3: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  passed: false,
-                },
-                egyptQuizz: {
-                  question1: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question2: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question3: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  passed: false,
-                },
-                medievalQuizz: {
-                  question1: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question2: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question3: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  passed: false,
-                },
-                victorianQuizz: {
-                  question1: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question2: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question3: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  passed: false,
-                },
-                '1980Quizz': {
-                  question1: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question2: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question3: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  passed: false,
-                },
-                futureQuizz: {
-                  question1: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question2: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  question3: {
-                    isCorrect: false,
-                    hintUsed: false,
-                  },
-                  passed: false,
-                },
-                points: 0,
               };
 
               localStorage.setItem('team', JSON.stringify(team));

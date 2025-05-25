@@ -6,9 +6,11 @@ import { useStopwatch } from 'react-timer-hook';
 
 const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
   isStarted,
+  isPaused,
 }) => {
   const { profile } = useAppSelector((state) => state.profile);
   const startButtonRef = useRef<HTMLButtonElement>(null);
+  const stopButtonRef = useRef<HTMLButtonElement>(null);
   const stopwatchOffset = new Date();
 
   let secondsElapsed = 0;
@@ -27,7 +29,7 @@ const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
   });
 
   useEffect(() => {
-    if (isStarted) {
+    if (isStarted && profile.timeEnd === null) {
       startButtonRef.current?.click();
       if (profile.timeStart !== null) return;
       const time = new Date();
@@ -37,7 +39,29 @@ const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
       };
       localStorage.setItem('team', JSON.stringify(updatedTeam));
     }
-  }, [isStarted, profile]);
+    if (isPaused && profile.timeEnd === null) {
+      console.log('Pausing stopwatch');
+      stopButtonRef.current?.click();
+      const stopTime = new Date();
+
+      const time = {
+        hours,
+        minutes,
+        seconds,
+      };
+
+      console.log(time);
+
+      const updatedTeam = {
+        ...profile,
+        timeEnd: stopTime,
+        gameTime: time,
+      };
+
+      localStorage.setItem('team', JSON.stringify(updatedTeam));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isPaused, isStarted, profile]);
 
   return (
     <div className="flex flex-col">

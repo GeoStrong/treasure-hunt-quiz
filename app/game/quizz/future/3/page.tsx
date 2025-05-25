@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import QuizzControls from '@/components/quizz/QuizzControls';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { TeamInterface } from '@/lib/types';
-import { quizzRedirection } from '@/lib/actions';
+import { gameRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
 import { Input } from '@/components/ui/input';
@@ -59,7 +59,7 @@ const FutureQuizzQuestion3: React.FC = () => {
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
     dispatch(setProfile(team));
-    quizzRedirection('/new-step');
+    gameRedirection('/congratulations');
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -122,7 +122,7 @@ const FutureQuizzQuestion3: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/new-step'}
+          nextPage={'/congratulations'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

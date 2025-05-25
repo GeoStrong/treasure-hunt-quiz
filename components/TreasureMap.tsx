@@ -26,51 +26,56 @@ const TreasureMap: React.FC = () => {
           <BiQr className="text-2xl" />
         </div>
       )}
+
       {profile.prehistoricQuizz.passed && !profile.egyptQuizz.passed ? (
         <div className="absolute bg-amber-800 p-2 rounded-full top-[85%] left-[58%]">
           <BiQr className="text-2xl" />
         </div>
-      ) : (
+      ) : profile.egyptQuizz.passed ? (
         <div className="absolute top-[85%] left-[58%]">
           <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
         </div>
-      )}
+      ) : null}
 
       {profile.egyptQuizz.passed && !profile.medievalQuizz.passed ? (
         <div className="absolute bg-amber-800 p-2 rounded-full top-[50%] left-[50%]">
           <BiQr className="text-2xl" />
         </div>
-      ) : (
+      ) : profile.medievalQuizz.passed ? (
         <div className="absolute top-[50%] left-[50%]">
           <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
         </div>
-      )}
+      ) : null}
 
       {profile.medievalQuizz.passed && !profile.victorianQuizz.passed ? (
         <div className="absolute bg-amber-800 p-2 rounded-full top-[25%] left-[25%]">
           <BiQr className="text-2xl" />
         </div>
-      ) : (
+      ) : profile.victorianQuizz.passed ? (
         <div className="absolute top-[25%] left-[25%]">
           <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
         </div>
-      )}
+      ) : null}
 
       {profile.victorianQuizz.passed && !profile['1980Quizz'].passed ? (
         <div className="absolute bg-amber-800 p-2 rounded-full top-[5%] left-[5%]">
           <BiQr className="text-2xl" />
         </div>
-      ) : (
+      ) : profile['1980Quizz'].passed ? (
         <div className="absolute top-[5%] left-[5%]">
           <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
         </div>
-      )}
+      ) : null}
 
-      {profile['1980Quizz'].passed && (
+      {profile['1980Quizz'].passed && !profile.futureQuizz.passed ? (
         <div className="absolute bg-amber-800 p-2 rounded-full top-[15%] left-[50%]">
           <BiQr className="text-2xl" />
         </div>
-      )}
+      ) : profile.futureQuizz.passed ? (
+        <div className="absolute top-[15%] left-[50%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        </div>
+      ) : null}
     </div>
   );
 };

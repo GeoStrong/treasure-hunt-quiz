@@ -38,7 +38,7 @@ const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
       quizzRedirection('/oopsie');
     }
     if (profile.futureQuizz.passed) {
-      quizzRedirection('/new-step');
+      quizzRedirection('/congratulations');
     }
   }, [profile, profile.victorianQuizz.passed]);
 

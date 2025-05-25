@@ -39,7 +39,7 @@ const QuizzControls: React.FC<{
   activeHint,
 }) => {
   const activeLanguage = useLanguage();
-  const pathname = '/game/quizz';
+  const pathname = '/game';
 
   return (
     <AnimatePresence>

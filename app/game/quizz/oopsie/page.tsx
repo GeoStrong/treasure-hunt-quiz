@@ -13,7 +13,9 @@ const Oopsie: React.FC = () => {
       </h1>
       <Link
         href="#"
-        onClick={() => window.history.back()}
+        onClick={() => {
+          window.history.go(-2);
+        }}
         className="text-2xl bg-purple-800 p-2 rounded-md font-bold text-center mt-5"
       >
         {activeLanguage.OOPSIE_PAGE_BUTTON}

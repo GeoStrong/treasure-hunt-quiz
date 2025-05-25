@@ -141,7 +141,7 @@ export const english = {
     'Which professional boxer had his last fight in 1980?',
   '1980_QUIZZ_QUESTION_1_HINT':
     'He was known for his incredible speed and power, and he was a world champion.',
-  '1980_QUIZZ_ANSWER_1': 'Muhammad Ali',
+  '1980_QUIZZ_ANSWER_1': 'muhammad ali',
   '1980_QUIZZ_SELECT_OPTION_1': 'Mike Tyson',
   '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
   '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
@@ -167,4 +167,26 @@ export const english = {
     'I’m a futuristic device that projects a 3D image into the air, allowing you to interact with it as if it were real.',
   FUTURE_QUIZZ_ANSWER_3: 'hologram',
   FUTURE_QUIZZ_IMAGE_SRC: '/images/future-maze.png',
+
+  CONGRATULATIONS_PAGE_TITLE: 'Congratulations,',
+  CONGRATULATIONS_PAGE_DESCRIPTION:
+    'You have successfully completed the Time Trek adventure! You have restored history and become a certified Time Explorer. Your team has earned a special prize for your efforts. Thank you for playing, and we hope to see you again on another adventure! 🚀',
+  CONGRATULATIONS_PAGE_TIP:
+    'Please keep this page open or take a screenshot of it to claim your prize at the starting location of the game.',
+
+  STATISTICS_TITLE: 'Your Journey',
+  STATISTICS_TIME_SPENT: 'Time spent',
+  STATISTICS_TIME_SPENT_HOURS: 'hours',
+  STATISTICS_TIME_SPENT_MINUTES: 'minutes',
+  STATISTICS_TIME_SPENT_SECONDS: 'seconds',
+  STATISTICS_POINTS: 'Points',
+  STATISTICS_PREHISTORIC_ERA: 'Prehistoric Era',
+  STATISTICS_EGYPT_ERA: 'Ancient Egypt Era',
+  STATISTICS_MEDIEVAL_ERA: 'Medieval Era',
+  STATISTICS_VICTORIAN_ERA: 'Victorian Era',
+  STATISTICS_1980S_ERA: '1980s Era',
+  STATISTICS_FUTURE_ERA: 'Future Era',
+  STATISTICS_QUIZZ_QUESTION_1: '1 Question',
+  STATISTICS_QUIZZ_QUESTION_2: '2 Question',
+  STATISTICS_QUIZZ_QUESTION_3: '3 Question',
 };

@@ -124,7 +124,7 @@ const VictorianQuizzQuestion3: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/new-step'}
+          nextPage={'/quizz/new-step'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}

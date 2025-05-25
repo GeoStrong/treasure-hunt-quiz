@@ -17,6 +17,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [startStopwatch, setStartStopwatch] = useState(false);
+  const [pauseStopwatch, setPauseStopwatch] = useState(false);
   const { progress, active } = useProgress();
   const { profile } = useAppSelector((state) => state.profile);
 
@@ -27,6 +28,16 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       setStartStopwatch(true);
     }
   }, [active, progress]);
+
+  useEffect(() => {
+    if (profile.futureQuizz.passed) {
+      setPauseStopwatch(true);
+      setStartStopwatch(false);
+    } else {
+      setPauseStopwatch(false);
+      setStartStopwatch(true);
+    }
+  }, [profile]);
 
   return (
     <>
@@ -44,7 +55,7 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </DialogHeader>
           </DialogContent>
         </Dialog>
-        <Stopwatch isStarted={startStopwatch} />
+        <Stopwatch isStarted={startStopwatch} isPaused={pauseStopwatch} />
         <div className="flex text-center flex-col gap-1">
           <h2 className="text-lg text-gradient-3 font-bold text-center">
             {profile.name}

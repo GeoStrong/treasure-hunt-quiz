@@ -75,7 +75,8 @@ export const estonian = {
   NEW_STEP_TITLE_3: 'Nüüd saate minna järgmise sammu juurde 👣',
   NEW_STEP_SCAN_BUTTON: 'Skaneeri QR-kood',
 
-  OOPSIE_PAGE_TITLE: 'Oopsie! Tundub, et midagi läks valesti. Proovige uuesti.',
+  OOPSIE_PAGE_TITLE:
+    'Upsie! Tundub, et oled džunglisse eksinud. Palun mine tagasi ja lõpeta eelmine samm enne seikluse jätkamist.',
   OOPSIE_PAGE_BUTTON: 'Mine tagasi eelnevale sammu',
 
   EGYPT_PAGE_TITLE: 'Egiptuse ajastu',
@@ -142,7 +143,7 @@ export const estonian = {
     'Millise profipoksija viimane võitlus toimus 1980. aastal?',
   '1980_QUIZZ_QUESTION_1_HINT':
     'Ta oli tuntud oma uskumatu kiiruse ja jõu poolest ning ta oli maailmameister.',
-  '1980_QUIZZ_ANSWER_1': 'Muhammad Ali',
+  '1980_QUIZZ_ANSWER_1': 'muhammad ali',
   '1980_QUIZZ_SELECT_OPTION_1': 'Mike Tyson',
   '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
   '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
@@ -168,4 +169,26 @@ export const estonian = {
     'Ma olen futuristlik seade, mis projitseerib 3D-pildi õhku, võimaldades teil sellega suhelda, nagu oleks see reaalne.',
   FUTURE_QUIZZ_ANSWER_3: 'hologramm',
   FUTURE_QUIZZ_IMAGE_SRC: '/images/future-maze-et.png',
+
+  CONGRATULATIONS_PAGE_TITLE: 'Palju õnne,',
+  CONGRATULATIONS_PAGE_DESCRIPTION:
+    'Olete edukalt lõpetanud Time Trek seikluse! Olete taastanud ajaloo ja saanud sertifitseeritud ajauurija. Teie meeskond on pingutuste eest pälvinud eriauhinna. Täname teid mängimise eest ja loodame, et näeme teid jälle ühel seiklusel! 🚀',
+  CONGRATULATIONS_PAGE_TIP:
+    'Hoidke see leht avatud või tehke sellest ekraanipilt, et nõuda oma auhinda mängu alguskohas.',
+
+  STATISTICS_TITLE: 'Teie teekond',
+  STATISTICS_TIME_SPENT: 'Kulutatud aeg',
+  STATISTICS_TIME_SPENT_HOURS: 'tundi',
+  STATISTICS_TIME_SPENT_MINUTES: 'minutit',
+  STATISTICS_TIME_SPENT_SECONDS: 'sekundit',
+  STATISTICS_POINTS: 'Punktid',
+  STATISTICS_PREHISTORIC_ERA: 'Eelajalooline ajastu',
+  STATISTICS_EGYPT_ERA: 'Egiptuse ajastu',
+  STATISTICS_MEDIEVAL_ERA: 'Keskaeg',
+  STATISTICS_VICTORIAN_ERA: 'Viktoriaanlik ajastu',
+  STATISTICS_1980S_ERA: '1980. aastad',
+  STATISTICS_FUTURE_ERA: 'Tuleviku ajastu',
+  STATISTICS_QUIZZ_QUESTION_1: '1 Küsimus',
+  STATISTICS_QUIZZ_QUESTION_2: '2 Küsimus',
+  STATISTICS_QUIZZ_QUESTION_3: '3 Küsimus',
 };

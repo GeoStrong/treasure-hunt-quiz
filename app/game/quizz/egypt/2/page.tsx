@@ -85,7 +85,7 @@ const EgyptQuizzQuestion2: React.FC = () => {
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={'/egypt/3'}
+          nextPage={'/quizz/egypt/3'}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}
