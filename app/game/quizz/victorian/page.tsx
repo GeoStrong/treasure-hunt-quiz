@@ -67,7 +67,6 @@ const QuizzQuestion = () => {
     if (!isCorrect && isSubmitted) {
       team.victorianQuizz.question1.blocked = true;
       team.victorianQuizz.question1.isCorrect = false;
-      team.victorianQuizz.passed = true;
       localStorage.setItem('team', JSON.stringify(team));
       dispatch(setProfile(team));
     }
