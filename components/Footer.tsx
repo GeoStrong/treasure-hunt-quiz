@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
     <div className="fixed w-full left-1 bottom-1">
       <Drawer>
         <DrawerTrigger>
-          <div className="p-1 px-2 text-xs rounded-base text-center text-white gradient-1 font-bold">
+          <div className="p-1 px-2 text-xs rounded-md text-center text-white gradient-1 font-bold">
             {activeLanguage.ABOUT_TRIGGER}
           </div>
         </DrawerTrigger>
