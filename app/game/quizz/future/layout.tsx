@@ -39,14 +39,14 @@ const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [progress]);
 
-  // useEffect(() => {
-  //   if (!profile['1980Quizz'].passed) {
-  //     quizzRedirection('/oopsie');
-  //   }
-  //   if (profile.futureQuizz.passed) {
-  //     gameRedirection('/congratulations');
-  //   }
-  // }, [profile, profile.victorianQuizz.passed]);
+  useEffect(() => {
+    if (!profile['1980Quizz'].passed) {
+      quizzRedirection('/oopsie');
+    }
+    if (profile.futureQuizz.passed) {
+      gameRedirection('/congratulations');
+    }
+  }, [profile, profile.victorianQuizz.passed]);
 
   return (
     <div className="w-full h-full">
