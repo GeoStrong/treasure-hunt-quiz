@@ -26,7 +26,7 @@ const NewStep: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
+    <div className="w-full h-full mb-10 flex flex-col items-center justify-center">
       {qrScannerIsActive ? (
         <QRScanner setQRScannerVisibility={setQrScannerIsActive} />
       ) : (

@@ -22,7 +22,7 @@ const Game: React.FC = () => {
         {qrScannerIsActive ? (
           <QRScanner setQRScannerVisibility={setQrScannerIsActive} />
         ) : (
-          <div className="justify-center flex flex-col items-center gap-5">
+          <div className="justify-center flex flex-col mb-10 items-center gap-5">
             <h1 className="text-4xl text-center text-gradient-2 flex gap-2 flex-col items-center font-bold">
               {activeLanguage.GAME_PAGE_TITLE}, {team?.name}!
               <GiPocketWatch className="text-4xl text-fuchsia-800" />

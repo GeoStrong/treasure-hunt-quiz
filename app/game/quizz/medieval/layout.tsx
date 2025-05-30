@@ -33,14 +33,14 @@ const MedievalLayout: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [progress]);
 
-  useEffect(() => {
-    if (!profile.egyptQuizz.passed) {
-      quizzRedirection('/oopsie');
-    }
-    if (profile.medievalQuizz.passed) {
-      quizzRedirection('/new-step');
-    }
-  }, [profile.egyptQuizz.passed, profile.medievalQuizz.passed]);
+  // useEffect(() => {
+  //   if (!profile.egyptQuizz.passed) {
+  //     quizzRedirection('/oopsie');
+  //   }
+  //   if (profile.medievalQuizz.passed) {
+  //     quizzRedirection('/new-step');
+  //   }
+  // }, [profile.egyptQuizz.passed, profile.medievalQuizz.passed]);
 
   return (
     <div className="w-full h-full">

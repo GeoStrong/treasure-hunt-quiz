@@ -23,10 +23,10 @@ import useLanguage from '@/lib/hooks/useLanguage';
 const Footer: React.FC = () => {
   const activeLanguage = useLanguage();
   return (
-    <div className="fixed w-full left-0 bottom-5">
+    <div className="fixed w-full left-0 bottom-1">
       <Drawer>
         <DrawerTrigger className="w-full flex justify-center">
-          <div className="w-1/3 text-base rounded-2xl text-center text-white gradient-1 font-bold">
+          <div className="py-1 px-4 text-base rounded-2xl text-center text-white gradient-1 font-bold">
             {activeLanguage.ABOUT_TRIGGER}
           </div>
         </DrawerTrigger>
