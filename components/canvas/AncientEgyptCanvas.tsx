@@ -31,7 +31,7 @@ const AncientEgyptCanvas: React.FC = () => {
           <Sphinx scale={0.1} position={[2, 0, 1]} rotation={[0, 2, 0]} />
           <Mummy scale={0.35} position={[2, -1.55, -2]} rotation={[0, 4, 0]} />
           <Horus scale={0.5} position={[0, -1.5, 0]} />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls />
           <Sky />
         </Suspense>
       </Canvas>

@@ -29,7 +29,7 @@ const PrehistoricCanvas: React.FC = () => {
           <Fire scale={0.5} position={[0, -2.2, 0.4]} />
           <ambientLight intensity={1} />
           <Environment preset="sunset" />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls />
           <Sky />
         </Suspense>
       </Canvas>

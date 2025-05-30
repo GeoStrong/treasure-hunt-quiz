@@ -9,6 +9,12 @@ import { GiMonoWheelRobot } from 'react-icons/gi';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { useAppSelector } from '@/lib/store/hooks';
 import { gameRedirection, quizzRedirection } from '@/lib/actions';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -47,24 +53,32 @@ const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
       {loading && <ModelsLoading />}
       {!loading && (
         <>
-          <h1 className="text-center text-white text-3xl flex items-center justify-center gap-2 text-gradient-2 font-bold">
-            {activeLanguage.FUTURE_PAGE_TITLE}
-            <GiMonoWheelRobot />
-          </h1>
-          <AnimatePresence initial={false}>
-            {isVisible ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="bg-yellow-300/10 border-white border-2 rounded-lg p-5 mt-5">
-                  {children}
-                </div>
-              </motion.div>
-            ) : null}
-          </AnimatePresence>
+          <Accordion type="single" collapsible defaultValue="item-1">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="w-full items=center justify-center">
+                <h1 className="text-center text-white text-3xl flex items-center justify-center gap-2 text-gradient-2 font-bold">
+                  {activeLanguage.FUTURE_PAGE_TITLE}
+                  <GiMonoWheelRobot />
+                </h1>
+              </AccordionTrigger>
+              <AccordionContent>
+                <AnimatePresence initial={false}>
+                  {isVisible ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <div className="bg-yellow-300/10 border-white border-2 rounded-lg p-5 mt-5">
+                        {children}
+                      </div>
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </>
       )}
       <FutureCanvas />

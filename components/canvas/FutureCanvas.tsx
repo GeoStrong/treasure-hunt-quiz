@@ -18,7 +18,7 @@ const FutureCanvas: React.FC = () => {
         <Suspense fallback={null}>
           <ambientLight intensity={1} />
           <Environment preset="sunset" />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls />
           <City scale={1.5} position={[1, -2, 0]} />
           <Drone scale={2} position={[-2, 0, 0]} />
           <Hologram scale={1} position={[1, -2, -3]} />

@@ -22,6 +22,7 @@ export const estonian = {
   SUPPORT_DESCRIPTION_5: 'Me aitame teid hea meelega!',
   SUPPORT_HINT_BUTTON: 'Hangi vihje',
   SUPPORT_SKIP_BUTTON: 'Küsimuse vahelejätmine',
+  SUPPORT_COLLAPSE_BUTTON: 'Küsimuse kokkuvarisemine',
 
   ABOUT_TRIGGER: 'Meie kohta',
   ABOUT_TITLE: 'Selle projekti kohta',

@@ -20,7 +20,7 @@ const Era1980Canvas: React.FC = () => {
         <Suspense fallback={null}>
           <ambientLight intensity={1} />
           <Environment preset="sunset" />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls />
           <Sky />
           <Miami scale={0.08} position={[0, -2, 0]} />
           <Pacman scale={0.01} position={[0, 0, -3]} rotation={[0, 0, 0]} />

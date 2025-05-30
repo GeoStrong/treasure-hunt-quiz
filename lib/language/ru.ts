@@ -22,6 +22,7 @@ export const russian = {
   SUPPORT_DESCRIPTION_5: 'Мы будем рады помочь вам!',
   SUPPORT_HINT_BUTTON: 'Получить подсказку',
   SUPPORT_SKIP_BUTTON: 'Пропустить вопрос',
+  SUPPORT_COLLAPSE_BUTTON: 'Свернуть вопрос',
 
   ABOUT_TRIGGER: 'О нас',
   ABOUT_TITLE: 'Об этом проекте',

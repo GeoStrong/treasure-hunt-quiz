@@ -13,6 +13,7 @@ import {
 import { MdTipsAndUpdates } from 'react-icons/md';
 import { BsFillFlagFill } from 'react-icons/bs';
 import useLanguage from '@/lib/hooks/useLanguage';
+import { ChevronDownIcon } from 'lucide-react';
 
 const Support: React.FC = () => {
   const activeLanguage = useLanguage();
@@ -52,6 +53,13 @@ const Support: React.FC = () => {
                   <span className="text-lg">
                     {' '}
                     - {activeLanguage.SUPPORT_SKIP_BUTTON}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <ChevronDownIcon className="text-white text-2xl" />
+                  <span className="text-lg">
+                    {' '}
+                    - {activeLanguage.SUPPORT_COLLAPSE_BUTTON}
                   </span>
                 </div>
               </div>

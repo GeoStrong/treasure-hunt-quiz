@@ -22,6 +22,7 @@ export const english = {
   SUPPORT_DESCRIPTION_5: 'We will be happy to help you!',
   SUPPORT_HINT_BUTTON: 'Get a hint',
   SUPPORT_SKIP_BUTTON: 'Skip question',
+  SUPPORT_COLLAPSE_BUTTON: 'Collapse a question',
 
   ABOUT_TRIGGER: 'About',
   ABOUT_TITLE: 'About this Project',
