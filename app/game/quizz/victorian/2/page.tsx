@@ -8,14 +8,6 @@ import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
-import Image from 'next/image';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTrigger,
-} from '@/components/ui/dialog';
 
 const VictorianQuizzQuestion2: React.FC = () => {
   const [answer, setAnswer] = useState('');
@@ -80,31 +72,10 @@ const VictorianQuizzQuestion2: React.FC = () => {
         onSubmit={handleSubmit}
         className="w-full flex flex-col items-center mt-2"
       >
-        <h2 className="text-xl text-center text-[#3B2F2F] p-2 rounded-md font-bold">
-          {activeLanguage.QUIZZ_QUESTION_REBUS}
+        <h2 className="text-xl text-center text-[#3B2F2F] p-2 rotate-180 rounded-md font-bold">
+          {[...activeLanguage.VICTORIAN_QUIZZ_QUESTION_2].reverse().join('')}
         </h2>
-        <Dialog>
-          <DialogTrigger className="mt-5">
-            <Image
-              src="/images/victorian-rebus.jpg"
-              width={200}
-              height={200}
-              alt="maze"
-            />
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogDescription className="flex justify-center">
-                <Image
-                  src="/images/victorian-rebus.jpg"
-                  width={500}
-                  height={500}
-                  alt="maze"
-                />
-              </DialogDescription>
-            </DialogHeader>
-          </DialogContent>
-        </Dialog>
+
         <Input
           value={answer}
           onChange={handleChange}

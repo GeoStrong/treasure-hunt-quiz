@@ -164,6 +164,8 @@ export const estonian = {
   VICTORIAN_QUIZZ_SELECT_OPTION_2: 'Nutitelefoni',
   VICTORIAN_QUIZZ_SELECT_OPTION_3: 'Kirjutusmasinad',
   VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Aurumootor',
+  VICTORIAN_QUIZZ_QUESTION_2:
+    'Mul ei ole jalgu, aga ma võin joosta, Terasest radadel, päikese all. Ma vilistan valjusti, mu hääl on selge, Ma kannan palju, kaugele ja lähedale. Mis ma olen?',
   VICTORIAN_QUIZZ_QUESTION_2_HINT:
     'See on transpordivahend, mis oli populaarne viktoriaanlikul ajastul.',
   VICTORIAN_QUIZZ_ANSWER_2: 'rong',
@@ -182,9 +184,15 @@ export const estonian = {
   '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
   '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
   '1980_QUIZZ_SELECT_OPTION_4': 'George Foreman',
+  '1980_QUIZZ_QUESTION_2':
+    'Ma liigun läbi mõistatuste värvi ja kiirusega, mõnikord väänan, mõnikord söödan. Ma järgin rada, kuid ei hüppa kunagi kõrgele, Mu vaenlased hõljuvad - ma ei küsi, miks',
   '1980_QUIZZ_QUESTION_2_HINT':
     'See on populaarne videomängude tegelane 1980ndatest aastatest.',
   '1980_QUIZZ_ANSWER_2': 'pacman',
+  '1980_QUIZZ_SELECT_OPTION_5': 'Super Mario',
+  '1980_QUIZZ_SELECT_OPTION_6': 'PacMan',
+  '1980_QUIZZ_SELECT_OPTION_7': 'Sonic',
+  '1980_QUIZZ_SELECT_OPTION_8': 'Rubiku kuubik',
   '1980_QUIZZ_QUESTION_3_HINT':
     'See on populaarne mõistatusmäng, mis hõlmab kujundite kokku sobitamist.',
   '1980_QUIZZ_ANSWER_3': 'tetris',
@@ -194,8 +202,14 @@ export const estonian = {
   FUTURE_QUIZZ_QUESTION_1:
     'Ma olen homne sõiduk, mis libiseb tänavate kohal, ühendades taeva vabaduse ja maantee mugavuse. Mis ma olen?',
   FUTURE_QUIZZ_QUESTION_1_HINT:
-    'Sa võid mind näha ulmefilmides, sõitmas ja lendamas üle liiklusummikute. Ma ei ole lihtsalt auto, ma oskan hõljuda!',
+    'Mul on rattad, kuid ma puudutan harva maad.Ma suumian nagu lennuk, kuid ma ei lahku linnast. Ma võin sõita, ma võin hõljuda - ma teen mõlemat ilma kulmu kortsutamata. Mis ma olen?',
   FUTURE_QUIZZ_ANSWER_1: 'lendav auto',
+  FUTURE_QUIZZ_SELECT_OPTION_1: 'Lendav auto',
+  FUTURE_QUIZZ_SELECT_OPTION_2: 'Jetpack',
+  FUTURE_QUIZZ_SELECT_OPTION_3: 'Droon',
+  FUTURE_QUIZZ_SELECT_OPTION_4: 'Hoverboard',
+  FUTURE_QUIZZ_QUESTION_2:
+    'Ma lendan kõrgel, kuid ma ei ole lind, ma sumin ja sumisen, kuid ei ütle ühtegi sõna. Pöörlevate tiibadega vaatan ma taevast - Kaamera on tihti mu silmis',
   FUTURE_QUIZZ_QUESTION_2_HINT:
     'Ma olen seade, mis suudab lennata ja pakke kohale toimetada ning mida sageli nähakse linnades ringi sumisemas.',
   FUTURE_QUIZZ_ANSWER_2: 'droon',

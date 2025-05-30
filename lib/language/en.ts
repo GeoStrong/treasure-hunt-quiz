@@ -164,6 +164,8 @@ export const english = {
   VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Steam engine',
   VICTORIAN_QUIZZ_QUESTION_2_HINT:
     'It’s a mode of transportation that was popular in the Victorian era.',
+  VICTORIAN_QUIZZ_QUESTION_2:
+    'I have no feet, yet I can run, On paths of steel, beneath the sun. I whistle loud, my voice is clear, I carry many, far and near. What am I?',
   VICTORIAN_QUIZZ_ANSWER_2: 'train',
   VICTORIAN_QUIZZ_QUESTION_3_HINT:
     'It’s a device that produces light and was invented during this time.',
@@ -180,9 +182,15 @@ export const english = {
   '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
   '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
   '1980_QUIZZ_SELECT_OPTION_4': 'George Foreman',
+  '1980_QUIZZ_QUESTION_2':
+    'I move through puzzles with color and speed, Sometimes I twist, sometimes I feed. I follow a path, but never jump high, My enemies float — I don’t question why',
   '1980_QUIZZ_QUESTION_2_HINT':
     'This is a popular video game character from the 1980s.',
   '1980_QUIZZ_ANSWER_2': 'pacman',
+  '1980_QUIZZ_SELECT_OPTION_5': 'Super Mario',
+  '1980_QUIZZ_SELECT_OPTION_6': 'PacMan',
+  '1980_QUIZZ_SELECT_OPTION_7': 'Sonic',
+  '1980_QUIZZ_SELECT_OPTION_8': "Rubik's Cube",
   '1980_QUIZZ_QUESTION_3_HINT':
     'This is a popular puzzle game that involves fitting shapes together.',
   '1980_QUIZZ_ANSWER_3': 'tetris',
@@ -190,10 +198,16 @@ export const english = {
 
   FUTURE_PAGE_TITLE: 'Future Era',
   FUTURE_QUIZZ_QUESTION_1:
-    'I’m a vehicle of tomorrow, gliding above the streets, combining the freedom of the sky with the convenience of the road. What am I?',
+    'I have wheels, but I rarely touch the ground.I zoom like a plane, yet I don’t leave the town. I might drive, I might soar — I do both without a frown. What am I?',
   FUTURE_QUIZZ_QUESTION_1_HINT:
     'You might see me in sci-fi movies, driving and flying above traffic jams. I’m not just a car, I can soar!',
   FUTURE_QUIZZ_ANSWER_1: 'flying car',
+  FUTURE_QUIZZ_SELECT_OPTION_1: 'Flying Car',
+  FUTURE_QUIZZ_SELECT_OPTION_2: 'Jetpack',
+  FUTURE_QUIZZ_SELECT_OPTION_3: 'Drone',
+  FUTURE_QUIZZ_SELECT_OPTION_4: 'Hoverboard',
+  FUTURE_QUIZZ_QUESTION_2:
+    'I fly up high but I’m not a bird, I hum and buzz but say no word. With spinning wings, I watch from the sky — A camera is often my eye',
   FUTURE_QUIZZ_QUESTION_2_HINT:
     'I’m a device that can fly and deliver packages, often seen buzzing around cities.',
   FUTURE_QUIZZ_ANSWER_2: 'drone',

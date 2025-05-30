@@ -1,13 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Input } from '@/components/ui/input';
 import useLanguage from '@/lib/hooks/useLanguage';
 import QuizzControls from '@/components/quizz/QuizzControls';
 import { TeamInterface } from '@/lib/types';
 import { quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { GrLinkNext } from 'react-icons/gr';
 
 const QuizzQuestion = () => {
   const [answer, setAnswer] = useState('');
@@ -49,10 +51,6 @@ const QuizzQuestion = () => {
     quizzRedirection('/future/2');
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAnswer(e.target.value);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
@@ -63,6 +61,18 @@ const QuizzQuestion = () => {
     }
   };
 
+  useEffect(() => {
+    if (!isCorrect && isSubmitted) {
+      team.futureQuizz.question1.blocked = true;
+      team.futureQuizz.question1.isCorrect = false;
+      localStorage.setItem('team', JSON.stringify(team));
+      dispatch(setProfile(team));
+    }
+  }, [dispatch, isCorrect, isSubmitted, team]);
+
+  const disabled =
+    (!isCorrect && isSubmitted) || team.futureQuizz.question1.blocked;
+
   return (
     <div className="flex justify-center items-center flex-col">
       <form
@@ -72,13 +82,68 @@ const QuizzQuestion = () => {
         <h2 className="text-xl text-center text-white font-bold rotate-180">
           {[...activeLanguage.FUTURE_QUIZZ_QUESTION_1].reverse().join('')}
         </h2>
-        <Input
-          value={answer}
-          onChange={handleChange}
-          type="text"
-          placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
-          className={`mt-5 text-white placeholder:text-white border-white text-xl w-2/3 p-4`}
-        />
+        <p className="text-center text-sm text-orange-400 p-2 rounded-md mt-2">
+          {activeLanguage.QUIZZ_QUESTION_SELECT_WARNING}
+        </p>
+        <div className="flex gap-2 w-full mt-5">
+          <div className="flex flex-col gap-2 w-full">
+            <Button
+              type="button"
+              disabled={disabled}
+              onClick={() => {
+                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_1);
+              }}
+              className={`bg-orange-400 text-lg text-white w-full ${
+                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_1 &&
+                'bg-orange-500'
+              }`}
+            >
+              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_1}
+            </Button>
+            <Button
+              type="button"
+              disabled={disabled}
+              onClick={() => {
+                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_2);
+              }}
+              className={`bg-orange-400 text-lg text-white w-full ${
+                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_2 &&
+                'bg-orange-500'
+              }`}
+            >
+              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_2}
+            </Button>
+          </div>
+          <div className="flex flex-col gap-2 w-full">
+            <Button
+              type="button"
+              disabled={disabled}
+              onClick={() => {
+                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_3);
+              }}
+              className={`bg-orange-400 text-lg text-white w-full ${
+                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_3 &&
+                'bg-orange-500'
+              }`}
+            >
+              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_3}{' '}
+            </Button>
+            <Button
+              type="button"
+              disabled={disabled}
+              onClick={() => {
+                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_4);
+              }}
+              className={`bg-orange-400 text-lg text-white w-full ${
+                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_4 &&
+                'bg-orange-500'
+              }`}
+            >
+              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_4}
+            </Button>
+          </div>
+        </div>
+
         <QuizzControls
           answer={answer}
           isCorrect={isCorrect}
@@ -90,6 +155,16 @@ const QuizzQuestion = () => {
           onSurrender={handleSurrender}
           activeHint={activeLanguage.FUTURE_QUIZZ_QUESTION_1_HINT}
         />
+
+        {disabled && (
+          <Link
+            href="/game/quizz/future/2"
+            className="bg-amber-600 mt-3 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
+          >
+            {activeLanguage.QUIZZ_NEXT_QUESTION}
+            <GrLinkNext />
+          </Link>
+        )}
       </form>
     </div>
   );

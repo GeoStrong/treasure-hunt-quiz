@@ -16,6 +16,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import Image from 'next/image';
+import { DialogTitle } from '@radix-ui/react-dialog';
 
 const VictorianQuizzQuestion3: React.FC = () => {
   const [answer, setAnswer] = useState('');
@@ -101,6 +102,7 @@ const VictorianQuizzQuestion3: React.FC = () => {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
+              <DialogTitle className="text-center text-2xl font-bold"></DialogTitle>
               <DialogDescription className="flex justify-center">
                 <Image
                   src={activeLanguage.VICTORIAN_QUIZZ_IMAGE_SRC}
