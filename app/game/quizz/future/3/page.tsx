@@ -61,8 +61,8 @@ const FutureQuizzQuestion3: React.FC = () => {
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
     dispatch(setProfile(team));
+    saveParticipantResult(team.name, team.points, team.gameTime, team);
     gameRedirection('/congratulations');
-    return saveParticipantResult(team.name, team.points, team.gameTime, team);
   };
 
   const handleSubmit = (e: React.FormEvent) => {

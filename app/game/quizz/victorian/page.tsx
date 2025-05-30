@@ -158,7 +158,7 @@ const QuizzQuestion = () => {
         />
         {disabled && (
           <Link
-            href="/game/quizz/egypt/2"
+            href="/game/quizz/victorian/2"
             className="bg-amber-600 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
           >
             {activeLanguage.QUIZZ_NEXT_QUESTION}
