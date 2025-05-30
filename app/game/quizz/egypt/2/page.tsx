@@ -58,7 +58,7 @@ const EgyptQuizzQuestion2: React.FC = () => {
     setIsSubmitted(true);
     if (
       answer.toLowerCase().trim() === activeLanguage.EGYPT_QUIZZ_ANSWER_2 ||
-      activeLanguage.EGYPT_QUIZZ_ANSWER_2_alt_1
+      answer.toLowerCase().trim() === activeLanguage.EGYPT_QUIZZ_ANSWER_2_alt_1
     ) {
       setIsCorrect(true);
     } else {

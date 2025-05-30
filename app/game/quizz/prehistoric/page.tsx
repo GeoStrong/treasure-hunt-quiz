@@ -58,7 +58,8 @@ const QuizzQuestion = () => {
     if (
       answer.toLowerCase().trim() ===
         activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1 ||
-      activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1_alt_1
+      answer.toLowerCase().trim() ===
+        activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1_alt_1
     ) {
       setIsCorrect(true);
     } else {
