@@ -11,6 +11,34 @@ export const estonian = {
     'Otsitud lehekülge ei ole olemas. Palun kontrollige URL-i või minge tagasi kodulehele.',
   NOT_FOUND_BUTTON: 'Tagasi kontrollpunkti juurde',
 
+  SUPPORT_TITLE: 'Kas vajate abi?',
+  SUPPORT_DESCRIPTION_1:
+    'Kui jääte mõne küsimuse juures hätta, võite alati saada vihje või jätta selle vahele.',
+  SUPPORT_DESCRIPTION_2: 'Kuid pidage meeles, et see maksab teile punkte.',
+  SUPPORT_DESCRIPTION_3:
+    'Selleks sisestage kõigepealt oma vastus sisestusväljale, seejärel klõpsake nupule "Vihje" või "Märksõna".',
+  SUPPORT_DESCRIPTION_4:
+    'Kui teil on tekkinud mõni viga või teil on lisaküsimusi, võtke julgelt ühendust meie meeskonnaga stardipaigas.',
+  SUPPORT_DESCRIPTION_5: 'Me aitame teid hea meelega!',
+  SUPPORT_HINT_BUTTON: 'Hangi vihje',
+  SUPPORT_SKIP_BUTTON: 'Küsimuse vahelejätmine',
+
+  ABOUT_TRIGGER: 'Mängu kohta',
+  ABOUT_TITLE: 'Selle projekti kohta',
+  ABOUT_HEADER_TITLE_1: 'Tere tulemast Time Trek: Kadunud ajajoonele!',
+  ABOUT_DESCRIPTION_1:
+    'See interaktiivne aardejahimäng loodi lastekaitsepäevaks 2025, et muuta õppimine ja seiklus meie kohalikus pargis elavaks.',
+  ABOUT_DESCRIPTION_2:
+    'QR-koodide, mõistatuste ja väljakutsete abil saavad osalejad tutvuda erinevate ajalooperioodidega - alates eelajaloolisest maailmast kuni tulevikuni -, lahendades samal ajal lõbusaid mõistatusi reaalsetes kohtades.',
+  ABOUT_HEADER_TITLE_2: 'Loodud',
+  ABOUT_DESCRIPTION_3: 'Selle veebisaidi kujundas ja arendas',
+  ABOUT_DESCRIPTION_4: 'vabatahtlik',
+  ABOUT_DESCRIPTION_5: 'Tartus, Eestis, osana',
+  ABOUT_DESCRIPTION_6:
+    'Minu eesmärk oli luua midagi lõbusat, interaktiivset ja harivat igas vanuses lastele - ja tuua parki natuke tehnoloogiat!',
+  ABOUT_HEADER_TITLE_3: 'Meie lingid',
+  ABOUT_DESCRIPTION_7: 'Vabatahtlik, arendaja',
+
   INTRODUCTION_PAGE_TITLE: 'Tere tulemast, ajauurijad!',
   INTRODUCTION_PAGE_DESCRIPTION:
     'Salapärane tõrge on segi ajanud ajaloo - dinosaurustest tulevikku! Sinu ülesanne on reisida läbi aja, lahendada mõistatusi ja taastada minevik, enne kui on liiga hilja. Klõpsake mängimiseks, et alustada oma teekonda. Palju õnne... ajalugu sõltub sinust! 🚀',

@@ -2,14 +2,17 @@
 
 import React from 'react';
 import LanguageSelect from './LanguageSelect';
-// import { Button } from './ui/button';
+
+import Footer from './Footer';
+import Support from './Support';
 
 const LayoutContainer: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   return (
     <div className="p-8 relative">
-      <div className="flex mb-5 justify-end relative left-0 z-10 w-full">
+      <div className="flex mb-5 justify-between relative left-0 z-10 w-full">
+        <Support />
         {/* <Button
           onClick={() => {
             localStorage.clear();
@@ -21,6 +24,7 @@ const LayoutContainer: React.FC<{ children: React.ReactNode }> = ({
         <LanguageSelect />
       </div>
       {children}
+      <Footer />
     </div>
   );
 };

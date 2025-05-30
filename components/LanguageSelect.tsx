@@ -8,14 +8,19 @@ import {
 } from './ui/select';
 import Image from 'next/image';
 import { languageSlice } from '@/lib/store/languageSlice';
-import { useAppDispatch } from '@/lib/store/hooks';
+import { useAppDispatch, useAppSelector } from '@/lib/store/hooks';
 import { defaultLanguage } from '@/lib/types';
 
 const LanguageSelect: React.FC = () => {
   const dispatch = useAppDispatch();
+  const { language } = useAppSelector((state) => state.language);
+
+  console.log('default language', defaultLanguage);
+  console.log('app language', language);
 
   return (
-    <Select defaultValue={defaultLanguage}>
+    <Select defaultValue={language}>
+      {/* <Select defaultValue={defaultLanguage}> */}
       <SelectTrigger>
         <SelectValue />
       </SelectTrigger>

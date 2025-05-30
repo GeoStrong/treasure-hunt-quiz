@@ -46,7 +46,7 @@ const Congratulations: React.FC = () => {
           key={activeLanguage.CONGRATULATIONS_PAGE_DESCRIPTION}
           sequence={[1000, activeLanguage.CONGRATULATIONS_PAGE_DESCRIPTION]}
           speed={70}
-          cursor={true}
+          cursor={false}
           wrapper="p"
           className="text-lg text-gradient-1 text-center mt-4"
         />

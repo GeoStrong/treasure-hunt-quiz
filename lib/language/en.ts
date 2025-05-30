@@ -11,6 +11,34 @@ export const english = {
     'The page you are looking for does not exist. Please check the URL or return to the home page.',
   NOT_FOUND_BUTTON: 'Back to Checkpoint',
 
+  SUPPORT_TITLE: 'Need help?',
+  SUPPORT_DESCRIPTION_1:
+    'If you got stuck on a question, you can always get a hint or skip it.',
+  SUPPORT_DESCRIPTION_2: 'But remember, it will cost you points.',
+  SUPPORT_DESCRIPTION_3:
+    'To do this, first type your answer in the input field, then click on the hint or flag button.',
+  SUPPORT_DESCRIPTION_4:
+    'If you have encountered a bug, or have additional questions, feel free to contact our team at the starting location.',
+  SUPPORT_DESCRIPTION_5: 'We will be happy to help you!',
+  SUPPORT_HINT_BUTTON: 'Get a hint',
+  SUPPORT_SKIP_BUTTON: 'Skip question',
+
+  ABOUT_TRIGGER: 'About the Game',
+  ABOUT_TITLE: 'About this Project',
+  ABOUT_HEADER_TITLE_1: 'Welcome to Time Trek: The Lost Timeline!',
+  ABOUT_DESCRIPTION_1:
+    'This interactive treasure hunt game was created for Children’s Day 2025 to make learning and adventure come alive in our local park.',
+  ABOUT_DESCRIPTION_2:
+    'Through QR codes, riddles, and challenges, participants explore different eras of history—from the prehistoric world to the future—while solving fun puzzles in real-world locations.',
+  ABOUT_HEADER_TITLE_2: 'Created By',
+  ABOUT_DESCRIPTION_3: 'This website was designed and developed by',
+  ABOUT_DESCRIPTION_4: 'a volunteer at',
+  ABOUT_DESCRIPTION_5: 'in Tartu, Estonia, as part of the',
+  ABOUT_DESCRIPTION_6:
+    'My goal was to create something fun, interactive, and educational for kids of all ages—and bring a bit of tech into the park!',
+  ABOUT_HEADER_TITLE_3: 'Our Links',
+  ABOUT_DESCRIPTION_7: 'Volunteer, Developer',
+
   INTRODUCTION_PAGE_TITLE: 'Welcome, Time Explorers!',
   INTRODUCTION_PAGE_DESCRIPTION:
     'A mysterious glitch has scrambled history — from dinosaurs to the future! Your mission is to travel through time, solve riddles, and restore the past before it’s too late. Click on play to begin your journey. Good luck… history depends on you! 🚀',

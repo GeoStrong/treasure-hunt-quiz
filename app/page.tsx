@@ -4,7 +4,7 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { useAppDispatch } from '@/lib/store/hooks';
-import { languageSlice } from '@/lib/store/languageSlice';
+import { setLanguage } from '@/lib/store/languageSlice';
 import { defaultLanguage } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,7 +25,7 @@ const Home = () => {
               htmlFor="en"
               className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
               onClick={() => {
-                dispatch(languageSlice.actions.setLanguage('en'));
+                dispatch(setLanguage('en'));
               }}
             >
               <RadioGroupItem value="en" id="en" />
@@ -43,7 +43,7 @@ const Home = () => {
               htmlFor="et"
               className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
               onClick={() => {
-                dispatch(languageSlice.actions.setLanguage('et'));
+                dispatch(setLanguage('et'));
               }}
             >
               <RadioGroupItem value="et" id="et" />
@@ -61,7 +61,7 @@ const Home = () => {
               htmlFor="ru"
               className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
               onClick={() => {
-                dispatch(languageSlice.actions.setLanguage('ru'));
+                dispatch(setLanguage('ru'));
               }}
             >
               <RadioGroupItem value="ru" id="ru" />
