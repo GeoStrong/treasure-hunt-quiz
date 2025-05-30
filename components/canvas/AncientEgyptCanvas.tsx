@@ -25,7 +25,7 @@ const AncientEgyptCanvas: React.FC = () => {
           <Sand scale={5} position={[0, -3, 0]} />
           <Pyramid scale={0.5} position={[0, -1.5, -7]} />
           <Temple scale={0.01} position={[-6, -1.5, -2]} />
-          <Camel scale={0.3} position={[-1, -1.5, -2]} />
+          <Camel scale={0.4} position={[-1, -1.5, -2]} />
           <Pharaon scale={0.5} position={[0, -1.7, 5]} rotation={[0, 3, 0]} />
           <Pharaon scale={0.5} position={[-1, -1.7, 5]} rotation={[0, 3, 0]} />
           <Sphinx scale={0.1} position={[2, 0, 1]} rotation={[0, 2, 0]} />
