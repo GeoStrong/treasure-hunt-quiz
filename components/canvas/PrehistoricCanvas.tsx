@@ -20,7 +20,7 @@ const PrehistoricCanvas: React.FC = () => {
           <Dinosaur
             floating={false}
             rotation={[0, 8, 0]}
-            position={[1, -1.9, 1]}
+            position={[1, -2.1, 1]}
             scale={0.01}
           />
           <Pteranodon scale={0.5} position={[0, -3, 0]} rotation={[6, 1, 0]} />
