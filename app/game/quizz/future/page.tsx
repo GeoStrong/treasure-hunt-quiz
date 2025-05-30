@@ -75,7 +75,6 @@ const QuizzQuestion = () => {
         <Input
           value={answer}
           onChange={handleChange}
-          onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
           className={`mt-5 text-white placeholder:text-white border-white text-xl w-2/3 p-4`}

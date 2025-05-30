@@ -23,7 +23,7 @@ export const estonian = {
   SUPPORT_HINT_BUTTON: 'Hangi vihje',
   SUPPORT_SKIP_BUTTON: 'Küsimuse vahelejätmine',
 
-  ABOUT_TRIGGER: 'Mängu kohta',
+  ABOUT_TRIGGER: 'Meie kohta',
   ABOUT_TITLE: 'Selle projekti kohta',
   ABOUT_HEADER_TITLE_1: 'Tere tulemast Time Trek: Kadunud ajajoonele!',
   ABOUT_DESCRIPTION_1:
@@ -87,6 +87,7 @@ export const estonian = {
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'Nad rändasid Maal miljoneid aastaid tagasi ja neid kujutatakse sageli filmides.',
   PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurused',
+  PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'dinosaurus',
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Midagi on selle varajase stseeni juures puudu - mida kasutasid inimesed sooja hoidmiseks ja toidu valmistamiseks?',
   PREHISTORIC_QUIZZ_QUESTION_2_HINT:
@@ -97,6 +98,9 @@ export const estonian = {
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'Olen taevakeha, mis võib põhjustada massilist väljasuremist.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'meteoriit',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'meteor',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'komeet',
 
   NEW_STEP_TITLE_1: 'Palju õnne, olete lõpetanud ühe mängu sammust!',
   NEW_STEP_TITLE_2: 'Olete avanud uue asukoha.',
@@ -117,6 +121,7 @@ export const estonian = {
   EGYPT_QUIZZ_QUESTION_2_HINT:
     'Nad maeti sageli suurtesse hauakambritesse ja nende nimed on tänaseni tuntud.',
   EGYPT_QUIZZ_ANSWER_2: 'vaaraod',
+  EGYPT_QUIZZ_ANSWER_2_alt_1: 'vaarao',
   EGYPT_QUIZZ_QUESTION_3:
     'Mul on haugi pea ja ma valvan kuningate üle. Kes ma olen?',
   EGYPT_QUIZZ_QUESTION_3_HINT:

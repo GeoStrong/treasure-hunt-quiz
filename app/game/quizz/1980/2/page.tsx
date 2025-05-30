@@ -106,7 +106,6 @@ const Era1980QuizzQuestion2: React.FC = () => {
         <Input
           value={answer}
           onChange={handleChange}
-          onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
           className={`mt-5 text-black placeholder:text-black border-amber-950 text-md w-2/3 p-4`}

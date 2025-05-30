@@ -108,7 +108,6 @@ const VictorianQuizzQuestion2: React.FC = () => {
         <Input
           value={answer}
           onChange={handleChange}
-          onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
           className={`mt-5 text-white placeholder:text-white border-amber-950 text-md w-2/3 p-4`}

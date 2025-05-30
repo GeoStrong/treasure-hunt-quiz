@@ -23,7 +23,7 @@ export const russian = {
   SUPPORT_HINT_BUTTON: 'Получить подсказку',
   SUPPORT_SKIP_BUTTON: 'Пропустить вопрос',
 
-  ABOUT_TRIGGER: 'Об игре',
+  ABOUT_TRIGGER: 'О нас',
   ABOUT_TITLE: 'Об этом проекте',
   ABOUT_HEADER_TITLE_1:
     'Добро пожаловать на сайт Time Trek: Пропавшая временная линия!',
@@ -85,6 +85,7 @@ export const russian = {
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'Они бродили по Земле миллионы лет назад и часто изображаются в фильмах.',
   PREHISTORIC_QUIZZ_ANSWER_1: 'динозавры',
+  PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'динозавр',
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Чего-то не хватает в этой ранней сцене - что использовали люди, чтобы согреться и готовить?',
   PREHISTORIC_QUIZZ_QUESTION_2_HINT:
@@ -95,6 +96,9 @@ export const russian = {
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'Я небесный объект, который может вызвать массовое вымирание.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'астероид',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'метеорит',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'метеор',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'комета',
 
   NEW_STEP_TITLE_1: 'Поздравляем, вы завершили один из шагов игры!',
   NEW_STEP_TITLE_2: 'Вы открыли новое местоположение.',
@@ -115,6 +119,7 @@ export const russian = {
   EGYPT_QUIZZ_QUESTION_2_HINT:
     'Их часто хоронили в величественных гробницах, и их имена известны до сих пор.',
   EGYPT_QUIZZ_ANSWER_2: 'фараоны',
+  EGYPT_QUIZZ_ANSWER_2_alt_1: 'фараон',
   EGYPT_QUIZZ_QUESTION_3: 'У меня голова сокола, и я охраняю царей. Кто я?',
   EGYPT_QUIZZ_QUESTION_3_HINT:
     'Я - мифическое существо, которое сочетает в себе человеческие и животные черты.',

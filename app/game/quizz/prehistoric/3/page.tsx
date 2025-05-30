@@ -58,7 +58,11 @@ const PrehistoricQuizzQuestion3: React.FC = () => {
     e.preventDefault();
     setIsSubmitted(true);
     if (
-      answer.toLowerCase().trim() === activeLanguage.PREHISTORIC_QUIZZ_ANSWER_3
+      answer.toLowerCase().trim() ===
+        activeLanguage.PREHISTORIC_QUIZZ_ANSWER_3 ||
+      activeLanguage.PREHISTORIC_QUIZZ_ANSWER_3_alt_1 ||
+      activeLanguage.PREHISTORIC_QUIZZ_ANSWER_3_alt_2 ||
+      activeLanguage.PREHISTORIC_QUIZZ_ANSWER_3_alt_3
     ) {
       setIsCorrect(true);
       team.prehistoricQuizz.passed = true;
@@ -85,10 +89,9 @@ const PrehistoricQuizzQuestion3: React.FC = () => {
         <Input
           value={answer}
           onChange={handleChange}
-          onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
-          className={`mt-5 text-black placeholder:text-black border-amber-950 text-xl w-2/3 p-4`}
+          className={`mt-5 text-black placeholder:text-black border-amber-950 text-md w-2/3 p-4`}
         />
         <QuizzControls
           answer={answer}

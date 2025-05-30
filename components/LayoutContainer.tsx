@@ -13,14 +13,14 @@ const LayoutContainer: React.FC<{ children: React.ReactNode }> = ({
     <div className="p-8 relative">
       <div className="flex mb-5 justify-between relative left-0 z-10 w-full">
         <Support />
-        {/* <Button
+        <button
           onClick={() => {
             localStorage.clear();
             location.replace('/');
           }}
         >
           Reset
-        </Button> */}
+        </button>
         <LanguageSelect />
       </div>
       {children}

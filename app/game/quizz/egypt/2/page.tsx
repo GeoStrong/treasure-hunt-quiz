@@ -56,7 +56,10 @@ const EgyptQuizzQuestion2: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    if (answer.toLowerCase().trim() === activeLanguage.EGYPT_QUIZZ_ANSWER_2) {
+    if (
+      answer.toLowerCase().trim() === activeLanguage.EGYPT_QUIZZ_ANSWER_2 ||
+      activeLanguage.EGYPT_QUIZZ_ANSWER_2_alt_1
+    ) {
       setIsCorrect(true);
     } else {
       setIsCorrect(false);
@@ -76,7 +79,6 @@ const EgyptQuizzQuestion2: React.FC = () => {
         <Input
           value={answer}
           onChange={handleChange}
-          onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
           className={`mt-5 text-black placeholder:text-black border-amber-950 text-md w-2/3 p-4`}

@@ -22,7 +22,7 @@ const Statistics: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full mb-10">
       <h2 className="text-2xl text-white font-bold text-center mt-5">
         {activeLanguage.STATISTICS_TITLE}, {team.name.toLocaleUpperCase()}!
       </h2>

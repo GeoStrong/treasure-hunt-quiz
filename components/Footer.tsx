@@ -137,7 +137,11 @@ const Footer: React.FC = () => {
             </div>
           </DrawerHeader>
           <DrawerFooter>
-            <DrawerClose>Close</DrawerClose>
+            <div className="flex justify-center w-full">
+              <DrawerClose className="border-1 w-1/2 border-gray-500 rounded-2xl">
+                Close
+              </DrawerClose>
+            </div>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

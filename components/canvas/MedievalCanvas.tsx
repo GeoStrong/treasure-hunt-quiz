@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import Castle from '@/public/Castle';
 import Dragon from '@/public/Dragon';
 import Archer from '@/public/Archer';
+import Knight from '@/public/Knight';
 import { Environment, OrbitControls, Sky } from '@react-three/drei';
 
 const MedievalCanvas: React.FC = () => {
@@ -21,6 +22,7 @@ const MedievalCanvas: React.FC = () => {
           <Castle scale={0.15} position={[0.5, -2, 0]} />
           <Dragon position={[1, 1, -2]} rotation={[0, 6, 0]} />
           <Archer scale={0.5} position={[-2, -0.4, -1]} rotation={[0, 2, 0]} />
+          <Knight position={[-1, 0, 2]} rotation={[0, 1, 0]} />
           <Sky />
         </Suspense>
       </Canvas>

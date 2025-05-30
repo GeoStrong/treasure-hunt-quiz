@@ -23,7 +23,7 @@ export const english = {
   SUPPORT_HINT_BUTTON: 'Get a hint',
   SUPPORT_SKIP_BUTTON: 'Skip question',
 
-  ABOUT_TRIGGER: 'About the Game',
+  ABOUT_TRIGGER: 'About',
   ABOUT_TITLE: 'About this Project',
   ABOUT_HEADER_TITLE_1: 'Welcome to Time Trek: The Lost Timeline!',
   ABOUT_DESCRIPTION_1:
@@ -84,6 +84,7 @@ export const english = {
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'They roamed the Earth millions of years ago and are often depicted in movies.',
   PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurs',
+  PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'dinosaur',
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Something’s missing from this early scene—what did people use to stay warm and cook?',
   PREHISTORIC_QUIZZ_QUESTION_2_HINT:
@@ -94,6 +95,9 @@ export const english = {
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'I’m a celestial object that can cause mass extinction.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'meteorite',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'meteor',
+  PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'comet',
 
   NEW_STEP_TITLE_1:
     'Congratulations you have completed one of the steps of the game!',
@@ -115,6 +119,7 @@ export const english = {
   EGYPT_QUIZZ_QUESTION_2_HINT:
     'They were often buried in grand tombs, and their names are still known today.',
   EGYPT_QUIZZ_ANSWER_2: 'pharaohs',
+  EGYPT_QUIZZ_ANSWER_2_alt_1: 'pharaoh',
   EGYPT_QUIZZ_QUESTION_3:
     'I have the head of a falcon and watch over kings. Who am I?',
   EGYPT_QUIZZ_QUESTION_3_HINT:

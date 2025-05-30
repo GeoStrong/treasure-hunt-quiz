@@ -5,7 +5,9 @@ import { Canvas } from '@react-three/fiber';
 import Miami from '@/public/Miami';
 import Pacman from '@/public/Pacman';
 import Rubik from '@/public/Rubik';
-import Nuclear from '@/public/Nuclear';
+// import Nuclear from '@/public/Nuclear';
+import Ali from '@/public/Ali';
+import Tetris from '@/public/Tetris';
 import { Environment, OrbitControls, Sky } from '@react-three/drei';
 
 const Era1980Canvas: React.FC = () => {
@@ -23,7 +25,9 @@ const Era1980Canvas: React.FC = () => {
           <Miami scale={0.08} position={[0, -2, 0]} />
           <Pacman scale={0.01} position={[0, 0, -3]} rotation={[0, 0, 0]} />
           <Rubik scale={5} position={[1, 0, 2]} rotation={[1, 1, 2]} />
-          <Nuclear scale={0.06} position={[-2, 1, 0]} rotation={[-5, 0, 0]} />
+          <Ali position={[0, 0, 5]} scale={0.001} />
+          <Tetris position={[-2, 0, 0]} rotation={[0, 0, 0]} scale={10} />
+          {/* <Nuclear scale={0.06} position={[-2, 1, 0]} rotation={[-5, 0, 0]} /> */}
         </Suspense>
       </Canvas>
     </div>

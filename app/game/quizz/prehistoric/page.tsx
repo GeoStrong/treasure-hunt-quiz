@@ -56,7 +56,9 @@ const QuizzQuestion = () => {
     e.preventDefault();
     setIsSubmitted(true);
     if (
-      answer.toLowerCase().trim() === activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1
+      answer.toLowerCase().trim() ===
+        activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1 ||
+      activeLanguage.PREHISTORIC_QUIZZ_ANSWER_1_alt_1
     ) {
       setIsCorrect(true);
     } else {
@@ -76,7 +78,6 @@ const QuizzQuestion = () => {
         <Input
           value={answer}
           onChange={handleChange}
-          onFocus={() => setIsCorrect(false)}
           type="text"
           placeholder={activeLanguage.QUIZZ_TYPE_YOUR_ANSWER}
           className={`mt-5 text-black placeholder:text-black border-amber-950 placeholder:text-base text-xl w-2/3 p-4`}
