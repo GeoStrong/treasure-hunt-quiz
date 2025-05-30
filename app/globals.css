@@ -126,10 +126,18 @@
     @apply bg-background text-foreground;
   }
 
+  .gradient-1 {
+    background-image: var(--gradient-1);
+  }
+
   .text-gradient-1 {
     background-image: var(--gradient-1);
     background-clip: text;
     color: transparent;
+  }
+
+  .gradient-2 {
+    background-image: var(--gradient-2);
   }
 
   .text-gradient-2 {
@@ -156,6 +164,10 @@
     background-image: var(--gradient-4);
     background-clip: text;
     color: transparent;
+  }
+
+  .gradient-5 {
+    background-image: var(--gradient-5);
   }
 
   .text-gradient-5 {

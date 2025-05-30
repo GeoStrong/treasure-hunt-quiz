@@ -25,8 +25,10 @@ const Footer: React.FC = () => {
   return (
     <div className="fixed w-full left-0 bottom-5">
       <Drawer>
-        <DrawerTrigger className="w-full text-xl text-center text-gradient-1 font-bold">
-          {activeLanguage.ABOUT_TRIGGER}
+        <DrawerTrigger className="w-full flex justify-center">
+          <div className="w-1/3 text-base rounded-2xl text-center text-white gradient-1 font-bold">
+            {activeLanguage.ABOUT_TRIGGER}
+          </div>
         </DrawerTrigger>
         <DrawerContent>
           <DrawerHeader className="!overflow-y-scroll">
@@ -54,7 +56,10 @@ const Footer: React.FC = () => {
                 <strong className="text-white">
                   European Solidarity Corps project.
                 </strong>{' '}
-                <br /> <i>{activeLanguage.ABOUT_DESCRIPTION_6}</i>
+                <br />{' '}
+                <i className="mt-2 block">
+                  {activeLanguage.ABOUT_DESCRIPTION_6}
+                </i>
               </DrawerDescription>
               <h3 className="text-gradient-1 text-xl mt-4">
                 {activeLanguage.ABOUT_HEADER_TITLE_3}
