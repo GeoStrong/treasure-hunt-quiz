@@ -20,9 +20,13 @@ export const english = {
   SUPPORT_DESCRIPTION_4:
     'If you have encountered a bug, or have additional questions, feel free to contact our team at the starting location.',
   SUPPORT_DESCRIPTION_5: 'We will be happy to help you!',
+  SUPPORT_DESCRIPTION_6:
+    'You can also collapse the question to see the environment better. Sometime the answer is right in front of you!',
   SUPPORT_HINT_BUTTON: 'Get a hint',
   SUPPORT_SKIP_BUTTON: 'Skip question',
   SUPPORT_COLLAPSE_BUTTON: 'Collapse a question',
+  SUPPORT_COMPLETED_BUTTON: 'Completed Era',
+  SUPPORT_LOCATION_BUTTON: 'Location of the next QR code',
 
   ABOUT_TRIGGER: 'About',
   ABOUT_TITLE: 'About this Project',

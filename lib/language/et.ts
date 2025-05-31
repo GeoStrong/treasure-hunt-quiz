@@ -20,9 +20,13 @@ export const estonian = {
   SUPPORT_DESCRIPTION_4:
     'Kui teil on tekkinud mõni viga või teil on lisaküsimusi, võtke julgelt ühendust meie meeskonnaga stardipaigas.',
   SUPPORT_DESCRIPTION_5: 'Me aitame teid hea meelega!',
+  SUPPORT_DESCRIPTION_6:
+    'Võite ka küsimust kokku lükata, et keskkonda paremini näha. Mõnikord on vastus otse teie ees!',
   SUPPORT_HINT_BUTTON: 'Hangi vihje',
   SUPPORT_SKIP_BUTTON: 'Küsimuse vahelejätmine',
   SUPPORT_COLLAPSE_BUTTON: 'Küsimuse kokkuvarisemine',
+  SUPPORT_COMPLETED_BUTTON: 'Lõppenud ajastu',
+  SUPPORT_LOCATION_BUTTON: 'Järgmise QR-koodi asukoht',
 
   ABOUT_TRIGGER: 'Meie kohta',
   ABOUT_TITLE: 'Selle projekti kohta',

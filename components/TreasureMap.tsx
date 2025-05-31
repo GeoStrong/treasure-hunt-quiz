@@ -20,67 +20,67 @@ const TreasureMap: React.FC = () => {
 
       {/* Prehistoric Qr code location */}
       {profile.prehistoricQuizz.passed ? (
-        <div className="absolute top-[60%] left-[75%]">
-          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        <div className="absolute top-[60%] left-[80%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : (
-        <div className="absolute bg-amber-800 p-2 rounded-full top-[60%] left-[75%]">
-          <BiQr className="text-2xl" />
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[60%] left-[80%]">
+          <BiQr className="text-lg" />
         </div>
       )}
 
       {/* Ancient Egypt Qr code location */}
       {profile.prehistoricQuizz.passed && !profile.egyptQuizz.passed ? (
-        <div className="absolute bg-amber-800 p-2 rounded-full top-[85%] left-[58%]">
-          <BiQr className="text-2xl" />
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[35%] left-[35%]">
+          <BiQr className="text-lg" />
         </div>
       ) : profile.egyptQuizz.passed ? (
-        <div className="absolute top-[85%] left-[58%]">
-          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        <div className="absolute top-[35%] left-[35%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : null}
 
       {/* Medieval Qr code location */}
       {profile.egyptQuizz.passed && !profile.medievalQuizz.passed ? (
-        <div className="absolute bg-amber-800 p-2 rounded-full top-[50%] left-[50%]">
-          <BiQr className="text-2xl" />
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[65%] left-[50%]">
+          <BiQr className="text-lg" />
         </div>
       ) : profile.medievalQuizz.passed ? (
-        <div className="absolute top-[50%] left-[50%]">
-          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        <div className="absolute top-[65%] left-[50%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : null}
 
       {/* Victorian Qr code location */}
       {profile.medievalQuizz.passed && !profile.victorianQuizz.passed ? (
-        <div className="absolute bg-amber-800 p-2 rounded-full top-[25%] left-[25%]">
-          <BiQr className="text-2xl" />
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[35%] left-[60%]">
+          <BiQr className="text-lg" />
         </div>
       ) : profile.victorianQuizz.passed ? (
-        <div className="absolute top-[25%] left-[25%]">
-          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        <div className="absolute top-[35%] left-[60%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : null}
 
       {/* 1980 Qr code location */}
       {profile.victorianQuizz.passed && !profile['1980Quizz'].passed ? (
-        <div className="absolute bg-amber-800 p-2 rounded-full top-[5%] left-[5%]">
-          <BiQr className="text-2xl" />
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[20%] left-[50%]">
+          <BiQr className="text-lg" />
         </div>
       ) : profile['1980Quizz'].passed ? (
-        <div className="absolute top-[5%] left-[5%]">
-          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        <div className="absolute top-[20%] left-[50%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : null}
 
       {/* Future Qr code location */}
       {profile['1980Quizz'].passed && !profile.futureQuizz.passed ? (
-        <div className="absolute bg-amber-800 p-2 rounded-full top-[15%] left-[50%]">
-          <BiQr className="text-2xl" />
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[85%] left-[60%]">
+          <BiQr className="text-lg" />
         </div>
       ) : profile.futureQuizz.passed ? (
-        <div className="absolute top-[15%] left-[50%]">
-          <IoIosCheckmarkCircle className="text-green-600 text-4xl" />
+        <div className="absolute top-[85%] left-[60%]">
+          <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : null}
     </div>

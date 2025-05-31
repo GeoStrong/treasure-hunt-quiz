@@ -20,9 +20,13 @@ export const russian = {
   SUPPORT_DESCRIPTION_4:
     'Если вы столкнулись с ошибкой или у вас возникли дополнительные вопросы, не стесняйтесь обращаться к нашей команде в стартовой локации.',
   SUPPORT_DESCRIPTION_5: 'Мы будем рады помочь вам!',
+  SUPPORT_DESCRIPTION_6:
+    'You can also collapse the question to see the environment better. Sometime the answer is right in front of you!',
   SUPPORT_HINT_BUTTON: 'Получить подсказку',
   SUPPORT_SKIP_BUTTON: 'Пропустить вопрос',
   SUPPORT_COLLAPSE_BUTTON: 'Свернуть вопрос',
+  SUPPORT_COMPLETED_BUTTON: 'Завершенная эпоха',
+  SUPPORT_LOCATION_BUTTON: 'Расположение следующего QR-кода',
 
   ABOUT_TRIGGER: 'О нас',
   ABOUT_TITLE: 'Об этом проекте',

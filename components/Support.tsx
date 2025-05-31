@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { BiHelpCircle } from 'react-icons/bi';
+import { BiHelpCircle, BiQr } from 'react-icons/bi';
 import {
   Sheet,
   SheetContent,
@@ -14,6 +14,7 @@ import { MdTipsAndUpdates } from 'react-icons/md';
 import { BsFillFlagFill } from 'react-icons/bs';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { ChevronDownIcon } from 'lucide-react';
+import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 const Support: React.FC = () => {
   const activeLanguage = useLanguage();
@@ -36,6 +37,8 @@ const Support: React.FC = () => {
               {activeLanguage.SUPPORT_DESCRIPTION_3}
               <br />
               {activeLanguage.SUPPORT_DESCRIPTION_4}
+              <br />
+              {activeLanguage.SUPPORT_DESCRIPTION_6}
               <br />
               <span className="text-lg text-gradient-2 font-bold">
                 {activeLanguage.SUPPORT_DESCRIPTION_5}
@@ -60,6 +63,22 @@ const Support: React.FC = () => {
                   <span className="text-lg">
                     {' '}
                     - {activeLanguage.SUPPORT_COLLAPSE_BUTTON}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
+                  <span className="text-lg">
+                    {' '}
+                    - {activeLanguage.SUPPORT_COMPLETED_BUTTON}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="bg-amber-800 p-[2px] rounded-full ">
+                    <BiQr className="text-xl" />
+                  </div>
+                  <span className="text-lg">
+                    {' '}
+                    - {activeLanguage.SUPPORT_LOCATION_BUTTON}
                   </span>
                 </div>
               </div>
