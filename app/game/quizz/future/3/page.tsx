@@ -17,7 +17,6 @@ import {
 } from '@/components/ui/dialog';
 import Image from 'next/image';
 import { DialogTitle } from '@radix-ui/react-dialog';
-import { saveParticipantResult } from '@/lib/functions';
 
 const FutureQuizzQuestion3: React.FC = () => {
   const [answer, setAnswer] = useState('');
@@ -61,7 +60,6 @@ const FutureQuizzQuestion3: React.FC = () => {
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
     dispatch(setProfile(team));
-    saveParticipantResult(team.name, team.points, team.gameTime, team);
     gameRedirection('/congratulations');
   };
 
@@ -76,7 +74,6 @@ const FutureQuizzQuestion3: React.FC = () => {
       localStorage.setItem('team', JSON.stringify(team));
       dispatch(addPoints(250));
       dispatch(setProfile(team));
-      return saveParticipantResult(team.name, team.points, team.gameTime, team);
     } else {
       setIsCorrect(false);
     }

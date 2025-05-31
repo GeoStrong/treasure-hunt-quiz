@@ -19,7 +19,7 @@ const MedievalCanvas: React.FC = () => {
           <ambientLight intensity={1} />
           <Environment preset="sunset" />
           <OrbitControls />
-          <Castle scale={0.15} position={[0.5, -2, 0]} />
+          <Castle scale={0.15} position={[0, -2, 0]} />
           <Dragon position={[1, 1, -2]} rotation={[0, 6, 0]} />
           <Archer scale={0.5} position={[-2, -0.4, -1]} rotation={[0, 2, 0]} />
           <Knight position={[-1, 0, 2]} rotation={[0, 1, 0]} />

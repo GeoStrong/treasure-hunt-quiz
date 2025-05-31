@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useAppSelector } from '@/lib/store/hooks';
 import { useStopwatch } from 'react-timer-hook';
+import { saveParticipantResult } from '@/lib/functions';
 
 const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
   isStarted,
@@ -50,15 +51,21 @@ const Stopwatch: React.FC<{ isStarted: boolean; isPaused?: boolean }> = ({
         seconds,
       };
 
-      console.log(time);
-
       const updatedTeam = {
         ...profile,
         timeEnd: stopTime,
         gameTime: time,
       };
 
+      console.log('Updated team:', updatedTeam.gameTime);
+
       localStorage.setItem('team', JSON.stringify(updatedTeam));
+      saveParticipantResult(
+        updatedTeam.name,
+        updatedTeam.points,
+        time,
+        updatedTeam
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPaused, isStarted, profile]);
