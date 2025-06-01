@@ -75,7 +75,7 @@ const TreasureMap: React.FC = () => {
 
       {/* Future Qr code location */}
       {profile['1980Quizz'].passed && !profile.futureQuizz.passed ? (
-        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[85%] left-[60%]">
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[76%] left-[66%]">
           <BiQr className="text-lg" />
         </div>
       ) : profile.futureQuizz.passed ? (
