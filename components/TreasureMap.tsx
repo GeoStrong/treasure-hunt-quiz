@@ -20,11 +20,11 @@ const TreasureMap: React.FC = () => {
 
       {/* Prehistoric Qr code location */}
       {profile.prehistoricQuizz.passed ? (
-        <div className="absolute top-[60%] left-[80%]">
+        <div className="absolute top-[78%] left-[58%]">
           <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : (
-        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[60%] left-[80%]">
+        <div className="absolute bg-amber-800 p-[2px] rounded-full top-[78%] left-[58%]">
           <BiQr className="text-lg" />
         </div>
       )}
@@ -79,7 +79,7 @@ const TreasureMap: React.FC = () => {
           <BiQr className="text-lg" />
         </div>
       ) : profile.futureQuizz.passed ? (
-        <div className="absolute top-[85%] left-[60%]">
+        <div className="absolute top-[76%] left-[66%]">
           <IoIosCheckmarkCircle className="text-green-600 text-2xl" />
         </div>
       ) : null}
