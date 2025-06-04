@@ -4,6 +4,7 @@ import QRScanner from '@/components/QRScanner';
 import { Button } from '@/components/ui/button';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { TeamInterface } from '@/lib/types';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { Gi3dHammer, GiPocketWatch } from 'react-icons/gi';
 
@@ -30,6 +31,16 @@ const Game: React.FC = () => {
             <p className="text-center text-xl text-white">
               {activeLanguage.GAME_PAGE_DESCRIPTION}
             </p>
+            <p className="text-center text-xl text-bold text-white mt-5">
+              Since the game is finished, you can proceed to the first Era
+              without scanning the QR code.
+            </p>
+            <Link
+              href="/game/quizz/prehistoric"
+              className="gradient-3 p-2 rounded-2xl"
+            >
+              Go to the first Era
+            </Link>
             <Button
               onClick={() => {
                 setQrScannerIsActive(true);
