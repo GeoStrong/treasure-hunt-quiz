@@ -31,16 +31,18 @@ const Game: React.FC = () => {
             <p className="text-center text-xl text-white">
               {activeLanguage.GAME_PAGE_DESCRIPTION}
             </p>
-            <p className="text-center text-xl text-bold text-white mt-5">
-              Since the game is finished, you can proceed to the first Era
-              without scanning the QR code.
-            </p>
-            <Link
-              href="/game/quizz/prehistoric"
-              className="gradient-3 p-2 rounded-2xl"
-            >
-              Go to the first Era
-            </Link>
+            <div className="flex flex-col items-center gap-5 mt-5 bg-yellow-800 rounded-2xl p-3">
+              <p className="text-center text-xl text-bold text-white">
+                Since the game is finished, you can proceed to the first Era
+                without scanning the QR code.
+              </p>
+              <Link
+                href="/game/quizz/prehistoric"
+                className="gradient-3 p-2 rounded-2xl"
+              >
+                Go to the first Era
+              </Link>
+            </div>
             <Button
               onClick={() => {
                 setQrScannerIsActive(true);
