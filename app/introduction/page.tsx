@@ -47,7 +47,7 @@ const Introduction: React.FC = () => {
         speed={70}
         cursor={true}
         wrapper="p"
-        className="text-2xl text-gradient-5 font-bold text-center mt-4"
+        className="text-2xl w-full md:w-1/2 text-gradient-5 font-bold text-center mt-4"
         style={{ display: 'block' }}
       />
 

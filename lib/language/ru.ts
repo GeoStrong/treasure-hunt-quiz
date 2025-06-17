@@ -68,7 +68,7 @@ export const russian = {
     '4. Выполни миссию, чтобы выиграть приз и стать сертифицированным исследователем времени!',
   ],
 
-  QUIZZ_INCORRECT_ANSWER: 'Неправильный ответ, попробуй еще раз!',
+  QUIZZ_INCORRECT_ANSWER: 'Неправильный ответ!',
   QUIZZ_CORRECT_ANSWER: 'Правильный ответ! Отличная работа!',
   QUIZZ_TYPE_YOUR_ANSWER: 'Введите свой ответ тут',
   QUIZZ_NEXT_QUESTION: 'Следующий вопрос',
@@ -90,20 +90,34 @@ export const russian = {
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'Они бродили по Земле миллионы лет назад и часто изображаются в фильмах.',
   PREHISTORIC_QUIZZ_ANSWER_1: 'динозавры',
-  PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'динозавр',
+  // PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'динозавр',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_1: 'Динозавр',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_2: 'Тираннозавр Рекс',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_3: 'Велоцираптор',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_4: 'Трицератопс',
+
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Чего-то не хватает в этой ранней сцене - что использовали люди, чтобы согреться и готовить?',
   PREHISTORIC_QUIZZ_QUESTION_2_HINT:
     'Это то, что можно найти в природе и что необходимо для выживания.',
   PREHISTORIC_QUIZZ_ANSWER_2: 'огонь',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_1: 'Камень',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_2: 'Вода',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_3: 'Огонь',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_4: 'Палка',
+
   PREHISTORIC_QUIZZ_QUESTION_3:
     'Я пролетел через космос и вызвал шум, положив конец правлению тех, кто имел значение. Что я?',
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'Я небесный объект, который может вызвать массовое вымирание.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'астероид',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'метеорит',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'метеор',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'комета',
+  // PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'метеорит',
+  // PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'метеор',
+  // PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'комета',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_1: 'Астероид',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_2: 'Вулкан',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_3: 'Землетрясение',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_4: 'Наводнение',
 
   NEW_STEP_TITLE_1: 'Поздравляем, вы завершили один из шагов игры!',
   NEW_STEP_TITLE_2: 'Вы открыли новое местоположение.',
@@ -120,19 +134,28 @@ export const russian = {
   EGYPT_QUIZZ_QUESTION_1_HINT:
     'Я - величественная гробница, построенная из огромных камней, и я охраняю секреты древнего мира.',
   EGYPT_QUIZZ_ANSWER_1: 'пирамида',
+  EGYPT_QUIZZ_1_SELECT_OPTION_1: 'Обелиск',
+  EGYPT_QUIZZ_1_SELECT_OPTION_2: 'Пирамида',
+  EGYPT_QUIZZ_1_SELECT_OPTION_3: 'Храм',
+  EGYPT_QUIZZ_1_SELECT_OPTION_4: 'Сфинкс',
+
   EGYPT_QUIZZ_QUESTION_2: 'Как звали египетских царей?',
   EGYPT_QUIZZ_QUESTION_2_HINT:
     'Их часто хоронили в величественных гробницах, и их имена известны до сих пор.',
-  EGYPT_QUIZZ_ANSWER_2: 'фараоны',
-  EGYPT_QUIZZ_ANSWER_2_alt_1: 'фараон',
+  EGYPT_QUIZZ_ANSWER_2: 'фараон',
+  EGYPT_QUIZZ_2_SELECT_OPTION_1: 'Визирь',
+  EGYPT_QUIZZ_2_SELECT_OPTION_2: 'Султан',
+  EGYPT_QUIZZ_2_SELECT_OPTION_3: 'Император',
+  EGYPT_QUIZZ_2_SELECT_OPTION_4: 'Фараон',
+
   EGYPT_QUIZZ_QUESTION_3: 'У меня голова сокола, и я охраняю царей. Кто я?',
   EGYPT_QUIZZ_QUESTION_3_HINT:
     'Я - мифическое существо, которое сочетает в себе человеческие и животные черты.',
   EGYPT_QUIZZ_ANSWER_3: 'гор',
-  EGYPT_QUIZZ_SELECT_OPTION_1: 'Анубис',
-  EGYPT_QUIZZ_SELECT_OPTION_2: 'Гор',
-  EGYPT_QUIZZ_SELECT_OPTION_3: 'Осирис',
-  EGYPT_QUIZZ_SELECT_OPTION_4: 'Ра',
+  EGYPT_QUIZZ_3_SELECT_OPTION_1: 'Анубис',
+  EGYPT_QUIZZ_3_SELECT_OPTION_2: 'Гор',
+  EGYPT_QUIZZ_3_SELECT_OPTION_3: 'Осирис',
+  EGYPT_QUIZZ_3_SELECT_OPTION_4: 'Ра',
 
   MEDIEVAL_PAGE_TITLE: 'Средневековая эпоха',
   MEDIEVAL_QUIZZ_QUESTION_1:
@@ -140,19 +163,29 @@ export const russian = {
   MEDIEVAL_QUIZZ_QUESTION_1_HINT:
     'Я - крепость, защищенная стенами, где происходят великие сражения и романтические истории.',
   MEDIEVAL_QUIZZ_ANSWER_1: 'замок',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_1: 'Замок',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_2: 'Кафедральный собор',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_3: 'Крепость',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_4: 'Дворец',
+
   MEDIEVAL_QUIZZ_QUESTION_2:
     'Я ношу доспехи и скачу в бой. Я служу своему королю с отвагой. Кто я?',
   MEDIEVAL_QUIZZ_QUESTION_2_HINT: 'Я - воин чести, с древними историями.',
   MEDIEVAL_QUIZZ_ANSWER_2: 'рыцарь',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_1: 'Крестьянин',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_2: 'Король',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_3: 'Рыцарь',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_4: 'Торговец',
+
   MEDIEVAL_QUIZZ_QUESTION_3:
     'Что использовали лучники для нанесения дальних атак?',
   MEDIEVAL_QUIZZ_QUESTION_3_HINT:
     'Я - точное оружие, с тетивой и стрелой для игры.',
   MEDIEVAL_QUIZZ_ANSWER_3: 'лук',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_1: 'Меч',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Ударная дубина',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_3: 'Арбалет',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Лук',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_1: 'Меч',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_2: 'Ударная дубина',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_3: 'Арбалет',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_4: 'Лук',
 
   VICTORIAN_PAGE_TITLE: 'Викторианская эпоха',
   VICTORIAN_QUIZZ_QUESTION_1:

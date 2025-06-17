@@ -13,7 +13,7 @@ const PrehistoricCanvas: React.FC = () => {
   return (
     <div
       id="canvas-container"
-      className={`absolute w-screen h-screen -z-10 inset-0 `}
+      className={`absolute w-screen h-[120vh] -z-10 inset-0 `}
     >
       <Canvas dpr={[1, 1.5]}>
         <Suspense fallback={null}>

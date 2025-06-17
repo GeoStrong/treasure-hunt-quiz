@@ -46,7 +46,7 @@ const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
   }, [profile.prehistoricQuizz.passed]);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full">
       {loading && <ModelsLoading />}
       {!loading && (
         <>
@@ -66,8 +66,9 @@ const PrehistoricLayout: React.FC<{ children: React.ReactNode }> = ({
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0 }}
                       transition={{ duration: 0.5 }}
+                      className="flex justify-center"
                     >
-                      <div className="bg-yellow-300/10 border-amber-950 border-2 rounded-lg p-5 mt-5">
+                      <div className="bg-yellow-300/10 w-full md:w-1/2 border-amber-950 border-2 rounded-lg p-5 mt-5">
                         {children}
                       </div>
                     </motion.div>

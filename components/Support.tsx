@@ -24,7 +24,7 @@ const Support: React.FC = () => {
         <SheetTrigger>
           <BiHelpCircle className="text-2xl" />
         </SheetTrigger>
-        <SheetContent side="left" className="pt-10">
+        <SheetContent side="left" className="pt-10 overflow-auto">
           <SheetHeader>
             <SheetTitle className="text-center text-2xl">
               {activeLanguage.SUPPORT_TITLE}

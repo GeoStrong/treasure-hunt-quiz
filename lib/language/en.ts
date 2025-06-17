@@ -67,7 +67,7 @@ export const english = {
     '4. Complete the quest to win a prize and become a certified Time Explorer!',
   ],
 
-  QUIZZ_INCORRECT_ANSWER: 'Incorrect answer, try again!',
+  QUIZZ_INCORRECT_ANSWER: 'Incorrect answer!',
   QUIZZ_CORRECT_ANSWER: 'Correct answer! Well done!',
   QUIZZ_TYPE_YOUR_ANSWER: 'Type your answer here',
 
@@ -88,21 +88,31 @@ export const english = {
   PREHISTORIC_QUIZZ_QUESTION_1: 'The giant lizards of the past were called ___',
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'They roamed the Earth millions of years ago and are often depicted in movies.',
-  PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurs',
-  PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'dinosaur',
+  PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaur',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_1: 'Dinosaur',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_2: 'Tyrannosaurus Rex',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_3: 'Velociraptor',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_4: 'Triceratops',
+
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Something’s missing from this early scene—what did people use to stay warm and cook?',
   PREHISTORIC_QUIZZ_QUESTION_2_HINT:
     'It’s something that can be found in nature and is essential for survival.',
   PREHISTORIC_QUIZZ_ANSWER_2: 'fire',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_1: 'Stone',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_2: 'Water',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_3: 'Fire',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_4: 'Stick',
+
   PREHISTORIC_QUIZZ_QUESTION_3:
     'I flew through space and caused quite the clatter, ending the reign of those who had mattered. What am I?',
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'I’m a celestial object that can cause mass extinction.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'meteorite',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'meteor',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'comet',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_1: 'Asteroid',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_2: 'Volcano',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_3: 'Earthquake',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_4: 'Flood',
 
   NEW_STEP_TITLE_1:
     'Congratulations you have completed one of the steps of the game!',
@@ -120,20 +130,29 @@ export const english = {
   EGYPT_QUIZZ_QUESTION_1_HINT:
     'I’m a massive tomb built for ancient kings, with a secret or two to tell.',
   EGYPT_QUIZZ_ANSWER_1: 'pyramid',
+  EGYPT_QUIZZ_1_SELECT_OPTION_1: 'Obelisk',
+  EGYPT_QUIZZ_1_SELECT_OPTION_2: 'Pyramid',
+  EGYPT_QUIZZ_1_SELECT_OPTION_3: 'Temple',
+  EGYPT_QUIZZ_1_SELECT_OPTION_4: 'Sphinx',
+
   EGYPT_QUIZZ_QUESTION_2: 'What was the name of Egyptian kings?',
   EGYPT_QUIZZ_QUESTION_2_HINT:
     'They were often buried in grand tombs, and their names are still known today.',
-  EGYPT_QUIZZ_ANSWER_2: 'pharaohs',
-  EGYPT_QUIZZ_ANSWER_2_alt_1: 'pharaoh',
+  EGYPT_QUIZZ_ANSWER_2: 'pharaoh',
+  EGYPT_QUIZZ_2_SELECT_OPTION_1: 'Vizier',
+  EGYPT_QUIZZ_2_SELECT_OPTION_2: 'Sultan',
+  EGYPT_QUIZZ_2_SELECT_OPTION_3: 'Emperor',
+  EGYPT_QUIZZ_2_SELECT_OPTION_4: 'Pharaoh',
+
   EGYPT_QUIZZ_QUESTION_3:
     'I have the head of a falcon and watch over kings. Who am I?',
   EGYPT_QUIZZ_QUESTION_3_HINT:
     'I’m a god of the sky, often depicted with a sun disk and wings.',
   EGYPT_QUIZZ_ANSWER_3: 'horus',
-  EGYPT_QUIZZ_SELECT_OPTION_1: 'Anubis',
-  EGYPT_QUIZZ_SELECT_OPTION_2: 'Horus',
-  EGYPT_QUIZZ_SELECT_OPTION_3: 'Osiris',
-  EGYPT_QUIZZ_SELECT_OPTION_4: 'Ra',
+  EGYPT_QUIZZ_3_SELECT_OPTION_1: 'Anubis',
+  EGYPT_QUIZZ_3_SELECT_OPTION_2: 'Horus',
+  EGYPT_QUIZZ_3_SELECT_OPTION_3: 'Osiris',
+  EGYPT_QUIZZ_3_SELECT_OPTION_4: 'Ra',
 
   MEDIEVAL_PAGE_TITLE: 'Medieval Era',
   MEDIEVAL_QUIZZ_QUESTION_1:
@@ -141,20 +160,30 @@ export const english = {
   MEDIEVAL_QUIZZ_QUESTION_1_HINT:
     'I’m a stronghold of stone, where battles were fought, and legends were born.',
   MEDIEVAL_QUIZZ_ANSWER_1: 'castle',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_1: 'Castle',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_2: 'Cathedral',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_3: 'Fortress',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_4: 'Palace',
+
   MEDIEVAL_QUIZZ_QUESTION_2:
     'I wear armor and ride into battle. I serve my king with courage. Who am I?',
   MEDIEVAL_QUIZZ_QUESTION_2_HINT:
     'I’m a warrior of honor, with stories of old.',
   MEDIEVAL_QUIZZ_ANSWER_2: 'knight',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_1: 'Peasant',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_2: 'King',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_3: 'Knight',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_4: 'Merchant',
+
   MEDIEVAL_QUIZZ_QUESTION_3:
     'From sword to bow, what did archers use to strike from far away?',
   MEDIEVAL_QUIZZ_QUESTION_3_HINT:
     'I’m a weapon of precision, with a string and an arrow to play.',
   MEDIEVAL_QUIZZ_ANSWER_3: 'bow',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_1: 'Sword',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Mace',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_3: 'Crossbow',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Bow',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_1: 'Sword',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_2: 'Mace',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_3: 'Crossbow',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_4: 'Bow',
 
   VICTORIAN_PAGE_TITLE: 'Victorian Era',
   VICTORIAN_QUIZZ_QUESTION_1:

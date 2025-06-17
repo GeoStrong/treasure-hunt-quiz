@@ -28,7 +28,7 @@ const Game: React.FC = () => {
               {activeLanguage.GAME_PAGE_TITLE}, {team?.name}!
               <GiPocketWatch className="text-4xl text-fuchsia-800" />
             </h1>
-            <p className="text-center text-xl text-white">
+            <p className="text-center w-full md:w-1/2 text-xl text-white">
               {activeLanguage.GAME_PAGE_DESCRIPTION}
             </p>
             <div className="flex flex-col items-center gap-5 mt-5 bg-yellow-800 rounded-2xl p-3">
@@ -38,7 +38,7 @@ const Game: React.FC = () => {
               </p>
               <Link
                 href="/game/quizz/prehistoric"
-                className="gradient-3 p-2 rounded-2xl"
+                className="gradient-3 p-2 rounded-lg"
               >
                 Go to the first Era
               </Link>

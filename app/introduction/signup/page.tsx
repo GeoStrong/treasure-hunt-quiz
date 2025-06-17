@@ -18,11 +18,11 @@ const Signup: React.FC = () => {
 
   return (
     <>
-      <div className="w-full relative z-10">
+      <div className="w-full relative flex justify-center flex-col items-center z-10">
         <h1 className="text-3xl mb-5 text-center text-gradient-2 font-bold">
           {activeLanguage.SIGNUP_PAGE_TITLE}
         </h1>
-        <form className="flex w-full items-center flex-col gap-5">
+        <form className="flex w-full md:w-1/2 items-center flex-col gap-5">
           <Input
             onChange={(e) => setName(e.target.value)}
             value={name}

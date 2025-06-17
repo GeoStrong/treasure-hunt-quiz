@@ -67,7 +67,7 @@ export const estonian = {
     '4. Täida missioon, et võita auhind ja saada sertifitseeritud ajauurijaks!',
   ],
 
-  QUIZZ_INCORRECT_ANSWER: 'Vale vastus, proovi uuesti!',
+  QUIZZ_INCORRECT_ANSWER: 'Vale vastus!',
   QUIZZ_CORRECT_ANSWER: 'Õige vastus! Tubli töö!',
   QUIZZ_TYPE_YOUR_ANSWER: 'Sisesta oma vastus siia',
 
@@ -91,21 +91,35 @@ export const estonian = {
     'Mineviku hiiglaslikke sisalikke nimetatakse ___',
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'Nad rändasid Maal miljoneid aastaid tagasi ja neid kujutatakse sageli filmides.',
-  PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurused',
-  PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'dinosaurus',
+  PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurus',
+  // PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'dinosaurus',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_1: 'Dinosaurus',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_2: 'Tyrannosaurus Rex',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_3: 'Velociraptor',
+  PREHISTORIC_QUIZZ_1_SELECT_OPTION_4: 'Triceratops',
+
   PREHISTORIC_QUIZZ_QUESTION_2:
     'Midagi on selle varajase stseeni juures puudu - mida kasutasid inimesed sooja hoidmiseks ja toidu valmistamiseks?',
   PREHISTORIC_QUIZZ_QUESTION_2_HINT:
     'See on midagi, mida leidub looduses ja mis on ellujäämiseks hädavajalik.',
   PREHISTORIC_QUIZZ_ANSWER_2: 'tuli',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_1: 'Kivi',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_2: 'Vesi',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_3: 'Tuli',
+  PREHISTORIC_QUIZZ_2_SELECT_OPTION_4: 'Kinni',
+
   PREHISTORIC_QUIZZ_QUESTION_3:
     'Lendasin läbi kosmose ja põhjustasin kõva müra, lõpetades nende valitsemise, kes olid olulised. Mis ma olen?',
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'Olen taevakeha, mis võib põhjustada massilist väljasuremist.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'asteroid',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'meteoriit',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'meteor',
-  PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'komeet',
+  // PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'meteoriit',
+  // PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'meteor',
+  // PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'komeet',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_1: 'Asteroid',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_2: 'Vulkaan',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_3: 'Maavärin',
+  PREHISTORIC_QUIZZ_3_SELECT_OPTION_4: 'Üleujutus',
 
   NEW_STEP_TITLE_1: 'Palju õnne, olete lõpetanud ühe mängu sammust!',
   NEW_STEP_TITLE_2: 'Olete avanud uue asukoha.',
@@ -122,20 +136,29 @@ export const estonian = {
   EGYPT_QUIZZ_QUESTION_1_HINT:
     'Ma olen iidsetele kuningatele ehitatud massiivne hauakamber, millel on üks või kaks saladust rääkida.',
   EGYPT_QUIZZ_ANSWER_1: 'püramiid',
+  EGYPT_QUIZZ_1_SELECT_OPTION_1: 'Obelisk',
+  EGYPT_QUIZZ_1_SELECT_OPTION_2: 'Püramiid',
+  EGYPT_QUIZZ_1_SELECT_OPTION_3: 'Tempel',
+  EGYPT_QUIZZ_1_SELECT_OPTION_4: 'Sphinx',
+
   EGYPT_QUIZZ_QUESTION_2: 'Mis oli Egiptuse kuningate nimi?',
   EGYPT_QUIZZ_QUESTION_2_HINT:
     'Nad maeti sageli suurtesse hauakambritesse ja nende nimed on tänaseni tuntud.',
-  EGYPT_QUIZZ_ANSWER_2: 'vaaraod',
-  EGYPT_QUIZZ_ANSWER_2_alt_1: 'vaarao',
+  EGYPT_QUIZZ_ANSWER_2: 'vaarao',
+  EGYPT_QUIZZ_2_SELECT_OPTION_1: 'Visiir',
+  EGYPT_QUIZZ_2_SELECT_OPTION_2: 'Sultan',
+  EGYPT_QUIZZ_2_SELECT_OPTION_3: 'Keiser',
+  EGYPT_QUIZZ_2_SELECT_OPTION_4: 'Vaarao',
+
   EGYPT_QUIZZ_QUESTION_3:
     'Mul on haugi pea ja ma valvan kuningate üle. Kes ma olen?',
   EGYPT_QUIZZ_QUESTION_3_HINT:
     'Ma olen taevajumal, keda kujutatakse sageli päikeseketta ja tiibadega.',
   EGYPT_QUIZZ_ANSWER_3: 'horos',
-  EGYPT_QUIZZ_SELECT_OPTION_1: 'Anubis',
-  EGYPT_QUIZZ_SELECT_OPTION_2: 'Horos',
-  EGYPT_QUIZZ_SELECT_OPTION_3: 'Osiris',
-  EGYPT_QUIZZ_SELECT_OPTION_4: 'Ra',
+  EGYPT_QUIZZ_3_SELECT_OPTION_1: 'Anubis',
+  EGYPT_QUIZZ_3_SELECT_OPTION_2: 'Horos',
+  EGYPT_QUIZZ_3_SELECT_OPTION_3: 'Osiris',
+  EGYPT_QUIZZ_3_SELECT_OPTION_4: 'Ra',
 
   MEDIEVAL_PAGE_TITLE: 'Keskaeg',
   MEDIEVAL_QUIZZ_QUESTION_1:
@@ -143,20 +166,30 @@ export const estonian = {
   MEDIEVAL_QUIZZ_QUESTION_1_HINT:
     'Ma olen kindel struktuur, mis kaitseb kuningriiki ja selle elanikke.',
   MEDIEVAL_QUIZZ_ANSWER_1: 'loss',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_1: 'Loss',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_2: 'Katedraal',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_3: 'Kindlus',
+  MEDIEVAL_QUIZZ_1_SELECT_OPTION_4: 'Palee',
+
   MEDIEVAL_QUIZZ_QUESTION_2:
     'Ma kannan soomust ja ratsutan lahingusse. Ma teen oma kuningat vapralt. Kes ma olen?',
   MEDIEVAL_QUIZZ_QUESTION_2_HINT:
     'Ma olen auväärne sõdalane, kellel on vanad lood.',
   MEDIEVAL_QUIZZ_ANSWER_2: 'rüütel',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_1: 'Talupoeg',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_2: 'Kuningas',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_3: 'Rüütel',
+  MEDIEVAL_QUIZZ_2_SELECT_OPTION_4: 'Kaupmees',
+
   MEDIEVAL_QUIZZ_QUESTION_3:
     'Mida kasutasid vibulaskjad mõõgast vibuni, et kaugelt lüüa?',
   MEDIEVAL_QUIZZ_QUESTION_3_HINT:
     'Ma olen täppisrelv, millel on nööri ja noolega mängida.',
   MEDIEVAL_QUIZZ_ANSWER_3: 'vibu',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_1: 'Mõõk',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_2: 'Nui',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_3: 'Ristlaskur',
-  MEDIEVAL_QUIZZ_SELECT_OPTION_4: 'Vibu',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_1: 'Mõõk',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_2: 'Nui',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_3: 'Ristlaskur',
+  MEDIEVAL_QUIZZ_3_SELECT_OPTION_4: 'Vibu',
 
   VICTORIAN_PAGE_TITLE: 'Viktoriaanlik ajastu',
   VICTORIAN_QUIZZ_QUESTION_1:
