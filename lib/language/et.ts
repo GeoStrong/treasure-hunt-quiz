@@ -196,19 +196,29 @@ export const estonian = {
     'Millist neist ei kasutatud viktoriaanlikul ajastul?',
   VICTORIAN_QUIZZ_QUESTION_1_HINT:
     'See seade on kaasaegne leiutis, mis muutis kommunikatsiooni revolutsiooniliselt.',
-  VICTORIAN_QUIZZ_ANSWER_1: 'nutitelefon',
-  VICTORIAN_QUIZZ_SELECT_OPTION_1: 'Gaasilamp',
-  VICTORIAN_QUIZZ_SELECT_OPTION_2: 'Nutitelefoni',
-  VICTORIAN_QUIZZ_SELECT_OPTION_3: 'Kirjutusmasinad',
-  VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Aurumootor',
+  VICTORIAN_QUIZZ_ANSWER_1: 'nutitelefoni',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_1: 'Gaasilamp',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_2: 'Nutitelefoni',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_3: 'Kirjutusmasinad',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_4: 'Aurumootor',
+
   VICTORIAN_QUIZZ_QUESTION_2:
     'Mul ei ole jalgu, aga ma võin joosta, Terasest radadel, päikese all. Ma vilistan valjusti, mu hääl on selge, Ma kannan palju, kaugele ja lähedale. Mis ma olen?',
   VICTORIAN_QUIZZ_QUESTION_2_HINT:
     'See on transpordivahend, mis oli populaarne viktoriaanlikul ajastul.',
   VICTORIAN_QUIZZ_ANSWER_2: 'rong',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_1: 'Rong',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_2: 'Vanker',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_3: 'Jalgratas',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_4: 'Aurulaev',
+
   VICTORIAN_QUIZZ_QUESTION_3_HINT:
     'See on seade, mis valgustab ruumi ja oli viktoriaanlikul ajastul väga populaarne.',
-  VICTORIAN_QUIZZ_ANSWER_3: 'valguslamp',
+  VICTORIAN_QUIZZ_ANSWER_3: 'Pirn',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_1: 'Küünal',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_2: 'Latern',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_3: 'Pirn',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_4: 'Fakett',
   VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze-et.png',
 
   '1980_PAGE_TITLE': '1980. aastad',
@@ -217,22 +227,28 @@ export const estonian = {
   '1980_QUIZZ_QUESTION_1_HINT':
     'Ta oli tuntud oma uskumatu kiiruse ja jõu poolest ning ta oli maailmameister.',
   '1980_QUIZZ_ANSWER_1': 'muhammad ali',
-  '1980_QUIZZ_SELECT_OPTION_1': 'Mike Tyson',
-  '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
-  '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
-  '1980_QUIZZ_SELECT_OPTION_4': 'George Foreman',
+  '1980_QUIZZ_1_SELECT_OPTION_1': 'Mike Tyson',
+  '1980_QUIZZ_1_SELECT_OPTION_2': 'Muhammad Ali',
+  '1980_QUIZZ_1_SELECT_OPTION_3': 'Sugar Ray Leonard',
+  '1980_QUIZZ_1_SELECT_OPTION_4': 'George Foreman',
+
   '1980_QUIZZ_QUESTION_2':
     'Ma liigun läbi mõistatuste värvi ja kiirusega, mõnikord väänan, mõnikord söödan. Ma järgin rada, kuid ei hüppa kunagi kõrgele, Mu vaenlased hõljuvad - ma ei küsi, miks',
   '1980_QUIZZ_QUESTION_2_HINT':
     'See on populaarne videomängude tegelane 1980ndatest aastatest.',
   '1980_QUIZZ_ANSWER_2': 'pacman',
-  '1980_QUIZZ_SELECT_OPTION_5': 'Super Mario',
-  '1980_QUIZZ_SELECT_OPTION_6': 'PacMan',
-  '1980_QUIZZ_SELECT_OPTION_7': 'Sonic',
-  '1980_QUIZZ_SELECT_OPTION_8': 'Rubiku kuubik',
+  '1980_QUIZZ_2_SELECT_OPTION_1': 'Super Mario',
+  '1980_QUIZZ_2_SELECT_OPTION_2': 'PacMan',
+  '1980_QUIZZ_2_SELECT_OPTION_3': 'Sonic',
+  '1980_QUIZZ_2_SELECT_OPTION_4': 'Rubiku kuubik',
+
   '1980_QUIZZ_QUESTION_3_HINT':
     'See on populaarne mõistatusmäng, mis hõlmab kujundite kokku sobitamist.',
   '1980_QUIZZ_ANSWER_3': 'tetris',
+  '1980_QUIZZ_3_SELECT_OPTION_1': 'Tetris',
+  '1980_QUIZZ_3_SELECT_OPTION_2': 'PacMan',
+  '1980_QUIZZ_3_SELECT_OPTION_3': 'Space Invaders',
+  '1980_QUIZZ_3_SELECT_OPTION_4': 'Donkey Kong',
   '1980_QUIZZ_IMAGE_SRC': '/images/1980-maze-et.png',
 
   FUTURE_PAGE_TITLE: 'Tuleviku ajastu',
@@ -241,18 +257,29 @@ export const estonian = {
   FUTURE_QUIZZ_QUESTION_1_HINT:
     'Mul on rattad, kuid ma puudutan harva maad.Ma suumian nagu lennuk, kuid ma ei lahku linnast. Ma võin sõita, ma võin hõljuda - ma teen mõlemat ilma kulmu kortsutamata. Mis ma olen?',
   FUTURE_QUIZZ_ANSWER_1: 'lendav auto',
-  FUTURE_QUIZZ_SELECT_OPTION_1: 'Lendav auto',
-  FUTURE_QUIZZ_SELECT_OPTION_2: 'Jetpack',
-  FUTURE_QUIZZ_SELECT_OPTION_3: 'Droon',
-  FUTURE_QUIZZ_SELECT_OPTION_4: 'Hoverboard',
+  FUTURE_QUIZZ_1_SELECT_OPTION_1: 'Lendav auto',
+  FUTURE_QUIZZ_1_SELECT_OPTION_2: 'Jetpack',
+  FUTURE_QUIZZ_1_SELECT_OPTION_3: 'Droon',
+  FUTURE_QUIZZ_1_SELECT_OPTION_4: 'Hoverboard',
+
   FUTURE_QUIZZ_QUESTION_2:
     'Ma lendan kõrgel, kuid ma ei ole lind, ma sumin ja sumisen, kuid ei ütle ühtegi sõna. Pöörlevate tiibadega vaatan ma taevast - Kaamera on tihti mu silmis',
   FUTURE_QUIZZ_QUESTION_2_HINT:
     'Ma olen seade, mis suudab lennata ja pakke kohale toimetada ning mida sageli nähakse linnades ringi sumisemas.',
   FUTURE_QUIZZ_ANSWER_2: 'droon',
+  FUTURE_QUIZZ_2_SELECT_OPTION_1: 'Rakett',
+  FUTURE_QUIZZ_2_SELECT_OPTION_2: 'Helikopter',
+  FUTURE_QUIZZ_2_SELECT_OPTION_3: 'Lennuk',
+  FUTURE_QUIZZ_2_SELECT_OPTION_4: 'Droon',
+
   FUTURE_QUIZZ_QUESTION_3_HINT:
     'Ma olen futuristlik seade, mis projitseerib 3D-pildi õhku, võimaldades teil sellega suhelda, nagu oleks see reaalne.',
   FUTURE_QUIZZ_ANSWER_3: 'hologramm',
+  FUTURE_QUIZZ_3_SELECT_OPTION_1: 'Virtuaalne reaalsus',
+  FUTURE_QUIZZ_3_SELECT_OPTION_2: 'Täiendatud reaalsus',
+  FUTURE_QUIZZ_3_SELECT_OPTION_3: 'Hologramm',
+  FUTURE_QUIZZ_3_SELECT_OPTION_4: '3D-printer',
+
   FUTURE_QUIZZ_IMAGE_SRC: '/images/future-maze-et.png',
 
   CONGRATULATIONS_PAGE_TITLE: 'Palju õnne,',

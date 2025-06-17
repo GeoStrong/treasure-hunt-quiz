@@ -56,7 +56,7 @@ const FutureLayout: React.FC<{ children: React.ReactNode }> = ({
           <Accordion type="single" collapsible defaultValue="item-1">
             <AccordionItem value="item-1">
               <AccordionTrigger className="w-full items=center justify-center">
-                <h1 className="text-center text-white text-3xl flex items-center justify-center gap-2 text-gradient-2 font-bold">
+                <h1 className="text-center text-black text-3xl flex items-center justify-center gap-2 text-gradient-2 font-bold">
                   {activeLanguage.FUTURE_PAGE_TITLE}
                   <GiMonoWheelRobot />
                 </h1>

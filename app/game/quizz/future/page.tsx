@@ -1,172 +1,31 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import useLanguage from '@/lib/hooks/useLanguage';
-import QuizzControls from '@/components/quizz/QuizzControls';
 import { TeamInterface } from '@/lib/types';
-import { quizzRedirection } from '@/lib/actions';
-import { useAppDispatch } from '@/lib/store/hooks';
-import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { GrLinkNext } from 'react-icons/gr';
+import QuizzTemplate from '@/components/quizz/QuizzTemplate';
 
 const QuizzQuestion = () => {
-  const [answer, setAnswer] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
-  const [isCorrect, setIsCorrect] = useState<boolean>(false);
-  const [isHintUsed, setIsHintUsed] = useState(false);
   const activeLanguage = useLanguage();
-  const dispatch = useAppDispatch();
 
   const team = JSON.parse(localStorage.getItem('team') || '') as TeamInterface;
 
-  useEffect(() => {
-    setIsHintUsed(team.futureQuizz.question1.hintUsed);
-  }, [team.futureQuizz.question1.hintUsed]);
-
-  const handleHintUsage = () => {
-    setIsHintUsed(true);
-    team.futureQuizz.question1.hintUsed = true;
-    team.points -= 50;
-    localStorage.setItem('team', JSON.stringify(team));
-    dispatch(deductPoints(50));
-    dispatch(setProfile(team));
-  };
-
-  const handlePassing = () => {
-    team.futureQuizz.question1.isCorrect = true;
-    team.points += 250;
-    localStorage.setItem('team', JSON.stringify(team));
-    dispatch(addPoints(250));
-    dispatch(setProfile(team));
-  };
-
-  const handleSurrender = () => {
-    team.futureQuizz.question1.isCorrect = false;
-    team.points -= 100;
-    localStorage.setItem('team', JSON.stringify(team));
-    dispatch(deductPoints(100));
-    dispatch(setProfile(team));
-    quizzRedirection('/future/2');
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    if (answer.toLowerCase().trim() === activeLanguage.FUTURE_QUIZZ_ANSWER_1) {
-      setIsCorrect(true);
-    } else {
-      setIsCorrect(false);
-    }
-  };
-
-  useEffect(() => {
-    if (!isCorrect && isSubmitted) {
-      team.futureQuizz.question1.blocked = true;
-      team.futureQuizz.question1.isCorrect = false;
-      localStorage.setItem('team', JSON.stringify(team));
-      dispatch(setProfile(team));
-    }
-  }, [dispatch, isCorrect, isSubmitted, team]);
-
-  const disabled =
-    (!isCorrect && isSubmitted) || team.futureQuizz.question1.blocked;
-
   return (
-    <div className="flex justify-center items-center flex-col">
-      <form
-        onSubmit={handleSubmit}
-        className="w-full flex flex-col items-center"
-      >
-        <h2 className="text-xl text-center text-white font-bold rotate-180">
-          {[...activeLanguage.FUTURE_QUIZZ_QUESTION_1].reverse().join('')}
-        </h2>
-        <p className="text-center text-sm text-orange-400 p-2 rounded-md mt-2">
-          {activeLanguage.QUIZZ_QUESTION_SELECT_WARNING}
-        </p>
-        <div className="flex gap-2 w-full mt-5">
-          <div className="flex flex-col gap-2 w-full">
-            <Button
-              type="button"
-              disabled={disabled}
-              onClick={() => {
-                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_1);
-              }}
-              className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_1 &&
-                'bg-orange-500'
-              }`}
-            >
-              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_1}
-            </Button>
-            <Button
-              type="button"
-              disabled={disabled}
-              onClick={() => {
-                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_2);
-              }}
-              className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_2 &&
-                'bg-orange-500'
-              }`}
-            >
-              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_2}
-            </Button>
-          </div>
-          <div className="flex flex-col gap-2 w-full">
-            <Button
-              type="button"
-              disabled={disabled}
-              onClick={() => {
-                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_3);
-              }}
-              className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_3 &&
-                'bg-orange-500'
-              }`}
-            >
-              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_3}{' '}
-            </Button>
-            <Button
-              type="button"
-              disabled={disabled}
-              onClick={() => {
-                setAnswer(activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_4);
-              }}
-              className={`bg-orange-400 text-lg text-white w-full ${
-                answer === activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_4 &&
-                'bg-orange-500'
-              }`}
-            >
-              {activeLanguage.FUTURE_QUIZZ_SELECT_OPTION_4}
-            </Button>
-          </div>
-        </div>
-
-        <QuizzControls
-          answer={answer}
-          isCorrect={isCorrect}
-          isSubmitted={isSubmitted}
-          nextPage={'/quizz/future/2'}
-          isHintUsed={isHintUsed}
-          setIsHintUsed={handleHintUsage}
-          onPassing={handlePassing}
-          onSurrender={handleSurrender}
-          activeHint={activeLanguage.FUTURE_QUIZZ_QUESTION_1_HINT}
-        />
-
-        {disabled && (
-          <Link
-            href="/game/quizz/future/2"
-            className="bg-amber-600 mt-3 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
-          >
-            {activeLanguage.QUIZZ_NEXT_QUESTION}
-            <GrLinkNext />
-          </Link>
-        )}
-      </form>
-    </div>
+    <QuizzTemplate
+      question={team.futureQuizz.question1}
+      questionTitle={activeLanguage.FUTURE_QUIZZ_QUESTION_1}
+      nextPage="future/2"
+      questionAnswer={activeLanguage.FUTURE_QUIZZ_ANSWER_1}
+      quizzEra={team.futureQuizz}
+      quizzHint={activeLanguage.FUTURE_QUIZZ_QUESTION_1_HINT}
+      quizzSelectOptions={[
+        activeLanguage.FUTURE_QUIZZ_1_SELECT_OPTION_1,
+        activeLanguage.FUTURE_QUIZZ_1_SELECT_OPTION_2,
+        activeLanguage.FUTURE_QUIZZ_1_SELECT_OPTION_3,
+        activeLanguage.FUTURE_QUIZZ_1_SELECT_OPTION_4,
+      ]}
+      answerReverse={false}
+      team={team}
+    />
   );
 };
 export default QuizzQuestion;

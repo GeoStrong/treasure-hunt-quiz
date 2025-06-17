@@ -193,18 +193,29 @@ export const russian = {
   VICTORIAN_QUIZZ_QUESTION_1_HINT:
     'Это устройство - современное изобретение, которое революционизировало связь.',
   VICTORIAN_QUIZZ_ANSWER_1: 'смартфон',
-  VICTORIAN_QUIZZ_SELECT_OPTION_1: 'Газовая лампа',
-  VICTORIAN_QUIZZ_SELECT_OPTION_2: 'Смартфон',
-  VICTORIAN_QUIZZ_SELECT_OPTION_3: 'Печатная машинка',
-  VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Паровой двигатель',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_1: 'Газовая лампа',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_2: 'Смартфон',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_3: 'Печатная машинка',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_4: 'Паровой двигатель',
+
   VICTORIAN_QUIZZ_QUESTION_2:
     'У меня нет ног, но я могу бежать по стальным тропам под солнцем. Я громко свищу, мой голос чист, я несу многих, далеко и близко. Что же я?',
   VICTORIAN_QUIZZ_QUESTION_2_HINT:
     'Это вид транспорта, который был популярен в викторианскую эпоху.',
   VICTORIAN_QUIZZ_ANSWER_2: 'поезд',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_1: 'Поезд',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_2: 'Карета',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_3: 'Велосипед',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_4: 'Пароход',
+
   VICTORIAN_QUIZZ_QUESTION_3_HINT:
     'Это устройство, которое использовалось для освещения улиц и домов.',
-  VICTORIAN_QUIZZ_ANSWER_3: 'лампа',
+  VICTORIAN_QUIZZ_ANSWER_3: 'лампочка',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_1: 'Свеча',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_2: 'Фонарь',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_3: 'Лампочка',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_4: 'Факел',
+
   VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze-ru.png',
 
   '1980_PAGE_TITLE': 'Эпоха 1980-х',
@@ -213,22 +224,28 @@ export const russian = {
   '1980_QUIZZ_QUESTION_1_HINT':
     'Он был известен своей невероятной скоростью и силой, а также был чемпионом мира.',
   '1980_QUIZZ_ANSWER_1': 'мухаммед али',
-  '1980_QUIZZ_SELECT_OPTION_1': 'Майк Тайсон',
-  '1980_QUIZZ_SELECT_OPTION_2': 'Мухаммед Али',
-  '1980_QUIZZ_SELECT_OPTION_3': 'Шугар Рэй Леонард',
-  '1980_QUIZZ_SELECT_OPTION_4': 'Джордж Форман',
+  '1980_QUIZZ_1_SELECT_OPTION_1': 'Майк Тайсон',
+  '1980_QUIZZ_1_SELECT_OPTION_2': 'Мухаммед Али',
+  '1980_QUIZZ_1_SELECT_OPTION_3': 'Шугар Рэй Леонард',
+  '1980_QUIZZ_1_SELECT_OPTION_4': 'Джордж Форман',
+
   '1980_QUIZZ_QUESTION_2':
     'Я двигаюсь по головоломкам с цветом и скоростью, иногда я кручусь, иногда подаю. Я иду по следу, но никогда не прыгаю высоко, Мои враги плавают - я не спрашиваю, почему.',
   '1980_QUIZZ_QUESTION_2_HINT':
     'Это популярный персонаж видеоигр из 1980-х годов.',
   '1980_QUIZZ_ANSWER_2': 'пакман',
-  '1980_QUIZZ_SELECT_OPTION_5': 'Супер Марио',
-  '1980_QUIZZ_SELECT_OPTION_6': 'Пакман',
-  '1980_QUIZZ_SELECT_OPTION_7': 'Соник',
-  '1980_QUIZZ_SELECT_OPTION_8': 'Кубик Рубика',
+  '1980_QUIZZ_2_SELECT_OPTION_1': 'Супер Марио',
+  '1980_QUIZZ_2_SELECT_OPTION_2': 'Пакман',
+  '1980_QUIZZ_2_SELECT_OPTION_3': 'Соник',
+  '1980_QUIZZ_2_SELECT_OPTION_4': 'Кубик Рубика',
+
   '1980_QUIZZ_QUESTION_3_HINT':
     'Это популярная головоломка, которая включает в себя сборку фигур.',
-  '1980_QUIZZ_ANSWER_3': 'тетрис',
+  '1980_QUIZZ_ANSWER_3': 'tetris',
+  '1980_QUIZZ_3_SELECT_OPTION_1': 'Tetris',
+  '1980_QUIZZ_3_SELECT_OPTION_2': 'PacMan',
+  '1980_QUIZZ_3_SELECT_OPTION_3': 'Space Invaders',
+  '1980_QUIZZ_3_SELECT_OPTION_4': 'Donkey Kong',
   '1980_QUIZZ_IMAGE_SRC': '/images/1980-maze-ru.png',
 
   FUTURE_PAGE_TITLE: 'Эпоха будущего',
@@ -237,18 +254,29 @@ export const russian = {
   FUTURE_QUIZZ_QUESTION_1_HINT:
     'Вы можете увидеть меня в фантастических фильмах, за рулем и в полете над пробками. Я не просто машина, я могу парить!',
   FUTURE_QUIZZ_ANSWER_1: 'летающий автомобиль',
-  FUTURE_QUIZZ_SELECT_OPTION_1: 'Летающий автомобиль',
-  FUTURE_QUIZZ_SELECT_OPTION_2: 'Джетпак',
-  FUTURE_QUIZZ_SELECT_OPTION_3: 'Дрон',
-  FUTURE_QUIZZ_SELECT_OPTION_4: 'Ховерборд',
+  FUTURE_QUIZZ_1_SELECT_OPTION_1: 'Летающий автомобиль',
+  FUTURE_QUIZZ_1_SELECT_OPTION_2: 'Джетпак',
+  FUTURE_QUIZZ_1_SELECT_OPTION_3: 'Дрон',
+  FUTURE_QUIZZ_1_SELECT_OPTION_4: 'Ховерборд',
+
   FUTURE_QUIZZ_QUESTION_2:
     'Я летаю высоко, но я не птица, я гужу и жужжу, но не говорю ни слова. Крутя крыльями, я наблюдаю с неба - Камера часто является моим глазом.',
   FUTURE_QUIZZ_QUESTION_2_HINT:
     'Я - устройство, которое может летать и доставлять посылки, его часто можно увидеть жужжащим над городами.',
   FUTURE_QUIZZ_ANSWER_2: 'дрон',
+  FUTURE_QUIZZ_2_SELECT_OPTION_1: 'Ракета',
+  FUTURE_QUIZZ_2_SELECT_OPTION_2: 'Вертолет',
+  FUTURE_QUIZZ_2_SELECT_OPTION_3: 'Самолет',
+  FUTURE_QUIZZ_2_SELECT_OPTION_4: 'Дрон',
+
   FUTURE_QUIZZ_QUESTION_3_HINT:
     'Я - футуристическое устройство, которое проецирует 3D-изображение в воздух, позволяя вам взаимодействовать с ним, как с реальным.',
   FUTURE_QUIZZ_ANSWER_3: 'голограмма',
+  FUTURE_QUIZZ_3_SELECT_OPTION_1: 'Виртуальная реальность',
+  FUTURE_QUIZZ_3_SELECT_OPTION_2: 'Дополненная реальность',
+  FUTURE_QUIZZ_3_SELECT_OPTION_3: 'Голограмма',
+  FUTURE_QUIZZ_3_SELECT_OPTION_4: '3D-принтер',
+
   FUTURE_QUIZZ_IMAGE_SRC: '/images/future-maze-ru.png',
 
   CONGRATULATIONS_PAGE_TITLE: 'Поздравляем,',

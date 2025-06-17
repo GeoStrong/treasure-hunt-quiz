@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import QuizzControls from '@/components/quizz/QuizzControls';
 import useLanguage from '@/lib/hooks/useLanguage';
 import { QuizzInterface, QuizzQuestion, TeamInterface } from '@/lib/types';
-import { quizzRedirection } from '@/lib/actions';
+import { gameRedirection, quizzRedirection } from '@/lib/actions';
 import { useAppDispatch } from '@/lib/store/hooks';
 import { addPoints, deductPoints, setProfile } from '@/lib/store/profileSlice';
 import { Button } from '@/components/ui/button';
@@ -20,6 +20,7 @@ interface QuizzTemplateProps {
   quizzSelectOptions: string[];
   quizzHint: string;
   answerReverse?: boolean;
+  answerRotate?: boolean;
   team: TeamInterface;
   children?: React.ReactNode;
 }
@@ -33,6 +34,7 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
   quizzSelectOptions,
   quizzHint,
   answerReverse = false,
+  answerRotate = false,
   team,
   children,
 }) => {
@@ -42,6 +44,8 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
   const [isHintUsed, setIsHintUsed] = useState(false);
   const activeLanguage = useLanguage();
   const dispatch = useAppDispatch();
+  const nextPageRedirection =
+    nextPage === 'congratulations' ? 'congratulations' : `quizz/${nextPage}`;
 
   useEffect(() => {
     setIsHintUsed(question.hintUsed);
@@ -71,7 +75,11 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
     localStorage.setItem('team', JSON.stringify(team));
     dispatch(deductPoints(100));
     dispatch(setProfile(team));
-    quizzRedirection(`/${nextPage}`);
+    if (nextPage === 'congratulations') {
+      gameRedirection('/congratulations');
+    } else {
+      quizzRedirection(`/${nextPage}`);
+    }
   };
 
   const handleLastQuestion = () => {
@@ -109,12 +117,16 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
 
   return (
     <div className="flex flex-col">
-      <div className="grid self-center gap-2 grid-cols-2">{children}</div>
+      {children}
       <form
         onSubmit={handleSubmit}
         className="w-full flex flex-col justify-center items-center mt-2"
       >
-        <h2 className="text-xl text-center p-2 rounded-md text-[#3B2F2F] font-bold">
+        <h2
+          className={`text-xl text-center p-2 rounded-md text-[#3B2F2F] font-bold ${
+            answerRotate && 'rotate-180'
+          }`}
+        >
           {answerReverse
             ? [...questionTitle].reverse().join('')
             : questionTitle}
@@ -143,7 +155,7 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
           answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={`/quizz/${nextPage}`}
+          nextPage={nextPageRedirection}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
           onPassing={handlePassing}
@@ -152,7 +164,7 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
         />
         {disabled && (
           <Link
-            href={`/game/quizz/${nextPage}`}
+            href={`/game/${nextPageRedirection}`}
             className="bg-amber-600 text-center mt-3 text-base font-bold justify-center text-white px-4 py-2 rounded-md flex items-center gap-2"
           >
             {activeLanguage.QUIZZ_NEXT_QUESTION}

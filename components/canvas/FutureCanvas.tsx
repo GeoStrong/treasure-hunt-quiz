@@ -6,7 +6,7 @@ import City from '@/public/City';
 import Drone from '@/public/Drone';
 import Hologram from '@/public/Hologram';
 import Car from '@/public/Car';
-import { Environment, OrbitControls } from '@react-three/drei';
+import { Environment, OrbitControls, Sky } from '@react-three/drei';
 
 const FutureCanvas: React.FC = () => {
   return (
@@ -23,6 +23,7 @@ const FutureCanvas: React.FC = () => {
           <Drone scale={2} position={[-2, 0, 0]} />
           <Hologram scale={1} position={[1, -2, -3]} />
           <Car scale={0.2} position={[3, 0.5, 3]} />
+          <Sky />
         </Suspense>
       </Canvas>
     </div>

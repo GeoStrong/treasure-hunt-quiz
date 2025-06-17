@@ -191,18 +191,29 @@ export const english = {
   VICTORIAN_QUIZZ_QUESTION_1_HINT:
     'This device is a modern invention that revolutionized communication.',
   VICTORIAN_QUIZZ_ANSWER_1: 'smartphone',
-  VICTORIAN_QUIZZ_SELECT_OPTION_1: 'Gas lamp',
-  VICTORIAN_QUIZZ_SELECT_OPTION_2: 'Smartphone',
-  VICTORIAN_QUIZZ_SELECT_OPTION_3: 'Typewriter',
-  VICTORIAN_QUIZZ_SELECT_OPTION_4: 'Steam engine',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_1: 'Gas lamp',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_2: 'Smartphone',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_3: 'Typewriter',
+  VICTORIAN_QUIZZ_1_SELECT_OPTION_4: 'Steam engine',
+
   VICTORIAN_QUIZZ_QUESTION_2_HINT:
     'It’s a mode of transportation that was popular in the Victorian era.',
   VICTORIAN_QUIZZ_QUESTION_2:
     'I have no feet, yet I can run, On paths of steel, beneath the sun. I whistle loud, my voice is clear, I carry many, far and near. What am I?',
   VICTORIAN_QUIZZ_ANSWER_2: 'train',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_1: 'Train',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_2: 'Carriage',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_3: 'Bicycle',
+  VICTORIAN_QUIZZ_2_SELECT_OPTION_4: 'Steamship',
+
   VICTORIAN_QUIZZ_QUESTION_3_HINT:
     'It’s a device that produces light and was invented during this time.',
   VICTORIAN_QUIZZ_ANSWER_3: 'bulb',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_1: 'Candle',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_2: 'Lantern',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_3: 'Bulb',
+  VICTORIAN_QUIZZ_3_SELECT_OPTION_4: 'Torch',
+
   VICTORIAN_QUIZZ_IMAGE_SRC: '/images/victorian-maze.png',
 
   '1980_PAGE_TITLE': '1980s Era',
@@ -211,22 +222,28 @@ export const english = {
   '1980_QUIZZ_QUESTION_1_HINT':
     'He was known for his incredible speed and power, and he was a world champion.',
   '1980_QUIZZ_ANSWER_1': 'muhammad ali',
-  '1980_QUIZZ_SELECT_OPTION_1': 'Mike Tyson',
-  '1980_QUIZZ_SELECT_OPTION_2': 'Muhammad Ali',
-  '1980_QUIZZ_SELECT_OPTION_3': 'Sugar Ray Leonard',
-  '1980_QUIZZ_SELECT_OPTION_4': 'George Foreman',
+  '1980_QUIZZ_1_SELECT_OPTION_1': 'Mike Tyson',
+  '1980_QUIZZ_1_SELECT_OPTION_2': 'Muhammad Ali',
+  '1980_QUIZZ_1_SELECT_OPTION_3': 'Sugar Ray Leonard',
+  '1980_QUIZZ_1_SELECT_OPTION_4': 'George Foreman',
+
   '1980_QUIZZ_QUESTION_2':
     'I move through puzzles with color and speed, Sometimes I twist, sometimes I feed. I follow a path, but never jump high, My enemies float — I don’t question why',
   '1980_QUIZZ_QUESTION_2_HINT':
     'This is a popular video game character from the 1980s.',
   '1980_QUIZZ_ANSWER_2': 'pacman',
-  '1980_QUIZZ_SELECT_OPTION_5': 'Super Mario',
-  '1980_QUIZZ_SELECT_OPTION_6': 'PacMan',
-  '1980_QUIZZ_SELECT_OPTION_7': 'Sonic',
-  '1980_QUIZZ_SELECT_OPTION_8': "Rubik's Cube",
+  '1980_QUIZZ_2_SELECT_OPTION_1': 'Super Mario',
+  '1980_QUIZZ_2_SELECT_OPTION_2': 'PacMan',
+  '1980_QUIZZ_2_SELECT_OPTION_3': 'Sonic',
+  '1980_QUIZZ_2_SELECT_OPTION_4': "Rubik's Cube",
+
   '1980_QUIZZ_QUESTION_3_HINT':
     'This is a popular puzzle game that involves fitting shapes together.',
   '1980_QUIZZ_ANSWER_3': 'tetris',
+  '1980_QUIZZ_3_SELECT_OPTION_1': 'Tetris',
+  '1980_QUIZZ_3_SELECT_OPTION_2': 'PacMan',
+  '1980_QUIZZ_3_SELECT_OPTION_3': 'Space Invaders',
+  '1980_QUIZZ_3_SELECT_OPTION_4': 'Donkey Kong',
   '1980_QUIZZ_IMAGE_SRC': '/images/1980-maze.png',
 
   FUTURE_PAGE_TITLE: 'Future Era',
@@ -235,18 +252,28 @@ export const english = {
   FUTURE_QUIZZ_QUESTION_1_HINT:
     'You might see me in sci-fi movies, driving and flying above traffic jams. I’m not just a car, I can soar!',
   FUTURE_QUIZZ_ANSWER_1: 'flying car',
-  FUTURE_QUIZZ_SELECT_OPTION_1: 'Flying Car',
-  FUTURE_QUIZZ_SELECT_OPTION_2: 'Jetpack',
-  FUTURE_QUIZZ_SELECT_OPTION_3: 'Drone',
-  FUTURE_QUIZZ_SELECT_OPTION_4: 'Hoverboard',
+  FUTURE_QUIZZ_1_SELECT_OPTION_1: 'Flying Car',
+  FUTURE_QUIZZ_1_SELECT_OPTION_2: 'Jetpack',
+  FUTURE_QUIZZ_1_SELECT_OPTION_3: 'Drone',
+  FUTURE_QUIZZ_1_SELECT_OPTION_4: 'Hoverboard',
+
   FUTURE_QUIZZ_QUESTION_2:
     'I fly up high but I’m not a bird, I hum and buzz but say no word. With spinning wings, I watch from the sky — A camera is often my eye',
   FUTURE_QUIZZ_QUESTION_2_HINT:
     'I’m a device that can fly and deliver packages, often seen buzzing around cities.',
   FUTURE_QUIZZ_ANSWER_2: 'drone',
+  FUTURE_QUIZZ_2_SELECT_OPTION_1: 'Rocket',
+  FUTURE_QUIZZ_2_SELECT_OPTION_2: 'Helicopter',
+  FUTURE_QUIZZ_2_SELECT_OPTION_3: 'Airplane',
+  FUTURE_QUIZZ_2_SELECT_OPTION_4: 'Drone',
+
   FUTURE_QUIZZ_QUESTION_3_HINT:
     'I’m a futuristic device that projects a 3D image into the air, allowing you to interact with it as if it were real.',
   FUTURE_QUIZZ_ANSWER_3: 'hologram',
+  FUTURE_QUIZZ_3_SELECT_OPTION_1: 'Virtual Reality',
+  FUTURE_QUIZZ_3_SELECT_OPTION_2: 'Augmented Reality',
+  FUTURE_QUIZZ_3_SELECT_OPTION_3: 'Hologram',
+  FUTURE_QUIZZ_3_SELECT_OPTION_4: '3D Printer',
   FUTURE_QUIZZ_IMAGE_SRC: '/images/future-maze.png',
 
   CONGRATULATIONS_PAGE_TITLE: 'Congratulations,',

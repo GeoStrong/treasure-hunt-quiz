@@ -66,14 +66,14 @@ const QuizzControls: React.FC<{
           <span className="bg-green-700 text-white px-2 text-center rounded-md">
             {activeLanguage.QUIZZ_CORRECT_ANSWER}
           </span>
-          <Link
+          {/* <Link
             href={`${pathname}/${nextPage}`}
             onClick={onPassing}
             className="bg-amber-600 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
           >
             {activeLanguage.QUIZZ_NEXT_QUESTION}
             <GrLinkNext />
-          </Link>
+          </Link> */}
         </motion.div>
       ) : null}
 

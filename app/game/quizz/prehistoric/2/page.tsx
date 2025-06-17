@@ -69,24 +69,26 @@ const PrehistoricQuizzQuestion2: React.FC = () => {
       ]}
       team={team}
     >
-      {images.map((image) => (
-        <>
-          <Dialog>
-            <DialogTrigger>
-              <div key={image.key} className="flex justify-center">
-                {image}
-              </div>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogDescription className="flex justify-center">
-                  {React.cloneElement(image, { width: 300, height: 300 })}
-                </DialogDescription>
-              </DialogHeader>
-            </DialogContent>
-          </Dialog>
-        </>
-      ))}
+      <div className="grid self-center gap-2 grid-cols-2">
+        {images.map((image) => (
+          <>
+            <Dialog>
+              <DialogTrigger>
+                <div key={image.key} className="flex justify-center">
+                  {image}
+                </div>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogDescription className="flex justify-center">
+                    {React.cloneElement(image, { width: 300, height: 300 })}
+                  </DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
+          </>
+        ))}
+      </div>
     </QuizzTemplate>
   );
 };
