@@ -5,7 +5,6 @@ import TreasureMap from '@/components/TreasureMap';
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -49,9 +48,7 @@ const QuizzLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Qr Code Map</DialogTitle>
-              <DialogDescription>
-                <TreasureMap />
-              </DialogDescription>
+              <TreasureMap />
             </DialogHeader>
           </DialogContent>
         </Dialog>

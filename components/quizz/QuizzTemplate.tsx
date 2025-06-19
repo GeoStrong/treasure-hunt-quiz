@@ -41,6 +41,7 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
   const [answer, setAnswer] = useState('');
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
+  const [isBlocked, setIsBlocked] = useState<boolean>(false);
   const [isHintUsed, setIsHintUsed] = useState(false);
   const activeLanguage = useLanguage();
   const dispatch = useAppDispatch();
@@ -60,16 +61,8 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
     dispatch(setProfile(team));
   };
 
-  const handlePassing = () => {
-    question.isCorrect = true;
-    team.points += 250;
-    localStorage.setItem('team', JSON.stringify(team));
-    dispatch(addPoints(250));
-    dispatch(setProfile(team));
-  };
-
   const handleSurrender = () => {
-    question.isCorrect = false;
+    question.blocked = true;
     team.points -= 100;
     if (nextPage === 'new-step') quizzEra.passed = true;
     localStorage.setItem('team', JSON.stringify(team));
@@ -82,36 +75,38 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
     }
   };
 
-  const handleLastQuestion = () => {
-    quizzEra.passed = true;
-    question.isCorrect = true;
-    team.points += 250;
-    localStorage.setItem('team', JSON.stringify(team));
-    dispatch(addPoints(250));
-    dispatch(setProfile(team));
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
     if (answer.toLowerCase().trim() === questionAnswer.toLowerCase().trim()) {
       setIsCorrect(true);
-      if (nextPage === 'new-step') handleLastQuestion();
     } else {
       setIsCorrect(false);
     }
   };
 
   useEffect(() => {
-    if (!isCorrect && isSubmitted) {
+    if (isSubmitted) {
       question.blocked = true;
-      question.isCorrect = false;
-      team.points -= 125;
+      setIsBlocked(true);
+      if (isCorrect) {
+        question.isCorrect = true;
+        team.points += 250;
+        dispatch(addPoints(250));
+      } else {
+        question.isCorrect = false;
+        team.points -= 125;
+        dispatch(deductPoints(125));
+      }
       if (nextPage === 'new-step') quizzEra.passed = true;
       localStorage.setItem('team', JSON.stringify(team));
       dispatch(setProfile(team));
     }
   }, [dispatch, isCorrect, isSubmitted, nextPage, question, quizzEra, team]);
+
+  useEffect(() => {
+    if (question.blocked) setIsBlocked(question.blocked);
+  }, [question.blocked]);
 
   const disabled = isSubmitted || question.blocked;
 
@@ -152,13 +147,11 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
           ))}
         </div>
         <QuizzControls
-          answer={answer}
           isCorrect={isCorrect}
           isSubmitted={isSubmitted}
-          nextPage={nextPageRedirection}
+          isBlocked={isBlocked}
           isHintUsed={isHintUsed}
           setIsHintUsed={handleHintUsage}
-          onPassing={handlePassing}
           onSurrender={handleSurrender}
           activeHint={quizzHint}
         />

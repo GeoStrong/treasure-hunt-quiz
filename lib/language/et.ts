@@ -92,7 +92,6 @@ export const estonian = {
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'Nad rändasid Maal miljoneid aastaid tagasi ja neid kujutatakse sageli filmides.',
   PREHISTORIC_QUIZZ_ANSWER_1: 'dinosaurus',
-  // PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'dinosaurus',
   PREHISTORIC_QUIZZ_1_SELECT_OPTION_1: 'Dinosaurus',
   PREHISTORIC_QUIZZ_1_SELECT_OPTION_2: 'Tyrannosaurus Rex',
   PREHISTORIC_QUIZZ_1_SELECT_OPTION_3: 'Velociraptor',

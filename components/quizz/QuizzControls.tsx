@@ -2,8 +2,8 @@ import { BsFillFlagFill } from 'react-icons/bs';
 import { MdTipsAndUpdates } from 'react-icons/md';
 import React from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import Link from 'next/link';
-import { GrLinkNext } from 'react-icons/gr';
+// import Link from 'next/link';
+// import { GrLinkNext } from 'react-icons/gr';
 import { Button } from '@/components/ui/button';
 import useLanguage from '@/lib/hooks/useLanguage';
 import {
@@ -18,28 +18,23 @@ import {
 } from '../ui/dialog';
 
 const QuizzControls: React.FC<{
-  answer: string;
   isCorrect: boolean;
   isSubmitted: boolean;
-  nextPage: string | number;
   isHintUsed: boolean;
+  isBlocked: boolean | undefined;
   setIsHintUsed: () => void;
-  onPassing: () => void;
   onSurrender: () => void;
   activeHint: string;
 }> = ({
-  answer,
   isCorrect,
   isSubmitted,
-  nextPage,
   isHintUsed,
+  isBlocked,
   setIsHintUsed,
-  onPassing,
   onSurrender,
   activeHint,
 }) => {
   const activeLanguage = useLanguage();
-  const pathname = '/game';
 
   return (
     <AnimatePresence>
@@ -55,7 +50,7 @@ const QuizzControls: React.FC<{
         </motion.div>
       ) : null}
 
-      {isCorrect && isSubmitted ? (
+      {isCorrect ? (
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -66,18 +61,10 @@ const QuizzControls: React.FC<{
           <span className="bg-green-700 text-white px-2 text-center rounded-md">
             {activeLanguage.QUIZZ_CORRECT_ANSWER}
           </span>
-          {/* <Link
-            href={`${pathname}/${nextPage}`}
-            onClick={onPassing}
-            className="bg-amber-600 text-center justify-center text-white px-4 rounded-md flex items-center gap-2"
-          >
-            {activeLanguage.QUIZZ_NEXT_QUESTION}
-            <GrLinkNext />
-          </Link> */}
         </motion.div>
       ) : null}
 
-      {answer.length > 0 ? (
+      {!isBlocked ? (
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -93,6 +80,7 @@ const QuizzControls: React.FC<{
               <DialogContent className="bg-gray-300 text-black">
                 {isHintUsed ? (
                   <DialogHeader>
+                    <DialogTitle className="text-2xl"></DialogTitle>
                     <DialogDescription className="flex text-xl text-black justify-center">
                       {activeHint}
                     </DialogDescription>
@@ -109,9 +97,7 @@ const QuizzControls: React.FC<{
                 )}
                 {!isHintUsed && (
                   <DialogFooter className="flex justify-center flex-row">
-                    <DialogClose>
-                      <Button>No</Button>
-                    </DialogClose>
+                    <DialogClose>No</DialogClose>
                     <Button
                       onClick={() => {
                         setIsHintUsed();
@@ -139,9 +125,7 @@ const QuizzControls: React.FC<{
                   </DialogDescription>
                 </DialogHeader>
                 <DialogFooter className="flex justify-center flex-row">
-                  <DialogClose>
-                    <Button>No</Button>
-                  </DialogClose>
+                  <DialogClose>No</DialogClose>
                   <Button onClick={onSurrender}>Yes</Button>
                 </DialogFooter>
               </DialogContent>

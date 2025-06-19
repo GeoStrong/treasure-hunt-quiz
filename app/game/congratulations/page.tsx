@@ -68,6 +68,17 @@ const Congratulations: React.FC = () => {
               className="mt-5"
             >
               <Statistics />
+              <div className="text-center mt-4">
+                <button
+                  onClick={() => {
+                    localStorage.clear();
+                    location.replace('/');
+                  }}
+                  className="gradient-1 text-white px-4 py-2 rounded-md hover:bg-gradient-2 transition-colors duration-300"
+                >
+                  Start New Game
+                </button>
+              </div>
             </motion.div>
           ) : null}
         </AnimatePresence>

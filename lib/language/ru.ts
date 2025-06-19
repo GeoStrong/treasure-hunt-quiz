@@ -89,8 +89,7 @@ export const russian = {
   PREHISTORIC_QUIZZ_QUESTION_1: 'Гигантских ящеров прошлого называли ___',
   PREHISTORIC_QUIZZ_QUESTION_1_HINT:
     'Они бродили по Земле миллионы лет назад и часто изображаются в фильмах.',
-  PREHISTORIC_QUIZZ_ANSWER_1: 'динозавры',
-  // PREHISTORIC_QUIZZ_ANSWER_1_alt_1: 'динозавр',
+  PREHISTORIC_QUIZZ_ANSWER_1: 'динозавр',
   PREHISTORIC_QUIZZ_1_SELECT_OPTION_1: 'Динозавр',
   PREHISTORIC_QUIZZ_1_SELECT_OPTION_2: 'Тираннозавр Рекс',
   PREHISTORIC_QUIZZ_1_SELECT_OPTION_3: 'Велоцираптор',
@@ -111,9 +110,6 @@ export const russian = {
   PREHISTORIC_QUIZZ_QUESTION_3_HINT:
     'Я небесный объект, который может вызвать массовое вымирание.',
   PREHISTORIC_QUIZZ_ANSWER_3: 'астероид',
-  // PREHISTORIC_QUIZZ_ANSWER_3_alt_1: 'метеорит',
-  // PREHISTORIC_QUIZZ_ANSWER_3_alt_2: 'метеор',
-  // PREHISTORIC_QUIZZ_ANSWER_3_alt_3: 'комета',
   PREHISTORIC_QUIZZ_3_SELECT_OPTION_1: 'Астероид',
   PREHISTORIC_QUIZZ_3_SELECT_OPTION_2: 'Вулкан',
   PREHISTORIC_QUIZZ_3_SELECT_OPTION_3: 'Землетрясение',
