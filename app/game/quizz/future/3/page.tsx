@@ -3,6 +3,15 @@
 import useLanguage from '@/lib/hooks/useLanguage';
 import { TeamInterface } from '@/lib/types';
 import QuizzTemplate from '@/components/quizz/QuizzTemplate';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import Image from 'next/image';
 
 const FutureQuizzQuestion3: React.FC = () => {
   const activeLanguage = useLanguage();
@@ -24,7 +33,33 @@ const FutureQuizzQuestion3: React.FC = () => {
         activeLanguage.FUTURE_QUIZZ_3_SELECT_OPTION_4,
       ]}
       team={team}
-    />
+    >
+      <div className="flex w-full justify-center">
+        <Dialog>
+          <DialogTrigger className="mt-5">
+            <Image
+              src={activeLanguage.FUTURE_QUIZZ_IMAGE_SRC}
+              width={200}
+              height={200}
+              alt="maze"
+            />
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle className="text-center text-2xl font-bold"></DialogTitle>
+              <DialogDescription className="flex justify-center">
+                <Image
+                  src={activeLanguage.FUTURE_QUIZZ_IMAGE_SRC}
+                  width={500}
+                  height={500}
+                  alt="maze"
+                />
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+      </div>
+    </QuizzTemplate>
   );
 };
 export default FutureQuizzQuestion3;

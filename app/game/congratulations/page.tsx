@@ -68,7 +68,7 @@ const Congratulations: React.FC = () => {
               className="mt-5"
             >
               <Statistics />
-              <div className="text-center mt-4">
+              {/* <div className="text-center mt-4">
                 <button
                   onClick={() => {
                     localStorage.clear();
@@ -78,7 +78,7 @@ const Congratulations: React.FC = () => {
                 >
                   Start New Game
                 </button>
-              </div>
+              </div> */}
             </motion.div>
           ) : null}
         </AnimatePresence>
