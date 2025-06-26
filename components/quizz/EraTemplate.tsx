@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import ModelsLoading from '@/components/canvas/ModelsLoading';
 import { useProgress } from '@react-three/drei';
@@ -77,7 +79,6 @@ const EraTemplate: React.FC<EraTemplateProps> = ({
                 <h1 className="text-center text-[#3B2F2F] text-3xl flex items-center justify-center gap-2 text-gradient-2 font-bold">
                   {activeLanguage[`${eraTitle}_PAGE_TITLE`]}
                   {titleIcon}
-                  {/* <GiDinosaurRex className="text-[#3B2F2F]" /> */}
                 </h1>
               </AccordionTrigger>
               <AccordionContent>
