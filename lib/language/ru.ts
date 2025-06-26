@@ -1,4 +1,6 @@
-export const russian = {
+import { Language } from '../types';
+
+export const russian: Language = {
   WELCOME_PAGE_TITLE: 'Выбери язык, чтобы начать игру',
   WELCOME_PAGE_PLAY_BUTTON: 'Начать игру',
 

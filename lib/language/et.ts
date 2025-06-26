@@ -1,4 +1,6 @@
-export const estonian = {
+import { Language } from '../types';
+
+export const estonian: Language = {
   WELCOME_PAGE_TITLE: 'Mängu alustamiseks valige keel',
   WELCOME_PAGE_PLAY_BUTTON: 'Alusta mängu',
 
