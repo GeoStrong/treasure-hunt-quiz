@@ -72,6 +72,11 @@ const QuizzTemplate: React.FC<QuizzTemplateProps> = ({
       gameRedirection('/congratulations');
     } else {
       quizzRedirection(`/${nextPage}`);
+      if (nextPage === 'new-step') {
+        setTimeout(() => {
+          quizzRedirection(`/${nextPage}`);
+        }, 1000);
+      }
     }
   };
 
