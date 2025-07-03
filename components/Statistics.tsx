@@ -21,6 +21,33 @@ const Statistics: React.FC = () => {
     );
   };
 
+  // Calculate game time if not available
+  const calculateGameTime = () => {
+    if (team.gameTime) {
+      return team.gameTime;
+    }
+
+    if (team.timeStart) {
+      const startTime = new Date(team.timeStart).getTime();
+      const endTime = team.timeEnd
+        ? new Date(team.timeEnd).getTime()
+        : Date.now();
+      const totalSeconds = Math.floor((endTime - startTime) / 1000);
+
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      return { hours, minutes, seconds };
+    }
+
+    return { hours: 0, minutes: 0, seconds: 0 };
+  };
+
+  const gameTime = calculateGameTime();
+
+  console.log(team);
+
   return (
     <div className="w-full mb-10">
       <h2 className="text-2xl text-white font-bold text-center mt-5">
@@ -31,11 +58,9 @@ const Statistics: React.FC = () => {
           <span className="font-bold text-gradient-2">
             {activeLanguage.STATISTICS_TIME_SPENT}:
           </span>{' '}
-          {team.gameTime?.hours} {activeLanguage.STATISTICS_TIME_SPENT_HOURS}{' '}
-          {team.gameTime?.minutes}{' '}
-          {activeLanguage.STATISTICS_TIME_SPENT_MINUTES}{' '}
-          {team.gameTime?.seconds}{' '}
-          {activeLanguage.STATISTICS_TIME_SPENT_SECONDS}
+          {gameTime.hours} {activeLanguage.STATISTICS_TIME_SPENT_HOURS}{' '}
+          {gameTime.minutes} {activeLanguage.STATISTICS_TIME_SPENT_MINUTES}{' '}
+          {gameTime.seconds} {activeLanguage.STATISTICS_TIME_SPENT_SECONDS}
         </h3>
         <h3 className="text-lg text-center w-full text-white">
           <span className="font-bold text-gradient-2">
@@ -146,7 +171,7 @@ const Statistics: React.FC = () => {
           </div>
           <div className="flex gap-2 flex-col justify-center text-center items-center">
             <h3 className="text-2xl text-gradient-4 font-bold">
-              {activeLanguage.STATISTICS_VICTORIAN_ERA}
+              {activeLanguage.STATISTICS_1980S_ERA}
             </h3>
             <ul className="flex gap-2 flex-col">
               <li className="flex items-center gap-1">
