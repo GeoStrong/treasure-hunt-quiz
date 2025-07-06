@@ -7,7 +7,7 @@ import useLanguage from '@/lib/hooks/useLanguage';
 import TreasureMap from '@/components/TreasureMap';
 import QRScanner from '@/components/QRScanner';
 import { Button } from '@/components/ui/button';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 const NewStep: React.FC = () => {
   const [isMapVisible, setIsMapVisible] = useState(false);
@@ -61,7 +61,7 @@ const NewStep: React.FC = () => {
             ) : null}
           </AnimatePresence>
 
-          {/* <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <p className="text-center text-xl text-bold text-white mt-5">
               Since the game is finished, you can proceed playing the game
               without scanning the QR code.
@@ -96,7 +96,7 @@ const NewStep: React.FC = () => {
             >
               Go to the Futuristic Era
             </Link>
-          </div> */}
+          </div>
 
           <Button
             onClick={() => {
