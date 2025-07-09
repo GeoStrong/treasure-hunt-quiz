@@ -69,7 +69,25 @@ const Home = () => {
                 Russian{' '}
                 <Image
                   src="/images/russian.svg"
-                  alt="English"
+                  alt="Russian"
+                  width={20}
+                  height={20}
+                />
+              </div>
+            </Label>
+            <Label
+              htmlFor="ka"
+              className="flex w-2xs items-center justify-center bg-gray-700 p-2 space-x-2 rounded-md"
+              onClick={() => {
+                dispatch(setLanguage('ka'));
+              }}
+            >
+              <RadioGroupItem value="ka" id="ka" />
+              <div className="text-xl flex items-center gap-2">
+                Georgian{' '}
+                <Image
+                  src="/images/georgian.svg"
+                  alt="Georgian"
                   width={20}
                   height={20}
                 />

@@ -1,4 +1,4 @@
-export type LanguageType = 'en' | 'et' | 'ru';
+export type LanguageType = 'en' | 'et' | 'ru' | 'ka';
 
 export interface GameTimeInterface {
   hours: number;
